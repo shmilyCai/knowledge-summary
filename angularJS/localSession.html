@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>说明 · 前端知识汇总</title>
+        <title>localStorage与sessionStorage区别 · 前端知识汇总</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../jquery/" />
+    <link rel="next" href="on.html" />
     
     
-    <link rel="prev" href="./" />
+    <link rel="prev" href="form.html" />
     
 
     </head>
@@ -181,9 +181,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5" data-path="../angularjs/">
+        <li class="chapter " data-level="1.5" data-path="./">
             
-                <a href="../angularjs/">
+                <a href="./">
             
                     
                     angularJS
@@ -195,9 +195,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="../angularjs/model.html">
+        <li class="chapter " data-level="1.5.1" data-path="model.html">
             
-                <a href="../angularjs/model.html">
+                <a href="model.html">
             
                     
                     双向绑定
@@ -208,9 +208,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.2" data-path="../angularjs/form.html">
+        <li class="chapter " data-level="1.5.2" data-path="form.html">
             
-                <a href="../angularjs/form.html">
+                <a href="form.html">
             
                     
                     form表单验证
@@ -221,9 +221,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.3" data-path="../angularjs/localSession.html">
+        <li class="chapter active" data-level="1.5.3" data-path="localSession.html">
             
-                <a href="../angularjs/localSession.html">
+                <a href="localSession.html">
             
                     
                     localStorage与sessionStorage区别
@@ -234,9 +234,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.4" data-path="../angularjs/on.html">
+        <li class="chapter " data-level="1.5.4" data-path="on.html">
             
-                <a href="../angularjs/on.html">
+                <a href="on.html">
             
                     
                     angularJS中各个控制器中的消息发送与接收
@@ -247,9 +247,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.5" data-path="../angularjs/directive.html">
+        <li class="chapter " data-level="1.5.5" data-path="directive.html">
             
-                <a href="../angularjs/directive.html">
+                <a href="directive.html">
             
                     
                     directive
@@ -260,9 +260,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.6" data-path="../angularjs/filter.html">
+        <li class="chapter " data-level="1.5.6" data-path="filter.html">
             
-                <a href="../angularjs/filter.html">
+                <a href="filter.html">
             
                     
                     过滤器
@@ -273,9 +273,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.7" data-path="../angularjs/interceptor.html">
+        <li class="chapter " data-level="1.5.7" data-path="interceptor.html">
             
-                <a href="../angularjs/interceptor.html">
+                <a href="interceptor.html">
             
                     
                     拦截器
@@ -286,9 +286,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.8" data-path="../angularjs/mores.html">
+        <li class="chapter " data-level="1.5.8" data-path="mores.html">
             
-                <a href="../angularjs/mores.html">
+                <a href="mores.html">
             
                     
                     多个angularjs项目嵌套方案
@@ -299,9 +299,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.9" data-path="../angularjs/hsf.html">
+        <li class="chapter " data-level="1.5.9" data-path="hsf.html">
             
-                <a href="../angularjs/hsf.html">
+                <a href="hsf.html">
             
                     
                     $http，$service与$factory区别
@@ -394,9 +394,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8" data-path="./">
+        <li class="chapter " data-level="1.8" data-path="../javascript/">
             
-                <a href="./">
+                <a href="../javascript/">
             
                     
                     Javascript
@@ -408,9 +408,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.8.1" data-path="test.html">
+        <li class="chapter " data-level="1.8.1" data-path="../javascript/test.html">
             
-                <a href="test.html">
+                <a href="../javascript/test.html">
             
                     
                     说明
@@ -527,7 +527,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >说明</a>
+        <a href=".." >localStorage与sessionStorage区别</a>
     </h1>
 </div>
 
@@ -542,8 +542,22 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>test</p>
-
+                                <h4 id="localstorage&#xFF0C;sessionstorage&#x4E0E;cookie&#x533A;&#x522B;">localStorage&#xFF0C;sessionStorage&#x4E0E;cookie&#x533A;&#x522B;</h4>
+<h5 id="localstorage">localStorage</h5>
+<p>&#x672C;&#x5730;&#x5B58;&#x50A8;&#xFF0C;&#x5B58;&#x50A8;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#xFF0C;&#x5F53;&#x7528;&#x6237;&#x6E05;&#x9664;&#x7F13;&#x5B58;&#x65F6;&#x624D;&#x53EF;&#x6D88;&#x9664;</p>
+<h5 id="sessionstorage">sessionStorage</h5>
+<p>&#x4F1A;&#x8BDD;&#x5B58;&#x50A8;&#xFF0C;&#x5F53;&#x524D;&#x4F1A;&#x8BDD;&#x5B58;&#x50A8;&#xFF0C;&#x5F53;&#x7528;&#x6237;&#x5173;&#x95ED;&#x7CFB;&#x7EDF;&#x9875;&#x9762;&#x65F6;&#xFF0C;&#x4F1A;&#x8BDD;&#x6D88;&#x5931;</p>
+<h5 id="cookie">cookie</h5>
+<p>&#x5B58;&#x50A8;&#x5BB9;&#x91CF;&#x5C11;&#xFF0C;&#x4F5C;&#x4E3A;http&#x89C4;&#x8303;&#x7684;&#x4E00;&#x90E8;&#x5206;&#xFF0C;&#x6BCF;&#x6B21;&#x90FD;&#x968F;&#x7740;&#x8BF7;&#x6C42;&#x88AB;&#x53D1;&#x9001;&#x51FA;&#x6765;</p>
+<h5 id="localstorage&#x4E0E;sessionstorage&#x65B9;&#x6CD5;">localStorage&#x4E0E;sessionStorage&#x65B9;&#x6CD5;</h5>
+<p>&#x4EE5;&#x4E0B;&#x4EE5;localStorage&#x4E3A;&#x4F8B;</p>
+<pre><code>localStorage.getItem(key)://&#x83B7;&#x53D6;&#x6307;&#x5B9A;key&#x672C;&#x5730;&#x5B58;&#x50A8;&#x7684;&#x503C;
+localStorage.setItem(key,value)&#xFF1A;//&#x5C06;value&#x5B58;&#x50A8;&#x5230;key&#x5B57;&#x6BB5;
+localStorage.removeItem(key)://&#x5220;&#x9664;&#x6307;&#x5B9A;key&#x672C;&#x5730;&#x5B58;&#x50A8;&#x7684;&#x503C;
+localStorage.valueOf();//&#x83B7;&#x53D6;&#x5168;&#x90E8;&#x6570;&#x636E;
+localStorage.key(N)&#xFF1B;//&#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x4E0B;&#x6807;key&#x952E;&#x503C;
+localStorage.clear();// &#x6E05;&#x7A7A;&#x7F13;&#x5B58;&#x6570;&#x636E;
+</code></pre>
                                 
                                 </section>
                             
@@ -570,12 +584,12 @@
 
             
                 
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Javascript">
+                <a href="form.html" class="navigation navigation-prev " aria-label="Previous page: form表单验证">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../jquery/" class="navigation navigation-next " aria-label="Next page: Jquery">
+                <a href="on.html" class="navigation navigation-next " aria-label="Next page: angularJS中各个控制器中的消息发送与接收">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -586,7 +600,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"说明","level":"1.8.1","depth":2,"next":{"title":"Jquery","level":"1.9","depth":1,"path":"jquery/index.md","ref":"jquery/index.md","articles":[{"title":"说明","level":"1.9.1","depth":2,"path":"jquery/test.md","ref":"jquery/test.md","articles":[]}]},"previous":{"title":"Javascript","level":"1.8","depth":1,"path":"javascript/index.md","ref":"javascript/index.md","articles":[{"title":"说明","level":"1.8.1","depth":2,"path":"javascript/test.md","ref":"javascript/test.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"前端知识汇总","variables":{},"title":"前端知识汇总","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{}},"gitbook":"*","description":null,"extension":null},"file":{"path":"javascript/test.md","mtime":"2018-08-29T01:26:26.423Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-04T06:16:02.533Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"localStorage与sessionStorage区别","level":"1.5.3","depth":2,"next":{"title":"angularJS中各个控制器中的消息发送与接收","level":"1.5.4","depth":2,"path":"angularjs/on.md","ref":"angularjs/on.md","articles":[]},"previous":{"title":"form表单验证","level":"1.5.2","depth":2,"path":"angularjs/form.md","ref":"angularjs/form.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"前端知识汇总","variables":{},"title":"前端知识汇总","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{}},"gitbook":"*","description":null,"extension":null},"file":{"path":"angularjs/localSession.md","mtime":"2018-09-04T02:34:25.538Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-04T06:16:02.533Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
