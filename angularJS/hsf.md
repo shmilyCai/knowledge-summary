@@ -1,1 +1,1 @@
-#### $http, $service, $factory区别
+#### $http，$service与$factory区别
