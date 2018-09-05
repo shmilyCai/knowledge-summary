@@ -1,18 +1,21 @@
 #### 表单验证事件
 
 1. 禁用H5原生验证
+
 	在form对象上添加novalidate属性
 	```
 	<form name="myForm" ng-submit="submit()" novalidate><form>//禁用了H5原生的提醒
 	```
 
 2. 焦点触发验证
+
 	创建`$scope.focused=false;`，使用ng-focus,ng-blur事件，修改focused状态（分别为获得焦点，失去焦点事件）
 	```
 	myForm.username.$error.required //验证失败
 	```
 
-3. 提交表单验证：
+3. 提交表单验证
+
 	创建`$scope.submitted=false;`提交表单时，如果`$scope.form.$invalid===true`,将其设置为true，从而显示错误信息
 	```
 	$scope.submitted = false;

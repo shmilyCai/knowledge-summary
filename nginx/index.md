@@ -1,5 +1,5 @@
 ####Nginx
 
-文件路径
+Mac下的文件路径
 
 `/usr/local/nginx `
