@@ -14,3 +14,12 @@
 
 查看80端口的进程
 `losF -i:80`
+
+从容停止nginx
+`kill -QUIT 主进程号`
+
+快速停止nginx
+`kill -TERM 主进程号`
+
+强制停止nginx
+`kill -9 nginx`

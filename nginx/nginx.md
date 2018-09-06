@@ -1,5 +1,3 @@
-####Nginx
+####Nginx接入原理分析
 
-路径
-
-`/usr/local/nginx `
+原理分析
