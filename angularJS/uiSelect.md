@@ -1,6 +1,6 @@
 #### ui-select
 
-经常访问ui-select demo页面时，经常打不开，所以把常用代码保留一份，方便查看
+访问ui-select demo页面时，经常打不开，所以把常用代码保留一份，方便查看
 
 ui-select下拉框中进行多选
 ```
