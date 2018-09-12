@@ -47,6 +47,7 @@
   * [常用操作命令](nginx/operate.md)
 * [Java](java/index.md)
   * [maven](java/maven.md)
+* [jenkins](others/jenkins.md)
 * [RestfulAPI](others/api.md)
 * [Vim常用命令](others/vim.md)
 * [Markdown使用说明](others/markdown.md)
