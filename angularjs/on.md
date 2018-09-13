@@ -22,8 +22,13 @@ $rootScope为全局作用域，其他所有的作用域继承自它，
 
    用于接收event与data
    ```
-    $scope.$on('to-child', function(event,data) {});
+    var toChild = $scope.$on('to-child', function(event,data) {});
 
-    $scope.$on('to-parent', function(event,data) {});
+    var toParent = $scope.$on('to-parent', function(event,data) {});
+
+    //必须要销毁
+    $scope.$on('$destroy', function(){
+       toChild();
+    })
 
    ```
