@@ -29,6 +29,7 @@ $rootScope为全局作用域，其他所有的作用域继承自它，
     //必须要销毁
     $scope.$on('$destroy', function(){
        toChild();
+       toParent();
     })
 
    ```

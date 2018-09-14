@@ -1,15 +1,16 @@
 {
-    "description": null,
+    "description": "小仙女的前端之路",
+    "title": "小仙女的前端之路",
     "extension": null,
     "generator": "site",
-    "isbn": "前端知识汇总",
+    "isbn": "小仙女的前端之路",
     "links": {
         "sharing": {
-            "all": null,
-            "facebook": null,
-            "google": null,
-            "twitter": null,
-            "weibo": null
+            "all": false,
+            "facebook": false,
+            "google": false,
+            "twitter": false,
+            "weibo": false
         },
         "sidebar": {}
     },
@@ -28,6 +29,5 @@
         "paperSize": "a4"
     },
     "plugins": [],
-    "title": "前端知识汇总",
     "variables": {}
 }
