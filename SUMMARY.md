@@ -24,6 +24,7 @@
 * [Javascript](javascript/index.md)
   * [数组去重-findIndex](javascript/findIndex.md)
   * [说明](javascript/test.md)
+  * [interval与timeout区别](javascript/interval_timeout.md)
 * [HTML5](html/index.md)
   * [表单](html/form.md)
   * [localStorage与sessionStorage区别](html/localSession.md)
