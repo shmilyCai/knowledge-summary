@@ -34,6 +34,7 @@
   * [页面布局](css/layout.md)
   * [常用样式说明](css/daily.md)
   * [选择器](css/selected.md)
+  * [margin](css/margin.md)
   * [animate](css/animate.md)
   * [transition](css/transition.md)
   * [transform](css/transform.md)
@@ -59,3 +60,4 @@
 * [Vim常用命令](others/vim.md)
 * [Gitbook](others/gitbook.md)
 * [Markdown使用说明](others/markdown.md)
+* [Next](others/next.md)
