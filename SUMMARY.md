@@ -20,6 +20,7 @@
   * [多个angularjs项目嵌套方案](angularjs/mores.md)
   * [$http，$service与$factory区别](angularjs/hsf.md)
   * [$apply](angularjs/apply.md)
+  * [$factory](angularjs/factory.md)
   * [ui-select](angularjs/uiSelect.md)
 * [Javascript](javascript/index.md)
   * [数组去重-findIndex](javascript/findIndex.md)
