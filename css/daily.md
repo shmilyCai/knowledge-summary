@@ -128,6 +128,7 @@ html {
 ```
 
 2. 使用img标签的全屏图片
+
 ```
 <div class="bg">
     <img src="the/path/to/your/image" alt="">
