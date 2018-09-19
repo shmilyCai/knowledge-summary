@@ -1,0 +1,5 @@
+#### 远程开发方式
+
+linux搭建环境要容易很多，可以在windows上装一台linux虚拟机，npm和bower安装都在linux虚拟机上。windows上只负责做分支管理、代码管理，windows上不需要安装npm和bower依赖；在webstorm上配置deployment，webstorm会自动把windows上修改过的代码同步到linux虚拟机里，把npm和bower依赖安装在linux虚拟机上，gulp serve也在linux虚拟机上运行。这一套俗称远程开发。
+
+---从公司内部wiki上看到的，并未实践，保留一份待有机会实践一下
