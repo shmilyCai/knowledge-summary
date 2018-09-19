@@ -24,14 +24,6 @@
 
 ---
 
-暂存
-
-`git stash`
-
-`git pop`
-
----
-
 tags
 
 `git tag -a v1.01 -m "Relase version 1.01"`

@@ -47,6 +47,8 @@
   * [常规操作](git/daily.md)
   * [常规指令说明](git/mores.md)
   * [gitconfig](git/gitconfig.md)
+  * [stash](git/stash.md)
+  * [合并分支的2种方式](git/merge.md)
 * [Sass](sass/index.md)
   * [使用方式](sass/test.md)
 * [Jquery](jquery/index.md)
