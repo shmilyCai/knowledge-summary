@@ -50,6 +50,7 @@
   * [gitconfig](git/gitconfig.md)
   * [stash](git/stash.md)
   * [合并分支的2种方式](git/merge.md)
+  * [Git合并指定文件到另一个分支](git/merge_file.md)
 * [Sass](sass/index.md)
   * [使用方式](sass/test.md)
 * [Jquery](jquery/index.md)
