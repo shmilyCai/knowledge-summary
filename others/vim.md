@@ -1,4 +1,4 @@
-####Nginx
+#### Vim
 
 `/usr/local/nginx `  路径
 
