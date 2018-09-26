@@ -17,7 +17,11 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
                 
             
                 
@@ -57,7 +61,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../sass/" />
+    <link rel="next" href="reset.html" />
     
     
     <link rel="prev" href="merge.html" />
@@ -752,6 +756,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.9.7" data-path="reset.html">
+            
+                <a href="reset.html">
+            
+                    
+                    撤销commit方式
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -964,7 +981,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.14.6" data-path="../others/jenkins.html">
+        <li class="chapter " data-level="1.14.6" data-path="../others/linux.html">
+            
+                <a href="../others/linux.html">
+            
+                    
+                    Linux常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.7" data-path="../others/jenkins.html">
             
                 <a href="../others/jenkins.html">
             
@@ -977,7 +1007,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.14.7" data-path="../others/gitbook_publish.html">
+        <li class="chapter " data-level="1.14.8" data-path="../others/gitbook_publish.html">
             
                 <a href="../others/gitbook_publish.html">
             
@@ -1071,13 +1101,13 @@
 <ol>
 <li>&#x5408;&#x5E76;&#x67D0;&#x4E2A;&#x5206;&#x652F;&#x4E0A;&#x7684;&#x5355;&#x4E2A;commit</li>
 </ol>
-<pre><code>git checkout master  
+<pre class="language-"><code>git checkout master  
 git cherry-pick 82ecb31
 </code></pre><p>82ecb31&#x5C31;&#x88AB;&#x5408;&#x5E76;&#x5230;master&#x5206;&#x652F;&#xFF0C;&#x5E76;&#x5728;master&#x4E2D;&#x6DFB;&#x52A0;&#x4E86;commit&#xFF08;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x65B0;&#x7684;commit&#xFF09;&#x3002;cherry-pick &#x548C;merge&#x6BD4;&#x8F83;&#x7C7B;&#x4F3C;&#xFF0C;&#x5982;&#x679C;git&#x4E0D;&#x80FD;&#x5408;&#x5E76;&#x4EE3;&#x7801;&#x6539;&#x52A8;&#xFF08;&#x6BD4;&#x5982;&#x9047;&#x5230;&#x5408;&#x5E76;&#x51B2;&#x7A81;&#xFF09;&#xFF0C;git&#x9700;&#x8981;&#x4F60;&#x81EA;&#x5DF1;&#x6765;&#x89E3;&#x51B3;&#x51B2;&#x7A81;&#x5E76;&#x624B;&#x52A8;&#x6DFB;&#x52A0;commit&#x3002;</p>
 <p>&#x8FD9;&#x91CC;git cherry-pick&#x6BCF;&#x6B21;&#x5408;&#x5E76;&#x8FC7;&#x6765;&#x4F1A;&#x663E;&#x793A;&#x6587;&#x4EF6;&#x51B2;&#x7A81;(&#x5176;&#x5B9E;&#x5E76;&#x6CA1;&#x6709;&#x51B2;&#x7A81;&#x4EE3;&#x7801;&#x90E8;&#x5206;&#xFF0C;&#x53EA;&#x9700;&#x624B;&#x52A8;&#x89E3;&#x51B3;&#x65E2;&#x53EF;)</p>
 <ol>
 <li><p>&#x5408;&#x5E76;&#x67D0;&#x4E2A;&#x5206;&#x652F;&#x4E0A;&#x7684;&#x4E00;&#x7CFB;&#x5217;commitsss</p>
-<pre><code>git checkout featuregit 
+<pre class="language-"><code>git checkout featuregit 
 git checkout -b newbranch 62ecb3
 git rebase --ontomaster 76cada^
 </code></pre></li>
@@ -1085,14 +1115,14 @@ git rebase --ontomaster 76cada^
 </li>
 </ol>
 <p>&#x5982;&#x679C;&#x53EA;&#x60F3;&#x5C06;feature&#x5206;&#x652F;&#x7684;&#x67D0;&#x4E2A;&#x6587;&#x4EF6;f.txt&#x5408;&#x5E76;&#x5230;master&#x5206;&#x652F;&#x4E0A;&#x3002;</p>
-<pre><code>git checkout feature 
+<pre class="language-"><code>git checkout feature 
 git checkout --patch master f.txt
 </code></pre><p>&#x7B2C;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#xFF1A; &#x5207;&#x6362;&#x5230;feature&#x5206;&#x652F;&#xFF1B;
 &#x7B2C;&#x4E8C;&#x4E2A;&#x547D;&#x4EE4;&#xFF1A;&#x5408;&#x5E76;master&#x5206;&#x652F;&#x4E0A;f&#x6587;&#x4EF6;&#x5230;feature&#x5206;&#x652F;&#x4E0A;&#xFF0C;&#x5C06;master&#x5206;&#x652F;&#x4E0A; f &#x6587;&#x4EF6;&#x8FFD;&#x52A0;&#x8865;&#x4E01;&#x5230;feature&#x5206;&#x652F;&#x4E0A; f&#x6587;&#x4EF6;&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x63A5;&#x53D7;&#x6216;&#x8005;&#x62D2;&#x7EDD;&#x8865;&#x4E01;&#x5185;&#x5BB9;&#x3002;</p>
 <p>&#x5982;&#x679C;&#x53EA;&#x662F;&#x7B80;&#x5355;&#x7684;&#x5C06;feature&#x5206;&#x652F;&#x7684;&#x6587;&#x4EF6;f.txt copy&#x5230;master&#x5206;&#x652F;&#x4E0A;&#xFF1B;</p>
-<pre><code>git checkout master
+<pre class="language-"><code>git checkout master
 git checkout feature f.txt
-</code></pre>
+</code></pre><footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> caicai&#xA0;&#x7248;&#x6743;&#x6240;&#x6709;&#xA0;([https://github.com/shmilyCai/knowledge-summary](https://github.com/shmilyCai/knowledge-summary)) </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <span>&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;</span> 2018-09-21 13:39:57 </span> </footer>
                                 
                                 </section>
                             
@@ -1124,7 +1154,7 @@ git checkout feature f.txt
                 </a>
                 
                 
-                <a href="../sass/" class="navigation navigation-next " aria-label="Next page: Sass">
+                <a href="reset.html" class="navigation navigation-next " aria-label="Next page: 撤销commit方式">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1135,7 +1165,7 @@ git checkout feature f.txt
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Git合并指定文件到另一个分支","level":"1.9.6","depth":2,"next":{"title":"Sass","level":"1.10","depth":1,"path":"sass/index.md","ref":"sass/index.md","articles":[{"title":"使用方式","level":"1.10.1","depth":2,"path":"sass/test.md","ref":"sass/test.md","articles":[]}]},"previous":{"title":"合并分支的2种方式","level":"1.9.5","depth":2,"path":"git/merge.md","ref":"git/merge.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"小仙女的前端之路","variables":{},"title":"小仙女的前端之路","links":{"sharing":{"all":false,"facebook":false,"google":false,"twitter":false,"weibo":false},"sidebar":{}},"gitbook":"*","description":"小仙女的前端之路","extension":null},"file":{"path":"git/merge_file.md","mtime":"2018-09-21T02:53:17.727Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-21T02:53:29.972Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Git合并指定文件到另一个分支","level":"1.9.6","depth":2,"next":{"title":"撤销commit方式","level":"1.9.7","depth":2,"path":"git/reset.md","ref":"git/reset.md","articles":[]},"previous":{"title":"合并分支的2种方式","level":"1.9.5","depth":2,"path":"git/merge.md","ref":"git/merge.md","articles":[]},"dir":"ltr"},"config":{"plugins":["page-footer-ex","prism","-highlight","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"livereload":{},"page-footer-ex":{"copyright":"caicai&nbsp;版权所有&nbsp;([https://github.com/shmilyCai/knowledge-summary](https://github.com/shmilyCai/knowledge-summary))","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<span>该文件修订时间</span>"},"search":{},"books":{"prism_themes":["prismjs/themes/prism-tomorrow.css"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"小仙女的前端之路","variables":{},"title":"小仙女的前端之路","links":{"sharing":{"all":false,"facebook":false,"google":false,"twitter":false,"weibo":false},"sidebar":{}},"gitbook":"*","description":"小仙女的前端之路","extension":null},"file":{"path":"git/merge_file.md","mtime":"2018-09-21T05:39:57.170Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-26T02:09:24.033Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

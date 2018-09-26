@@ -17,7 +17,11 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
                 
             
                 
@@ -752,6 +756,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.9.7" data-path="../git/reset.html">
+            
+                <a href="../git/reset.html">
+            
+                    
+                    撤销commit方式
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -964,7 +981,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.14.6" data-path="../others/jenkins.html">
+        <li class="chapter " data-level="1.14.6" data-path="../others/linux.html">
+            
+                <a href="../others/linux.html">
+            
+                    
+                    Linux常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.7" data-path="../others/jenkins.html">
             
                 <a href="../others/jenkins.html">
             
@@ -977,7 +1007,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.14.7" data-path="../others/gitbook_publish.html">
+        <li class="chapter " data-level="1.14.8" data-path="../others/gitbook_publish.html">
             
                 <a href="../others/gitbook_publish.html">
             
@@ -1069,19 +1099,19 @@
                                 <h4 id="&#x8868;&#x5355;&#x9A8C;&#x8BC1;&#x4E8B;&#x4EF6;">&#x8868;&#x5355;&#x9A8C;&#x8BC1;&#x4E8B;&#x4EF6;</h4>
 <h5 id="&#x7981;&#x7528;h5&#x539F;&#x751F;&#x9A8C;&#x8BC1;">&#x7981;&#x7528;H5&#x539F;&#x751F;&#x9A8C;&#x8BC1;</h5>
 <p>form&#x6807;&#x7B7E;&#x5FC5;&#x987B;&#x6709;name&#xFF0C;novalidate&#x5C06;&#x7981;&#x7528;&#x6D4F;&#x89C8;&#x5668;&#x81EA;&#x5E26;&#x7684;&#x9A8C;&#x8BC1;&#x529F;&#x80FD;&#xFF0C;&#x4F7F;&#x7528;angularJS&#x63D0;&#x4F9B;&#x7684;&#x9A8C;&#x8BC1;</p>
-<pre><code>&lt;form name=&quot;myForm&quot; ng-submit=&quot;submit()&quot; novalidate&gt;&lt;form&gt;//&#x7981;&#x7528;&#x4E86;H5&#x539F;&#x751F;&#x7684;&#x63D0;&#x9192;
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>myForm<span class="token punctuation">&quot;</span></span> <span class="token attr-name">ng-submit</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>submit()<span class="token punctuation">&quot;</span></span> <span class="token attr-name">novalidate</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span><span class="token punctuation">&gt;</span></span>//&#x7981;&#x7528;&#x4E86;H5&#x539F;&#x751F;&#x7684;&#x63D0;&#x9192;
 </code></pre><h5 id="&#x9519;&#x8BEF;&#x6D88;&#x606F;&#x63D0;&#x793A;&#x7EDF;&#x4E00;">&#x9519;&#x8BEF;&#x6D88;&#x606F;&#x63D0;&#x793A;&#x7EDF;&#x4E00;</h5>
 <p>&#x8868;&#x5355;&#x63D0;&#x4F9B;&#x7EDF;&#x4E00;&#x7684;&#x63D0;&#x793A;&#x5185;&#x5BB9;&#xFF0C;&#x5185;&#x5BB9;&#x653E;&#x5728;common/message.html&#x9875;&#x9762;&#x91CC;&#xFF0C;&#x6BCF;&#x4E2A;&#x9700;&#x8981;&#x9A8C;&#x8BC1;&#x7684;input&#x540E;&#xFF0C;&#x90FD;&#x5FC5;&#x987B;&#x52A0;&#x4E0A;&#x7EDF;&#x4E00;&#x7684;&#x63D0;&#x793A;</p>
-<pre><code>&lt;input type=&quot;text&quot; class=&quot;form-control&quot; data-ng-model=&quot;name&quot; name=&quot;name&quot; required ng-minlength=&quot;4&quot;
-   ng-pattern=&quot;/a-zA-Z/&quot; ng-maxlength=&quot;16&quot; placeholder=&quot;&#x8BF7;&#x8F93;&#x5165;4-16&#x4E2A;&#x5B57;&#x7B26;&quot;&gt;
-&lt;div class=&quot;form-error&quot; ng-messages=&quot;form.name.$error&quot;
- ng-messages-include=&quot;app/common/messages.html&quot;&gt;&lt;/div&gt;
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>text<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form-control<span class="token punctuation">&quot;</span></span> <span class="token attr-name">data-ng-model</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>name<span class="token punctuation">&quot;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>name<span class="token punctuation">&quot;</span></span> <span class="token attr-name">required</span> <span class="token attr-name">ng-minlength</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>4<span class="token punctuation">&quot;</span></span>
+   <span class="token attr-name">ng-pattern</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>/a-zA-Z/<span class="token punctuation">&quot;</span></span> <span class="token attr-name">ng-maxlength</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>16<span class="token punctuation">&quot;</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>&#x8BF7;&#x8F93;&#x5165;4-16&#x4E2A;&#x5B57;&#x7B26;<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form-error<span class="token punctuation">&quot;</span></span> <span class="token attr-name">ng-messages</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form.name.$error<span class="token punctuation">&quot;</span></span>
+ <span class="token attr-name">ng-messages-include</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>app/common/messages.html<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
 </code></pre><h5 id="&#x7126;&#x70B9;&#x89E6;&#x53D1;&#x9A8C;&#x8BC1;">&#x7126;&#x70B9;&#x89E6;&#x53D1;&#x9A8C;&#x8BC1;</h5>
 <p>&#x521B;&#x5EFA;<code>$scope.focused=false;</code>&#xFF0C;&#x4F7F;&#x7528;ng-focus,ng-blur&#x4E8B;&#x4EF6;&#xFF0C;&#x4FEE;&#x6539;focused&#x72B6;&#x6001;&#xFF08;&#x5206;&#x522B;&#x4E3A;&#x83B7;&#x5F97;&#x7126;&#x70B9;&#xFF0C;&#x5931;&#x53BB;&#x7126;&#x70B9;&#x4E8B;&#x4EF6;&#xFF09;</p>
-<pre><code>myForm.username.$error.required //&#x9A8C;&#x8BC1;&#x5931;&#x8D25;
+<pre class="language-"><code>myForm.username.$error.required //&#x9A8C;&#x8BC1;&#x5931;&#x8D25;
 </code></pre><h5 id="&#x63D0;&#x4EA4;&#x8868;&#x5355;&#x9A8C;&#x8BC1;">&#x63D0;&#x4EA4;&#x8868;&#x5355;&#x9A8C;&#x8BC1;</h5>
 <p>&#x521B;&#x5EFA;<code>$scope.submitted=false;</code>&#x63D0;&#x4EA4;&#x8868;&#x5355;&#x65F6;&#xFF0C;&#x5982;&#x679C;<code>$scope.form.$invalid===true</code>,&#x5C06;&#x5176;&#x8BBE;&#x7F6E;&#x4E3A;true&#xFF0C;&#x4ECE;&#x800C;&#x663E;&#x793A;&#x9519;&#x8BEF;&#x4FE1;&#x606F;</p>
-<pre><code>$scope.submitted = false;
+<pre class="language-"><code>$scope.submitted = false;
 $scope.submit = function () {
     if($scope.myForm.$valid){
         $scope.submitted = false;//&#x9A8C;&#x8BC1;&#x901A;&#x8FC7;&#x65F6;&#x4E0D;&#x663E;&#x793A;
@@ -1099,38 +1129,38 @@ $scope.submit = function () {
 </ul>
 <h5 id="&#x5FC5;&#x586B;">&#x5FC5;&#x586B;</h5>
 <p>&#x9A8C;&#x8BC1;&#x662F;&#x5426;&#x8F93;&#x5165;&#x5B57;&#x7B26;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x5728;&#x6807;&#x7B7E;&#x4E0A;&#x52A0;&#x4E0A;required</p>
-<pre><code>&lt;input type=&quot;text&quot; required /&gt;
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>text<span class="token punctuation">&quot;</span></span> <span class="token attr-name">required</span> <span class="token punctuation">/&gt;</span></span>
 </code></pre><h5 id="&#x6570;&#x5B57;">&#x6570;&#x5B57;</h5>
 <p>&#x9A8C;&#x8BC1;&#x8F93;&#x5165;&#x7684;&#x662F;&#x6570;&#x5B57;&#xFF0C;type&#x8BBE;&#x7F6E;&#x4E3A;number&#xFF0C;max&#x8BBE;&#x7F6E;&#x9700;&#x8981;&#x6700;&#x5927;&#x7684;&#x6570;&#x503C;&#xFF0C;&#x6700;&#x5C0F;&#x7684;&#x6570;&#x503C;&#x4E3A;1</p>
-<pre><code>&lt;input type=&quot;number&quot; class=&quot;form-control&quot; data-ng-model=&quot;number&quot; name=&quot;number&quot; max=&quot;4094&quot; min=&quot;1&quot;&gt;
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>number<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form-control<span class="token punctuation">&quot;</span></span> <span class="token attr-name">data-ng-model</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>number<span class="token punctuation">&quot;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>number<span class="token punctuation">&quot;</span></span> <span class="token attr-name">max</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>4094<span class="token punctuation">&quot;</span></span> <span class="token attr-name">min</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>1<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
 </code></pre><h5 id="&#x6700;&#x5C0F;&#x957F;&#x5EA6;&#x548C;&#x6700;&#x5927;&#x957F;&#x5EA6;">&#x6700;&#x5C0F;&#x957F;&#x5EA6;&#x548C;&#x6700;&#x5927;&#x957F;&#x5EA6;</h5>
 <p>&#x9A8C;&#x8BC1;&#x8F93;&#x5165;&#x81F3;&#x5C11;&#x8F93;&#x5165;&#x7684;&#x5B57;&#x7B26;&#x6570;</p>
-<pre><code>&lt;input type=&quot;text&quot; ng-minlength=&quot;4&quot;  ng-maxlength=&quot;20&quot;/&gt;
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>text<span class="token punctuation">&quot;</span></span> <span class="token attr-name">ng-minlength</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>4<span class="token punctuation">&quot;</span></span>  <span class="token attr-name">ng-maxlength</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>20<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
 </code></pre><h5 id="email">Email</h5>
 <p>&#x9A8C;&#x8BC1;&#x8F93;&#x5165;&#x5B57;&#x7B26;&#x662F;&#x4E00;&#x4E2A;&#x7535;&#x5B50;&#x90AE;&#x4EF6;</p>
-<pre><code>&lt;input type=&quot;email&quot; name=&quot;email&quot; ng-model=&quot;&quot; /&gt;
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>email<span class="token punctuation">&quot;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>email<span class="token punctuation">&quot;</span></span> <span class="token attr-name">ng-model</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span><span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
 </code></pre><h5 id="ip&#x9A8C;&#x8BC1;">IP&#x9A8C;&#x8BC1;</h5>
 <p>&#x9A8C;&#x8BC1;&#x8F93;&#x5165;&#x7684;IP&#x683C;&#x5F0F;</p>
-<pre><code>&lt;input type=&quot;text&quot; class=&quot;form-control&quot; data-ng-model=&quot;ipNumber&quot; ui-mask=&quot;999.999.999.999&quot;  ui-mask-placeholder ui-mask-placeholder-char=&quot;_&quot;/&gt;
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>text<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form-control<span class="token punctuation">&quot;</span></span> <span class="token attr-name">data-ng-model</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>ipNumber<span class="token punctuation">&quot;</span></span> <span class="token attr-name">ui-mask</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>999.999.999.999<span class="token punctuation">&quot;</span></span>  <span class="token attr-name">ui-mask-placeholder</span> <span class="token attr-name">ui-mask-placeholder-char</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>_<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
 </code></pre><h5 id="&#x6B63;&#x5219;&#x5339;&#x914D;">&#x6B63;&#x5219;&#x5339;&#x914D;</h5>
 <p>&#x8981;&#x786E;&#x4FDD;&#x8F93;&#x5165;&#x5339;&#x914D;&#x7684;&#x4E00;&#x4E2A;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x4F7F;&#x7528;ng-pattern</p>
-<pre><code>&lt;input type=&quot;text&quot; ng-pattern=&quot;/a-zA-Z/&quot; /&gt;
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>text<span class="token punctuation">&quot;</span></span> <span class="token attr-name">ng-pattern</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>/a-zA-Z/<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
 </code></pre><h5 id="&#x9A8C;&#x8BC1;&#x8F93;&#x5165;&#x7684;&#x5185;&#x5BB9;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;">&#x9A8C;&#x8BC1;&#x8F93;&#x5165;&#x7684;&#x5185;&#x5BB9;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;</h5>
 <p>&#x4E00;&#x822C;&#x7528;&#x4E8E;&#x540D;&#x79F0;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x88AB;&#x4F7F;&#x7528;&#xFF0C;&#x4E0B;&#x9762;&#x6709;&#x5177;&#x4F53;&#x7684;&#x8C03;&#x7528;&#x540E;&#x53F0;&#x7684;&#x6848;&#x4F8B;</p>
-<pre><code>&lt;div class=&quot;form-group&quot; ng-controller=&quot;ValidateCtrl&quot;&gt;
-&lt;label class=&quot;col-sm-3 control-label&quot;&gt;Email&lt;/label&gt;
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form-group<span class="token punctuation">&quot;</span></span> <span class="token attr-name">ng-controller</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>ValidateCtrl<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>col-sm-3 control-label<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Email<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
 
-&lt;div class=&quot;col-sm-7&quot;&gt;
-&lt;input class=&quot;form-control&quot; name=&quot;email&quot; placeholder=&quot;try john.doe@mail.com or bad@domain.com&quot;
-       type=&quot;email&quot; required ng-model=&quot;email&quot; ng-model-options=&quot;{ debounce: 500 }&quot;
-       data-ui-validate=&quot;{duplicated: &apos;notBlackListed($value)&apos;}&quot;
-       ui-validate-async=&quot;{duplicated: &apos;doesNotExist($modelValue)&apos; }&quot;&gt;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>col-sm-7<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form-control<span class="token punctuation">&quot;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>email<span class="token punctuation">&quot;</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>try john.doe@mail.com or bad@domain.com<span class="token punctuation">&quot;</span></span>
+       <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>email<span class="token punctuation">&quot;</span></span> <span class="token attr-name">required</span> <span class="token attr-name">ng-model</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>email<span class="token punctuation">&quot;</span></span> <span class="token attr-name">ng-model-options</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>{ debounce: 500 }<span class="token punctuation">&quot;</span></span>
+       <span class="token attr-name">data-ui-validate</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>{duplicated: <span class="token punctuation">&apos;</span>notBlackListed($value)<span class="token punctuation">&apos;</span>}<span class="token punctuation">&quot;</span></span>
+       <span class="token attr-name">ui-validate-async</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>{duplicated: <span class="token punctuation">&apos;</span>doesNotExist($modelValue)<span class="token punctuation">&apos;</span> }<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
 
-&lt;div class=&quot;form-error&quot; ng-messages=&quot;form.email.$error&quot;
-     ng-messages-include=&quot;app/common/messages.html&quot;&gt;&lt;/div&gt;
-&lt;p class=&quot;text-muted&quot;&gt;(&#x9A8C;&#x8BC1;&#x540D;&#x5B57;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x5217;&#x8868;)&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form-error<span class="token punctuation">&quot;</span></span> <span class="token attr-name">ng-messages</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form.email.$error<span class="token punctuation">&quot;</span></span>
+     <span class="token attr-name">ng-messages-include</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>app/common/messages.html<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>text-muted<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>(&#x9A8C;&#x8BC1;&#x540D;&#x5B57;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x5217;&#x8868;)<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
 .controller(&apos;ValidateCtrl&apos;, function($scope, $timeout, $q) {
 $scope.notBlackListed = function(value) {
 var blacklist = [&apos;bad@domain.com&apos;, &apos;verybad@domain.com&apos;];
@@ -1150,13 +1180,13 @@ return $q(function(resolve, reject) {
 };
 });
 </code></pre><p>&#x4F18;&#x5316;&#x540E;&#x7684;&#xFF1A;</p>
-<pre><code>&lt;input name=&quot;farm_name&quot; type=&quot;text&quot; class=&quot;form-control&quot;
+<pre class="language-"><code>&lt;input name=&quot;farm_name&quot; type=&quot;text&quot; class=&quot;form-control&quot;
    data-ng-model=&quot;appStackData.farm.name&quot;
    required
    ng-model-options=&quot;{ debounce: 500 }&quot;  //&#x5F85;input&#x8F93;&#x5165;&#x5185;&#x5BB9;&#x540E;&#xFF0C;&#x6709;500&#x6BEB;&#x79D2;&#x7684;&#x5EF6;&#x8FDF;&#xFF0C;&#x5728;&#x6267;&#x884C;checkAppStackName
    data-ui-validate=&quot;{duplicated : &apos;checkAppStackName($value)&apos; }&quot;&gt;
-&lt;div ng-messages=&quot;appStack.farm_name.$error&quot; class=&quot;form-error&quot;
- data-ng-messages-include=&quot;app/views/common/messages.html&quot;&gt;&lt;/div&gt;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">ng-messages</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>appStack.farm_name.$error<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form-error<span class="token punctuation">&quot;</span></span>
+ <span class="token attr-name">data-ng-messages-include</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>app/views/common/messages.html<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
 
 //&#x63A7;&#x5236;&#x5668;&#x4E2D;&#x7684;&#x5185;&#x5BB9;
 $scope.checkAppStackName = function (name) {
@@ -1181,43 +1211,43 @@ return defered.promise; //&#x8FD4;&#x56DE;&#x627F;&#x8BFA;&#xFF0C;&#x8FD9;&#x91C
 };
 </code></pre><h5 id="&#x5BC6;&#x7801;&#x9A8C;&#x8BC1;">&#x5BC6;&#x7801;&#x9A8C;&#x8BC1;</h5>
 <p>&#x6B64;&#x5904;&#x9A8C;&#x8BC1;2&#x6B21;&#x8F93;&#x5165;&#x7684;&#x5BC6;&#x7801;&#x662F;&#x5426;&#x76F8;&#x540C;</p>
-<pre><code>&lt;section class=&quot;col-sm-6&quot;&gt;
-&lt;div class=&quot;form-group&quot;&gt;
-&lt;label class=&quot;col-sm-3 control-label&quot;&gt;&#x5BC6;&#x7801;&lt;/label&gt;
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>section</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>col-sm-6<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form-group<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>col-sm-3 control-label<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>&#x5BC6;&#x7801;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
 
-&lt;div class=&quot;col-sm-7&quot;&gt;
-  &lt;input class=&quot;form-control&quot; name=&quot;password&quot; type=&quot;text&quot; required ng-model=&quot;password&quot;
-         placeholder=&quot;password&quot;&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;p class=&quot;text-center text-muted&quot;&gt;&#x4EE5;&#x4E0B;&#x4E3A;2&#x79CD;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&lt;/p&gt;
-&lt;div class=&quot;form-group&quot;&gt;
-&lt;label class=&quot;col-sm-3 control-label&quot;&gt;&#x786E;&#x8BA4;&#x5BC6;&#x7801;&lt;/label&gt;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>col-sm-7<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form-control<span class="token punctuation">&quot;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>password<span class="token punctuation">&quot;</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>text<span class="token punctuation">&quot;</span></span> <span class="token attr-name">required</span> <span class="token attr-name">ng-model</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>password<span class="token punctuation">&quot;</span></span>
+         <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>password<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>text-center text-muted<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>&#x4EE5;&#x4E0B;&#x4E3A;2&#x79CD;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form-group<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>col-sm-3 control-label<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>&#x786E;&#x8BA4;&#x5BC6;&#x7801;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
 //&#x7B2C;&#x4E00;&#x79CD;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;
-&lt;div class=&quot;col-sm-7&quot;&gt;
-  &lt;input class=&quot;form-control&quot; name=&quot;confirm_password&quot; type=&quot;text&quot; required ng-model=&quot;confirm_password&quot;
-         ui-validate=&quot;&apos;$value === password&apos; &quot;
-         ng-model-options=&quot;{ debounce: 500 }&quot;
-         ui-validate-watch=&quot; &apos;password&apos; &quot; placeholder=&quot;confirm password&quot;&gt;
-  &lt;div ng-show=&apos;form.confirm_password.$error&apos;
-       ng-messages-include=&quot;app/common/messages.html&quot;&gt;&lt;/div&gt;
-  &lt;span ng-show=&apos;form.confirm_password.$error.validator&apos; class=&quot;form-error&quot;&gt;2&#x6B21;&#x8F93;&#x5165;&#x7684;&#x5BC6;&#x7801;&#x4E0D;&#x4E00;&#x81F4;&lt;/span&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>col-sm-7<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form-control<span class="token punctuation">&quot;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>confirm_password<span class="token punctuation">&quot;</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>text<span class="token punctuation">&quot;</span></span> <span class="token attr-name">required</span> <span class="token attr-name">ng-model</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>confirm_password<span class="token punctuation">&quot;</span></span>
+         <span class="token attr-name">ui-validate</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span><span class="token punctuation">&apos;</span>$value === password<span class="token punctuation">&apos;</span> <span class="token punctuation">&quot;</span></span>
+         <span class="token attr-name">ng-model-options</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>{ debounce: 500 }<span class="token punctuation">&quot;</span></span>
+         <span class="token attr-name">ui-validate-watch</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span> <span class="token punctuation">&apos;</span>password<span class="token punctuation">&apos;</span> <span class="token punctuation">&quot;</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>confirm password<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">ng-show</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&apos;</span>form.confirm_password.$error<span class="token punctuation">&apos;</span></span>
+       <span class="token attr-name">ng-messages-include</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>app/common/messages.html<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">ng-show</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&apos;</span>form.confirm_password.$error.validator<span class="token punctuation">&apos;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form-error<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>2&#x6B21;&#x8F93;&#x5165;&#x7684;&#x5BC6;&#x7801;&#x4E0D;&#x4E00;&#x81F4;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
 //&#x7B2C;&#x4E8C;&#x79CD;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;
-&lt;div class=&quot;form-group&quot;&gt;
-&lt;label class=&quot;col-sm-3 control-label&quot;&gt;&#x786E;&#x8BA4;&#x5BC6;&#x7801;&lt;/label&gt;
-&lt;div class=&quot;col-sm-7&quot;&gt;
-  &lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;confirm password&quot;
-         name=&quot;confirmPassword&quot;
-         data-ng-model=&quot;confirmPassword&quot;
-         compare-to=&quot;password&quot;&gt;
-  &lt;div ng-messages=&quot;form.confirmPassword.$error&quot;
-       ng-messages-include=&quot;app/common/messages.html&quot; class=&quot;form-error&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form-group<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>col-sm-3 control-label<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>&#x786E;&#x8BA4;&#x5BC6;&#x7801;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>col-sm-7<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>text<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form-control<span class="token punctuation">&quot;</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>confirm password<span class="token punctuation">&quot;</span></span>
+         <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>confirmPassword<span class="token punctuation">&quot;</span></span>
+         <span class="token attr-name">data-ng-model</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>confirmPassword<span class="token punctuation">&quot;</span></span>
+         <span class="token attr-name">compare-to</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>password<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">ng-messages</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form.confirmPassword.$error<span class="token punctuation">&quot;</span></span>
+       <span class="token attr-name">ng-messages-include</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>app/common/messages.html<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form-error<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
 
-&lt;/section&gt;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>section</span><span class="token punctuation">&gt;</span></span>
 
 //compare-to&#x6307;&#x4EE4;
 .directive(&apos;compareTo&apos;, [
@@ -1239,7 +1269,7 @@ return {
   }
 };
 }])
-</code></pre>
+</code></pre><footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> caicai&#xA0;&#x7248;&#x6743;&#x6240;&#x6709;&#xA0;([https://github.com/shmilyCai/knowledge-summary](https://github.com/shmilyCai/knowledge-summary)) </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <span>&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;</span> 2018-09-21 13:39:57 </span> </footer>
                                 
                                 </section>
                             
@@ -1282,7 +1312,7 @@ return {
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"form表单验证常用方法","level":"1.4.3","depth":2,"next":{"title":"form表单状态","level":"1.4.4","depth":2,"path":"angularjs/form_status.md","ref":"angularjs/form_status.md","articles":[]},"previous":{"title":"双向绑定","level":"1.4.2","depth":2,"path":"angularjs/model.md","ref":"angularjs/model.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"小仙女的前端之路","variables":{},"title":"小仙女的前端之路","links":{"sharing":{"all":false,"facebook":false,"google":false,"twitter":false,"weibo":false},"sidebar":{}},"gitbook":"*","description":"小仙女的前端之路","extension":null},"file":{"path":"angularjs/form.md","mtime":"2018-09-21T02:53:17.711Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-21T02:53:29.972Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"form表单验证常用方法","level":"1.4.3","depth":2,"next":{"title":"form表单状态","level":"1.4.4","depth":2,"path":"angularjs/form_status.md","ref":"angularjs/form_status.md","articles":[]},"previous":{"title":"双向绑定","level":"1.4.2","depth":2,"path":"angularjs/model.md","ref":"angularjs/model.md","articles":[]},"dir":"ltr"},"config":{"plugins":["page-footer-ex","prism","-highlight","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"livereload":{},"page-footer-ex":{"copyright":"caicai&nbsp;版权所有&nbsp;([https://github.com/shmilyCai/knowledge-summary](https://github.com/shmilyCai/knowledge-summary))","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<span>该文件修订时间</span>"},"search":{},"books":{"prism_themes":["prismjs/themes/prism-tomorrow.css"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"小仙女的前端之路","variables":{},"title":"小仙女的前端之路","links":{"sharing":{"all":false,"facebook":false,"google":false,"twitter":false,"weibo":false},"sidebar":{}},"gitbook":"*","description":"小仙女的前端之路","extension":null},"file":{"path":"angularjs/form.md","mtime":"2018-09-21T05:39:57.154Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-26T02:09:24.033Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

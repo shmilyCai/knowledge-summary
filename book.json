@@ -28,6 +28,23 @@
         "pageNumbers": false,
         "paperSize": "a4"
     },
-    "plugins": [],
+    "plugins": [
+        "page-footer-ex",
+        "prism", 
+        "-highlight"
+    ],
+    "pluginsConfig": {
+        "page-footer-ex": {
+            "copyright": "caicai&nbsp;版权所有&nbsp;([https://github.com/shmilyCai/knowledge-summary](https://github.com/shmilyCai/knowledge-summary))",
+            "markdown": false,
+            "update_label": "<span>该文件修订时间</span>",
+            "update_format": "YYYY-MM-DD HH:mm:ss"
+        },
+         "books": {
+            "prism_themes": [
+              "prismjs/themes/prism-tomorrow.css"
+            ]
+          }
+    },
     "variables": {}
 }

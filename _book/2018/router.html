@@ -17,7 +17,11 @@
     
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
                 
             
                 
@@ -752,6 +756,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.9.7" data-path="../git/reset.html">
+            
+                <a href="../git/reset.html">
+            
+                    
+                    撤销commit方式
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -964,7 +981,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.14.6" data-path="../others/jenkins.html">
+        <li class="chapter " data-level="1.14.6" data-path="../others/linux.html">
+            
+                <a href="../others/linux.html">
+            
+                    
+                    Linux常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.7" data-path="../others/jenkins.html">
             
                 <a href="../others/jenkins.html">
             
@@ -977,7 +1007,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.14.7" data-path="../others/gitbook_publish.html">
+        <li class="chapter " data-level="1.14.8" data-path="../others/gitbook_publish.html">
             
                 <a href="../others/gitbook_publish.html">
             
@@ -1069,18 +1099,18 @@
                                 <h4 id="angularjs&#x4E2D;&#x5237;&#x65B0;&#x5F53;&#x524D;&#x9875;&#x9762;&#x65B9;&#x6CD5;">angularJS&#x4E2D;&#x5237;&#x65B0;&#x5F53;&#x524D;&#x9875;&#x9762;&#x65B9;&#x6CD5;</h4>
 <ol>
 <li><p>&#x6709;&#x4E9B;&#x65F6;&#x5019;&#x597D;&#x50CF;&#x4E0D;&#x7BA1;&#x7528;&#xFF0C;&#x5FD8;&#x8BB0;&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x4E0D;&#x7BA1;&#x7528;&#x4E86;</p>
-<pre><code>$state.reload();
+<pre class="language-"><code>$state.reload();
 </code></pre></li>
 <li><p>&#x8FD9;&#x4E2A;&#x5FC5;&#x987B;&#x77E5;&#x9053;&#x8DEF;&#x7531;&#x91CC;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x5168;&#x5C40;&#x63A7;&#x5236;&#xFF0C;&#x53C2;&#x6570;&#x4E0D;&#x660E;&#x767D;</p>
-<pre><code>$state.go($state.current, {}, {reload: true}); //second parameter is for $stateParams
+<pre class="language-"><code>$state.go($state.current, {}, {reload: true}); //second parameter is for $stateParams
 </code></pre></li>
 <li><p>&#x83B7;&#x53D6;&#x8DEF;&#x7531;name&#xFF0C;&#x7136;&#x540E;&#x52A0;&#x8F7D;&#x8BE5;&#x8DEF;&#x7531;</p>
-<pre><code>$state.reload($state.current.name);
+<pre class="language-"><code>$state.reload($state.current.name);
 </code></pre></li>
 </ol>
 <p>4.&#x6682;&#x65F6;&#x6CA1;&#x6709;&#x4F7F;&#x7528;&#x8FC7;&#xFF0C;&#x4E0D;&#x77E5;&#x9053;&#x6548;&#x679C;&#xFF0C;&#x5F85;&#x540E;&#x7EED;&#x66F4;&#x65B0;&#x6548;&#x679C;</p>
-<pre><code>$state.forceReload();
-</code></pre>
+<pre class="language-"><code>$state.forceReload();
+</code></pre><footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> caicai&#xA0;&#x7248;&#x6743;&#x6240;&#x6709;&#xA0;([https://github.com/shmilyCai/knowledge-summary](https://github.com/shmilyCai/knowledge-summary)) </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <span>&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;</span> 2018-09-21 13:39:57 </span> </footer>
                                 
                                 </section>
                             
@@ -1123,7 +1153,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"angularJS中刷新当前页面方法","level":"1.3.3","depth":2,"next":{"title":"页面第一次加载时接口异步但有些需要触发同步操作","level":"1.3.4","depth":2,"path":"2018/endpoint.md","ref":"2018/endpoint.md","articles":[]},"previous":{"title":"链式调用和并发调用","level":"1.3.2","depth":2,"path":"2018/api_sequence.md","ref":"2018/api_sequence.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"小仙女的前端之路","variables":{},"title":"小仙女的前端之路","links":{"sharing":{"all":false,"facebook":false,"google":false,"twitter":false,"weibo":false},"sidebar":{}},"gitbook":"*","description":"小仙女的前端之路","extension":null},"file":{"path":"2018/router.md","mtime":"2018-09-21T02:53:17.639Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-21T02:53:29.972Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"angularJS中刷新当前页面方法","level":"1.3.3","depth":2,"next":{"title":"页面第一次加载时接口异步但有些需要触发同步操作","level":"1.3.4","depth":2,"path":"2018/endpoint.md","ref":"2018/endpoint.md","articles":[]},"previous":{"title":"链式调用和并发调用","level":"1.3.2","depth":2,"path":"2018/api_sequence.md","ref":"2018/api_sequence.md","articles":[]},"dir":"ltr"},"config":{"plugins":["page-footer-ex","prism","-highlight","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"livereload":{},"page-footer-ex":{"copyright":"caicai&nbsp;版权所有&nbsp;([https://github.com/shmilyCai/knowledge-summary](https://github.com/shmilyCai/knowledge-summary))","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<span>该文件修订时间</span>"},"search":{},"books":{"prism_themes":["prismjs/themes/prism-tomorrow.css"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"小仙女的前端之路","variables":{},"title":"小仙女的前端之路","links":{"sharing":{"all":false,"facebook":false,"google":false,"twitter":false,"weibo":false},"sidebar":{}},"gitbook":"*","description":"小仙女的前端之路","extension":null},"file":{"path":"2018/router.md","mtime":"2018-09-21T05:39:57.034Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-09-26T02:09:24.033Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

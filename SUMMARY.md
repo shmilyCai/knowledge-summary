@@ -63,7 +63,7 @@
   * [RestfulAPI](others/api.md)
   * [Gitbook](others/gitbook.md)
   * [Vim常用命令](others/vim.md)
-  * [Linux常用命令](others/jenkins.md)
+  * [Linux常用命令](others/linux.md)
   * [jenkins](others/jenkins.md)
   * [gitbook周五的发布版本命令](others/gitbook_publish.md)
 * [Markdown使用说明](others/markdown.md)
