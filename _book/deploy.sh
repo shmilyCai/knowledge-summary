@@ -3,7 +3,7 @@
 ### 更新gh-pages下的文件
 git checkout gh-pages
 git branch
-rm -rf  *
+rm -rf *~
 git checkout master _book 
 cp -ri /Users/caiyali/git/github/knowledge-summary/_book/*  /Users/caiyali/git/github/knowledge-summary
 rm -rf _book
