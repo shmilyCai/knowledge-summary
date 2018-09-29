@@ -1,20 +1,21 @@
 #### docker打包部署命令
 
-//查看docker镜像
-`docker image`
+`docker image`   //查看docker镜像
 
-//更改配置文件
 `cat .env`
-`vim .env`
+`vim .env`   //更改配置文件
 
-//暂停docker镜像
-`docker-compose stop name`
+`docker-compose stop name`   //暂停容器
 
-//删除docker中的镜像文件
-`docker-compose rm -f name`
+`docker-compose rm -f name`   //删除停止的容器
 
-//启动docker中的镜像
-`docker-compose up -d name`
+`docker rmi ImageId`  //docker删除镜像文件，需要重新下载最新的包
 
-//查看docker中的pulsar进程
-`docker ps|grep pulsar `
+`docker-compose up -d name`   //重新启动docker，自动下载最新的包
+
+`docker ps|grep pulsar `   //查看与pulsar有关的容器
+
+`docker-compose ps`   //查看运行状况
+
+
+`docker-compose`
