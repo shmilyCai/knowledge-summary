@@ -61,6 +61,7 @@
   * [docker](java/docker.md)
 * [Others](others/index.md)
   * [Gulp](others/gulp.md)
+  * [常见的前端优化内容](others/web_optimize.md)
   * [远程开发](others/remote_develop.md)
   * [总结-如何管理好10万行代码的前端单页面应用](others/01.md)
   * [RestfulAPI](others/api.md)
