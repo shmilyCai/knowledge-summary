@@ -17,5 +17,6 @@
 
 `docker-compose ps`   //查看运行状况
 
+`docker logs -f`  //查看日志
 
 `docker-compose`
