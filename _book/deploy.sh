@@ -11,7 +11,7 @@ rm -rf _book
 #### 提交到git上
 date=$(date +%Y%m%d)
 git add .
-git commit -am"$date"
+git commit -am"$date-周五发布"
 git push
 
 git branch

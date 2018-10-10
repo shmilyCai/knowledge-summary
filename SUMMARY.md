@@ -33,6 +33,7 @@
   * [localStorage与sessionStorage区别](html/localSession.md)
   * [Server-Sent Events(SSE)-消息流接收方法](javascript/eventSource.md)
 * [CSS3](css/index.md)
+  * [css居中说明](css/css_centering.md)
   * [页面布局](css/layout.md)
   * [常用样式说明](css/daily.md)
   * [选择器](css/selected.md)
