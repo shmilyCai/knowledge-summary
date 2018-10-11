@@ -45,6 +45,8 @@
   * [其他](css/others.md)
 * [ES6](es/index.md)
   * [for_of](es/for_of.md)
+* [angular2](angular/index.md)
+  * [index](angular/index.md)
 * [git](git/index.md)
   * [常规操作](git/daily.md)
   * [常规指令说明](git/mores.md)
