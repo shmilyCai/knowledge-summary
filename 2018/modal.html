@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>2018-坑（经验） · 小仙女的前端之路</title>
+        <title>模态对话框使用方法及常见问题解决 · 小仙女的前端之路</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="angular_bootstrap.html" />
+    <link rel="next" href="../angularjs/" />
     
     
-    <link rel="prev" href="../aboutme.html" />
+    <link rel="prev" href="button.html" />
     
 
     </head>
@@ -121,7 +121,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3" data-path="./">
+        <li class="chapter " data-level="1.3" data-path="./">
             
                 <a href="./">
             
@@ -213,7 +213,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.7" data-path="modal.html">
+        <li class="chapter active" data-level="1.3.7" data-path="modal.html">
             
                 <a href="modal.html">
             
@@ -1204,7 +1204,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >2018-坑（经验）</a>
+        <a href=".." >模态对话框使用方法及常见问题解决</a>
     </h1>
 </div>
 
@@ -1219,9 +1219,82 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h4 id="2018">2018</h4>
-<p>&#x8BB0;&#x5F55;2018&#x5E74;&#x548C;2018&#x4E4B;&#x524D;&#x9047;&#x89C1;&#x548C;&#x603B;&#x7ED3;&#x7684;&#x95EE;&#x9898;</p>
-<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> caicai&#xA0;&#x7248;&#x6743;&#x6240;&#x6709;&#xA0;(https://github.com/shmilyCai/knowledge-summary) </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <span>&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;</span> 2018-09-28 15:00:12 </span> </footer>
+                                <h4 id="&#x6A21;&#x6001;&#x5BF9;&#x8BDD;&#x6846;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x53CA;&#x5E38;&#x89C1;&#x95EE;&#x9898;&#x89E3;&#x51B3;">&#x6A21;&#x6001;&#x5BF9;&#x8BDD;&#x6846;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x53CA;&#x5E38;&#x89C1;&#x95EE;&#x9898;&#x89E3;&#x51B3;</h4>
+<p>&#x5173;&#x4E8E;angularJS&#x4E2D;&#x7684;angular-bootstrap&#x7684;modal&#x5F39;&#x51FA;&#x6846;&#x95EE;&#x9898;</p>
+<hr>
+<p>modal&#x6846;&#x5F39;&#x51FA;&#x65B9;&#x5F0F;&#x4E00;</p>
+<p>&#x4F7F;&#x7528;&#x6B63;&#x5E38;&#x7684;<code>data-ng-click</code>&#x4E8B;&#x4EF6;&#x8FDB;&#x884C;&#x5F39;&#x51FA;</p>
+<p>&#x4F18;&#x70B9;&#xFF1A;modal&#x6846;&#x7684;&#x2018;nbNewVolumeCtrl&#x2019;&#x63A7;&#x5236;&#x5668;&#x4E2D;&#x7684;scope&#x4E0E;&#x7236;&#x7EA7;&#x7684;&#x63A7;&#x5236;&#x5668;&#x662F;&#x76F8;&#x540C;&#x7684;,&#x53EF;&#x4EE5;&#x4E92;&#x76F8;&#x4F7F;&#x7528;$scope&#x4E2D;&#x7684;&#x6570;&#x636E;</p>
+<p>&#x7F3A;&#x70B9;&#xFF1A;&#x5F53;&#x5728;&#x9875;&#x9762;&#x4E2D;&#x70B9;&#x51FA;&#x5F39;&#x51FA;&#x6846;&#xFF0C;&#x70B9;&#x51FB;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x9875;&#x9762;&#x524D;&#x8FDB;&#xFF0C;&#x540E;&#x9000;&#x6216;&#x8005;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x76F4;&#x63A5;&#x91CD;&#x65B0;&#x8F93;&#x5165;login&#x5730;&#x5740;&#xFF0C;&#x5F39;&#x51FA;&#x6846;&#x4F1A;&#x4E00;&#x76F4;&#x5B58;&#x5728;&#x9875;&#x9762;&#x4E2D;&#xFF0C;</p>
+<pre class="language-"><code>$scope.openModal = function(){
+    $scope.modalInstance  = $modal.open({
+    templateUrl: &apos;app/components/volumes/volumes.new.html&apos;,
+    controller: &apos;nbNewVolumeCtrl&apos;,
+    backdrop: &apos;static&apos;,
+    scope: $scope
+    });
+}
+</code></pre><hr>
+<p>modal&#x6846;&#x5F39;&#x51FA;&#x65B9;&#x5F0F;&#x4E8C;</p>
+<p>&#x5C06;modal&#x5199;&#x6210;&#x8DEF;&#x7531;&#x5F62;&#x5F0F;</p>
+<p>&#x4F18;&#x70B9;&#xFF1A;&#x5F53;modal&#x6846;&#x6253;&#x5F00;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x70B9;&#x51FB;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x524D;&#x8FDB;&#x548C;&#x540E;&#x9000;&#xFF0C;&#x5F39;&#x51FA;&#x6846;&#x968F;&#x4E4B;&#x5173;&#x95ED;&#xFF0C;&#x5F39;&#x51FA;&#x6846;&#x4F1A;&#x6839;&#x636E;&#x8DEF;&#x7531;&#x7684;&#x5730;&#x5740;&#xFF0C;&#x6253;&#x5F00;&#x8BE5;&#x5F39;&#x51FA;&#x6846;</p>
+<p>&#x7F3A;&#x70B9;&#xFF1A;&#x4E0E;&#x7236;&#x7EA7;&#x63A7;&#x5236;&#x5668;&#x4F20;&#x53C2;&#x6570;&#x65F6;&#xFF0C;&#x53EA;&#x80FD;&#x901A;&#x8FC7;&#x8DEF;&#x7531;&#x7684;&#x65B9;&#x5F0F;&#x4F20;&#x9012;&#x53C2;&#x6570;&#xFF0C;&#x5E76;&#x4E14;&#x4F20;&#x9012;&#x7684;&#x53C2;&#x6570;&#x8981;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x5730;&#x5740;&#x680F;&#x4E2D;&#x663E;&#x793A;&#x3002;</p>
+<pre class="language-"><code>//&#x8DEF;&#x7531;
+.state(&apos;user.organization.space.app.info.summary.addService&apos;, {
+  url: &apos;/category&apos;,
+  template: &apos;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">ui-view</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>&apos;,
+  controller: &apos;userAddServiceCtrl&apos;,
+  onEnter: showAddServiceModal
+})
+//onEnter&#x4E2D;&#x5199;&#x5165;&#x9700;&#x8981;&#x5F39;&#x51FA;&#x7684;&#x5F39;&#x51FA;&#x6846;&#x5730;&#x5740;
+function showAddServiceModal($modal, $previousState) {
+  $modal.open({
+    templateUrl: &apos;views/user/features/service/addService.html&apos;,
+    backdrop: &apos;static&apos;,
+    controller: &apos;&apos;
+  })
+}
+</code></pre><p>modal&#x6846;&#x5F39;&#x51FA;&#x65B9;&#x5F0F;&#x4E00;&#x4F18;&#x5316;&#x65B9;&#x6848;</p>
+<p>&#x7531;&#x4E8E;XXXX&#x7CFB;&#x7EDF;&#x91C7;&#x7528;&#x7684;&#x5F39;&#x51FA;&#x65B9;&#x5F0F;&#x4E00;&#xFF0C;&#x5E76;&#x4E14;XXXX&#x7CFB;&#x7EDF;&#x4E2D;&#x5F88;&#x591A;&#x90E8;&#x5206;&#x90FD;&#x9002;&#x7528;&#x7684;&#x662F;&#x5F39;&#x51FA;&#x6846;&#xFF0C;&#x6240;&#x4EE5;&#x9488;&#x5BF9;&#x65B9;&#x5F0F;&#x4E00;&#x8FDB;&#x884C;&#x4F18;&#x5316;&#x3002;</p>
+<p>&#x8BE5;&#x4F18;&#x5316;&#x5FC5;&#x987B;&#x53BB;&#x6389;modal&#x63A7;&#x5236;&#x5668;&#x4E0E;&#x7236;&#x7EA7;&#x63A7;&#x5236;&#x5668;&#x4E4B;&#x95F4;&#x76F8;&#x901A;&#x7684;scope: $scope&#xFF0C;&#x901A;&#x8FC7;items&#x6765;&#x4F20;&#x9012;&#x9700;&#x8981;&#x901A;&#x8FC7;&#x7236;&#x7EA7;&#x4F20;&#x9012;&#x5230;modal&#x63A7;&#x5236;&#x5668;&#x7684;&#x53C2;&#x6570;&#x3002;</p>
+<pre class="language-"><code>$scope.items = [&apos;item1&apos;, &apos;item2&apos;, &apos;item3&apos;]; &#xFF0F;&#xFF0F;&#x9700;&#x8981;&#x4F20;&#x9012;&#x7684;&#x53C2;&#x6570;
+
+$scope.openModal = function(){
+    $scope.modalInstance  = $modal.open({
+    templateUrl: &apos;app/components/volumes/volumes.new.html&apos;,
+    controller: &apos;nbNewVolumeCtrl&apos;,
+    backdrop: &apos;static&apos;,
+    //scope: $scope &#xFF0C;&#xFF0F;&#xFF0F;&#x5982;&apos;$modalInstance.close()&apos;&#x4E0D;&#x8D77;&#x4F5C;&#x7528;&#x65F6;&#xFF0C;&#x5FC5;&#x987B;&#x53BB;&#x6389;&#x8FD9;&#x53E5;&#x4EE3;&#x7801;&#xFF0C;
+    resolve: {
+        items: function () {
+          return $scope.items; &#xFF0F;&#xFF0F;&#x8FD4;&#x56DE;&#x4F20;&#x9012;&#x7684;&#x53C2;&#x6570;
+        }
+      }
+    });
+}
+
+//&#x76D1;&#x542C;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x53D8;&#x5316;&#xFF0C;&#x5F53;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x8DEF;&#x7531;&#x53D8;&#x5316;&#x65F6;&#xFF0C;&#x4F7F;&#x5F97;&#x5F39;&#x51FA;&#x6846;&#x5173;&#x95ED;
+ $scope.$on(&apos;$routeChangeStart&apos;, function(){  //&#x6B64;&#x5904;&#x7684;$routeChangeStart&#x4E5F;&#x53EF;&#x6362;&#x6210;$destroy
+    $modalInstance.close();
+  });
+
+//&#x5F39;&#x51FA;&#x6846;&#x7684;&#x63A7;&#x5236;&#x5668;
+.controller(&apos;nbNewVolumeCtrl&apos;, function ($scope, $modalInstance, items) { //&#x6B64;&#x5904;&#x9700;&#x8981;&#x6CE8;&#x5165;items
+
+  $scope.items = items; //&#x4ECE;&#x7236;&#x7EA7;&#x4F20;&#x9012;&#x7684;&#x53C2;&#x6570;
+  $scope.selected = {
+    item: $scope.items[0]
+  };
+
+  $scope.ok = function () {
+    $modalInstance.close($scope.selected.item);
+  };
+
+  $scope.cancel = function () {
+    $modalInstance.dismiss(&apos;cancel&apos;);
+  };
+});
+</code></pre><footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> caicai&#xA0;&#x7248;&#x6743;&#x6240;&#x6709;&#xA0;(https://github.com/shmilyCai/knowledge-summary) </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <span>&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;</span> 2018-09-29 14:57:06 </span> </footer>
                                 
                                 </section>
                             
@@ -1248,12 +1321,12 @@
 
             
                 
-                <a href="../aboutme.html" class="navigation navigation-prev " aria-label="Previous page: About ME">
+                <a href="button.html" class="navigation navigation-prev " aria-label="Previous page: 点击页面中的button按钮触发校验问题">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="angular_bootstrap.html" class="navigation navigation-next " aria-label="Next page: angular_bootstrap.md">
+                <a href="../angularjs/" class="navigation navigation-next " aria-label="Next page: angularJS">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1264,7 +1337,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"2018-坑（经验）","level":"1.3","depth":1,"next":{"title":"angular_bootstrap.md","level":"1.3.1","depth":2,"path":"2018/angular_bootstrap.md","ref":"2018/angular_bootstrap.md","articles":[]},"previous":{"title":"About ME","level":"1.2","depth":1,"path":"aboutme.md","ref":"aboutme.md","articles":[]},"dir":"ltr"},"config":{"plugins":["page-footer-ex","prism","-highlight","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"livereload":{},"page-footer-ex":{"copyright":"caicai&nbsp;版权所有&nbsp;(https://github.com/shmilyCai/knowledge-summary)","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<span>该文件修订时间</span>"},"search":{},"books":{"prism_themes":["prismjs/themes/prism-tomorrow.css"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"小仙女的前端之路","variables":{},"title":"小仙女的前端之路","links":{"sharing":{"all":false,"facebook":false,"google":false,"twitter":false,"weibo":false},"sidebar":{}},"gitbook":"*","description":"小仙女的前端之路","extension":null},"file":{"path":"2018/index.md","mtime":"2018-09-28T07:00:12.247Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-11T03:03:59.190Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"模态对话框使用方法及常见问题解决","level":"1.3.7","depth":2,"next":{"title":"angularJS","level":"1.4","depth":1,"path":"angularjs/index.md","ref":"angularjs/index.md","articles":[{"title":"angularjs常用插件地址","level":"1.4.1","depth":2,"path":"angularjs/plugins.md","ref":"angularjs/plugins.md","articles":[]},{"title":"双向绑定","level":"1.4.2","depth":2,"path":"angularjs/model.md","ref":"angularjs/model.md","articles":[]},{"title":"form表单验证常用方法","level":"1.4.3","depth":2,"path":"angularjs/form.md","ref":"angularjs/form.md","articles":[]},{"title":"form表单状态","level":"1.4.4","depth":2,"path":"angularjs/form_status.md","ref":"angularjs/form_status.md","articles":[]},{"title":"angularJS中各个控制器中的消息发送与接收","level":"1.4.5","depth":2,"path":"angularjs/on.md","ref":"angularjs/on.md","articles":[]},{"title":"directive","level":"1.4.6","depth":2,"path":"angularjs/directive.md","ref":"angularjs/directive.md","articles":[]},{"title":"过滤器","level":"1.4.7","depth":2,"path":"angularjs/filter.md","ref":"angularjs/filter.md","articles":[]},{"title":"拦截器","level":"1.4.8","depth":2,"path":"angularjs/interceptor.md","ref":"angularjs/interceptor.md","articles":[]},{"title":"多个angularjs项目嵌套方案","level":"1.4.9","depth":2,"path":"angularjs/mores.md","ref":"angularjs/mores.md","articles":[]},{"title":"$http，$service与$factory区别","level":"1.4.10","depth":2,"path":"angularjs/hsf.md","ref":"angularjs/hsf.md","articles":[]},{"title":"$apply","level":"1.4.11","depth":2,"path":"angularjs/apply.md","ref":"angularjs/apply.md","articles":[]},{"title":"$factory","level":"1.4.12","depth":2,"path":"angularjs/factory.md","ref":"angularjs/factory.md","articles":[]},{"title":"ui-select","level":"1.4.13","depth":2,"path":"angularjs/uiSelect.md","ref":"angularjs/uiSelect.md","articles":[]}]},"previous":{"title":"点击页面中的button按钮触发校验问题","level":"1.3.6","depth":2,"path":"2018/button.md","ref":"2018/button.md","articles":[]},"dir":"ltr"},"config":{"plugins":["page-footer-ex","prism","-highlight","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{},"livereload":{},"page-footer-ex":{"copyright":"caicai&nbsp;版权所有&nbsp;(https://github.com/shmilyCai/knowledge-summary)","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<span>该文件修订时间</span>"},"search":{},"books":{"prism_themes":["prismjs/themes/prism-tomorrow.css"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"小仙女的前端之路","variables":{},"title":"小仙女的前端之路","links":{"sharing":{"all":false,"facebook":false,"google":false,"twitter":false,"weibo":false},"sidebar":{}},"gitbook":"*","description":"小仙女的前端之路","extension":null},"file":{"path":"2018/modal.md","mtime":"2018-09-29T06:57:06.995Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-11T03:03:59.190Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
