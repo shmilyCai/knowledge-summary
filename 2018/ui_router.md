@@ -4,15 +4,6 @@
 
 ```
 vendor-887d9f29.js:20917 Error: Cannot transition to abstract state 'fast.mir.computingServices'
-    at Object.transitionTo (vendor-887d9f29.js:203501)
-    at Object.$state.transitionTo (vendor-887d9f29.js:100395)
-    at Object.$state.transitionTo (vendor-887d9f29.js:101866)
-    at Object.$state.transitionTo (vendor-887d9f29.js:101348)
-    at Object.go (vendor-887d9f29.js:203426)
-    at vendor-887d9f29.js:204445
-    at vendor-887d9f29.js:25625
-    at completeOutstandingRequest (vendor-887d9f29.js:14151)
-    at vendor-887d9f29.js:14539
 ```
 
 ##### 产生原因
