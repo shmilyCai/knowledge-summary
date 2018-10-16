@@ -15,8 +15,13 @@
         "sidebar": {}
     },
     "output": null,
+    "fontState": {
+        "size": "1",
+        "family": "sans",
+        "theme": "night"
+    },
     "pdf": {
-        "fontSize": 12,
+        "fontSize": 10,
         "footerTemplate": null,
         "headerTemplate": null,
         "margin": {
@@ -34,8 +39,13 @@
         "-highlight"
     ],
     "pluginsConfig": {
+         "fontSettings": {
+          "theme": "white",
+          "family": "msyh",
+          "size": 2
+        },
         "page-footer-ex": {
-            "copyright": "caicai&nbsp;版权所有&nbsp;(https://github.com/shmilyCai/knowledge-summary)",
+            "copyright": "caicai&nbsp;版权所有&nbsp;&nbsp;https://github.com/shmilyCai/knowledge-summary",
             "markdown": false,
             "update_label": "<span>该文件修订时间</span>",
             "update_format": "YYYY-MM-DD HH:mm:ss"
