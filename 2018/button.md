@@ -2,7 +2,7 @@
 
 #### 问题
 
-页面中存在以下这样的多个按钮组成的可点击方法，当点击`selectConfig`时，触发`submitted`为true；
+页面中存在以下这样的多个按钮组成的可点击方法，当点击`selectConfig`时，触发`submitted`为`true`；
 
 实际情况是当点击`apply`时才触发`$submitted`，
 
@@ -21,4 +21,4 @@
 
 #### 修改方案
 
-不采用button作为可点击事件，更换成span。
+不采用`button`作为可点击事件，更换成`span`。
