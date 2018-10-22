@@ -43,3 +43,7 @@ git checkout test
 git merge master
 git push 
 ```
+
+---
+
+git checkout -b 本地分支名x origin/远程分支名x  --- 通过远程分支新建本地分支
