@@ -1,0 +1,1543 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>form表单验证常用方法 · 小仙女的前端之路</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        <meta name="identifier" content="小仙女的前端之路" scheme="ISBN">
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="form_status.html" />
+    
+    
+    <link rel="prev" href="model.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../aboutme.html">
+            
+                <a href="../aboutme.html">
+            
+                    
+                    About ME
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../2018/">
+            
+                <a href="../2018/">
+            
+                    
+                    2018-坑（经验）
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../2018/ui_router.html">
+            
+                <a href="../2018/ui_router.html">
+            
+                    
+                    ui-router报错误‘Cannot transition to abstract state’
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../2018/substr.html">
+            
+                <a href="../2018/substr.html">
+            
+                    
+                    substr报null错误
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../2018/angular_bootstrap.html">
+            
+                <a href="../2018/angular_bootstrap.html">
+            
+                    
+                    使用angularJS项目的三种启动方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../2018/sce.html">
+            
+                <a href="../2018/sce.html">
+            
+                    
+                    $sce报错
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../2018/api_sequence.html">
+            
+                <a href="../2018/api_sequence.html">
+            
+                    
+                    链式调用和并发调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../2018/router.html">
+            
+                <a href="../2018/router.html">
+            
+                    
+                    angularJS中刷新当前页面方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../2018/endpoint.html">
+            
+                <a href="../2018/endpoint.html">
+            
+                    
+                    页面第一次加载时接口异步但有些需要触发同步操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../2018/button.html">
+            
+                <a href="../2018/button.html">
+            
+                    
+                    点击页面中的button按钮触发校验问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../2018/modal.html">
+            
+                <a href="../2018/modal.html">
+            
+                    
+                    模态对话框使用方法及常见问题解决
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../others/01.html">
+            
+                <a href="../others/01.html">
+            
+                    
+                    总结-如何管理好10万行代码的前端单页面应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../2018/web_optimize.html">
+            
+                <a href="../2018/web_optimize.html">
+            
+                    
+                    常见的前端优化内容
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../others/remote_develop.html">
+            
+                <a href="../others/remote_develop.html">
+            
+                    
+                    远程开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../2018/p_question.html">
+            
+                <a href="../2018/p_question.html">
+            
+                    
+                    目前产品前端所存在的问题-不间断更新
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="../2018/me_question.html">
+            
+                <a href="../2018/me_question.html">
+            
+                    
+                    开发时的自我约束与思考-不间断更新
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    angularJS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="plugins.html">
+            
+                <a href="plugins.html">
+            
+                    
+                    angularjs常用插件地址
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="model.html">
+            
+                <a href="model.html">
+            
+                    
+                    双向绑定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.3" data-path="form.html">
+            
+                <a href="form.html">
+            
+                    
+                    form表单验证常用方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="form_status.html">
+            
+                <a href="form_status.html">
+            
+                    
+                    form表单状态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="on.html">
+            
+                <a href="on.html">
+            
+                    
+                    angularJS中各个控制器中的消息发送与接收
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="directive.html">
+            
+                <a href="directive.html">
+            
+                    
+                    directive
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="filter.html">
+            
+                <a href="filter.html">
+            
+                    
+                    过滤器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="interceptor.html">
+            
+                <a href="interceptor.html">
+            
+                    
+                    拦截器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="mores.html">
+            
+                <a href="mores.html">
+            
+                    
+                    多个angularjs项目嵌套方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="hsf.html">
+            
+                <a href="hsf.html">
+            
+                    
+                    $http，$service与$factory区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="apply.html">
+            
+                <a href="apply.html">
+            
+                    
+                    $apply
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="factory.html">
+            
+                <a href="factory.html">
+            
+                    
+                    $factory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="uiSelect.html">
+            
+                <a href="uiSelect.html">
+            
+                    
+                    ui-select
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../javascript/">
+            
+                <a href="../javascript/">
+            
+                    
+                    Javascript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../javascript/findIndex.html">
+            
+                <a href="../javascript/findIndex.html">
+            
+                    
+                    数组去重-findIndex
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../javascript/test.md">
+            
+                <span>
+            
+                    
+                    说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../javascript/split.html">
+            
+                <a href="../javascript/split.html">
+            
+                    
+                    split.md
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../javascript/interval_timeout.html">
+            
+                <a href="../javascript/interval_timeout.html">
+            
+                    
+                    interval与timeout区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../html/">
+            
+                <a href="../html/">
+            
+                    
+                    HTML5
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../html/form.html">
+            
+                <a href="../html/form.html">
+            
+                    
+                    表单
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../html/localSession.html">
+            
+                <a href="../html/localSession.html">
+            
+                    
+                    localStorage与sessionStorage区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../javascript/eventSource.html">
+            
+                <a href="../javascript/eventSource.html">
+            
+                    
+                    Server-Sent Events(SSE)-消息流接收方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../css/">
+            
+                <a href="../css/">
+            
+                    
+                    CSS3
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../css/css_centering.html">
+            
+                <a href="../css/css_centering.html">
+            
+                    
+                    css居中说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../css/layout.html">
+            
+                <a href="../css/layout.html">
+            
+                    
+                    页面布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../css/daily.html">
+            
+                <a href="../css/daily.html">
+            
+                    
+                    常用样式说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../css/selected.html">
+            
+                <a href="../css/selected.html">
+            
+                    
+                    选择器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../css/margin.html">
+            
+                <a href="../css/margin.html">
+            
+                    
+                    margin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../css/animate.html">
+            
+                <a href="../css/animate.html">
+            
+                    
+                    animate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="../css/transition.html">
+            
+                <a href="../css/transition.html">
+            
+                    
+                    transition
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="../css/transform.html">
+            
+                <a href="../css/transform.html">
+            
+                    
+                    transform
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="../css/others.html">
+            
+                <a href="../css/others.html">
+            
+                    
+                    其他
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../es/">
+            
+                <a href="../es/">
+            
+                    
+                    ES6
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../es/for_of.html">
+            
+                <a href="../es/for_of.html">
+            
+                    
+                    for_of
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../angular/">
+            
+                <a href="../angular/">
+            
+                    
+                    angular2
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../angular/">
+            
+                <a href="../angular/">
+            
+                    
+                    index
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../git/">
+            
+                <a href="../git/">
+            
+                    
+                    git
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../git/daily.html">
+            
+                <a href="../git/daily.html">
+            
+                    
+                    常规操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../git/mores.html">
+            
+                <a href="../git/mores.html">
+            
+                    
+                    常规指令说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../git/gitconfig.html">
+            
+                <a href="../git/gitconfig.html">
+            
+                    
+                    gitconfig
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../git/stash.html">
+            
+                <a href="../git/stash.html">
+            
+                    
+                    stash
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../git/merge.html">
+            
+                <a href="../git/merge.html">
+            
+                    
+                    合并分支的2种方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../git/merge_file.html">
+            
+                <a href="../git/merge_file.html">
+            
+                    
+                    Git合并指定文件到另一个分支
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="../git/reset.html">
+            
+                <a href="../git/reset.html">
+            
+                    
+                    撤销commit方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../sass/">
+            
+                <a href="../sass/">
+            
+                    
+                    Sass
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../sass/test.html">
+            
+                <a href="../sass/test.html">
+            
+                    
+                    使用方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../jquery/">
+            
+                <a href="../jquery/">
+            
+                    
+                    Jquery
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../jquery/fun.html">
+            
+                <a href="../jquery/fun.html">
+            
+                    
+                    常用方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../nginx/">
+            
+                <a href="../nginx/">
+            
+                    
+                    Nginx
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../nginx/operate.html">
+            
+                <a href="../nginx/operate.html">
+            
+                    
+                    常用操作命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../java/">
+            
+                <a href="../java/">
+            
+                    
+                    Java
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../java/maven.html">
+            
+                <a href="../java/maven.html">
+            
+                    
+                    maven
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../java/docker.html">
+            
+                <a href="../java/docker.html">
+            
+                    
+                    docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../others/">
+            
+                <a href="../others/">
+            
+                    
+                    Others
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../others/gulp.html">
+            
+                <a href="../others/gulp.html">
+            
+                    
+                    Gulp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../others/api.html">
+            
+                <a href="../others/api.html">
+            
+                    
+                    RestfulAPI
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../others/gitbook.html">
+            
+                <a href="../others/gitbook.html">
+            
+                    
+                    Gitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../others/vim.html">
+            
+                <a href="../others/vim.html">
+            
+                    
+                    Vim常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="../others/linux.html">
+            
+                <a href="../others/linux.html">
+            
+                    
+                    Linux常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="../others/jenkins.html">
+            
+                <a href="../others/jenkins.html">
+            
+                    
+                    jenkins
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="../others/gitbook_publish.html">
+            
+                <a href="../others/gitbook_publish.html">
+            
+                    
+                    gitbook周五的发布版本命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.8" data-path="../others/webstorm.html">
+            
+                <a href="../others/webstorm.html">
+            
+                    
+                    webstorm快捷键使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../others/markdown.html">
+            
+                <a href="../others/markdown.html">
+            
+                    
+                    Markdown使用说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../others/next.html">
+            
+                <a href="../others/next.html">
+            
+                    
+                    Next
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >form表单验证常用方法</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h4 id="&#x8868;&#x5355;&#x9A8C;&#x8BC1;&#x4E8B;&#x4EF6;">&#x8868;&#x5355;&#x9A8C;&#x8BC1;&#x4E8B;&#x4EF6;</h4>
+<h5 id="&#x7981;&#x7528;h5&#x539F;&#x751F;&#x9A8C;&#x8BC1;">&#x7981;&#x7528;H5&#x539F;&#x751F;&#x9A8C;&#x8BC1;</h5>
+<p>form&#x6807;&#x7B7E;&#x5FC5;&#x987B;&#x6709;name&#xFF0C;novalidate&#x5C06;&#x7981;&#x7528;&#x6D4F;&#x89C8;&#x5668;&#x81EA;&#x5E26;&#x7684;&#x9A8C;&#x8BC1;&#x529F;&#x80FD;&#xFF0C;&#x4F7F;&#x7528;angularJS&#x63D0;&#x4F9B;&#x7684;&#x9A8C;&#x8BC1;</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>myForm<span class="token punctuation">&quot;</span></span> <span class="token attr-name">ng-submit</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>submit()<span class="token punctuation">&quot;</span></span> <span class="token attr-name">novalidate</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span><span class="token punctuation">&gt;</span></span>//&#x7981;&#x7528;&#x4E86;H5&#x539F;&#x751F;&#x7684;&#x63D0;&#x9192;
+</code></pre><h5 id="&#x9519;&#x8BEF;&#x6D88;&#x606F;&#x63D0;&#x793A;&#x7EDF;&#x4E00;">&#x9519;&#x8BEF;&#x6D88;&#x606F;&#x63D0;&#x793A;&#x7EDF;&#x4E00;</h5>
+<p>&#x8868;&#x5355;&#x63D0;&#x4F9B;&#x7EDF;&#x4E00;&#x7684;&#x63D0;&#x793A;&#x5185;&#x5BB9;&#xFF0C;&#x5185;&#x5BB9;&#x653E;&#x5728;common/message.html&#x9875;&#x9762;&#x91CC;&#xFF0C;&#x6BCF;&#x4E2A;&#x9700;&#x8981;&#x9A8C;&#x8BC1;&#x7684;input&#x540E;&#xFF0C;&#x90FD;&#x5FC5;&#x987B;&#x52A0;&#x4E0A;&#x7EDF;&#x4E00;&#x7684;&#x63D0;&#x793A;</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>text<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form-control<span class="token punctuation">&quot;</span></span> <span class="token attr-name">data-ng-model</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>name<span class="token punctuation">&quot;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>name<span class="token punctuation">&quot;</span></span> <span class="token attr-name">required</span> <span class="token attr-name">ng-minlength</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>4<span class="token punctuation">&quot;</span></span>
+   <span class="token attr-name">ng-pattern</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>/a-zA-Z/<span class="token punctuation">&quot;</span></span> <span class="token attr-name">ng-maxlength</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>16<span class="token punctuation">&quot;</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>&#x8BF7;&#x8F93;&#x5165;4-16&#x4E2A;&#x5B57;&#x7B26;<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form-error<span class="token punctuation">&quot;</span></span> <span class="token attr-name">ng-messages</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form.name.$error<span class="token punctuation">&quot;</span></span>
+ <span class="token attr-name">ng-messages-include</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>app/common/messages.html<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre><h5 id="&#x7126;&#x70B9;&#x89E6;&#x53D1;&#x9A8C;&#x8BC1;">&#x7126;&#x70B9;&#x89E6;&#x53D1;&#x9A8C;&#x8BC1;</h5>
+<p>&#x521B;&#x5EFA;<code>$scope.focused=false;</code>&#xFF0C;&#x4F7F;&#x7528;ng-focus,ng-blur&#x4E8B;&#x4EF6;&#xFF0C;&#x4FEE;&#x6539;focused&#x72B6;&#x6001;&#xFF08;&#x5206;&#x522B;&#x4E3A;&#x83B7;&#x5F97;&#x7126;&#x70B9;&#xFF0C;&#x5931;&#x53BB;&#x7126;&#x70B9;&#x4E8B;&#x4EF6;&#xFF09;</p>
+<pre class="language-"><code>myForm.username.$error.required //&#x9A8C;&#x8BC1;&#x5931;&#x8D25;
+</code></pre><h5 id="&#x63D0;&#x4EA4;&#x8868;&#x5355;&#x9A8C;&#x8BC1;">&#x63D0;&#x4EA4;&#x8868;&#x5355;&#x9A8C;&#x8BC1;</h5>
+<p>&#x521B;&#x5EFA;<code>$scope.submitted=false;</code>&#x63D0;&#x4EA4;&#x8868;&#x5355;&#x65F6;&#xFF0C;&#x5982;&#x679C;<code>$scope.form.$invalid===true</code>,&#x5C06;&#x5176;&#x8BBE;&#x7F6E;&#x4E3A;true&#xFF0C;&#x4ECE;&#x800C;&#x663E;&#x793A;&#x9519;&#x8BEF;&#x4FE1;&#x606F;</p>
+<pre class="language-"><code>$scope.submitted = false;
+$scope.submit = function () {
+    if($scope.myForm.$valid){
+        $scope.submitted = false;//&#x9A8C;&#x8BC1;&#x901A;&#x8FC7;&#x65F6;&#x4E0D;&#x663E;&#x793A;
+        //&#x63D0;&#x4EA4;&#x8868;&#x5355;&#x7684;&#x884C;&#x4E3A;
+    }else{//&#x9A8C;&#x8BC1;&#x4E0D;&#x901A;&#x8FC7;&#x65F6;&#x663E;&#x793A;
+        $scope.submitted = true;
+    }
+}
+</code></pre><h5 id="&#x76F8;&#x5173;css&#x6837;&#x5F0F;">&#x76F8;&#x5173;css&#x6837;&#x5F0F;</h5>
+<ul>
+<li>ng-pristine //input&#x8FD8;&#x672A;&#x586B;&#x5165;&#x6570;&#x636E;&#x65F6;</li>
+<li>ng-invalid  //input&#x9A8C;&#x8BC1;&#x975E;&#x6CD5;&#x65F6;</li>
+<li>ng-dirty    //input&#x5DF2;&#x7ECF;&#x586B;&#x5165;&#x6570;&#x636E;&#x65F6;</li>
+<li>ng-valid    //input&#x5408;&#x6CD5;</li>
+</ul>
+<h5 id="&#x5FC5;&#x586B;">&#x5FC5;&#x586B;</h5>
+<p>&#x9A8C;&#x8BC1;&#x662F;&#x5426;&#x8F93;&#x5165;&#x5B57;&#x7B26;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x5728;&#x6807;&#x7B7E;&#x4E0A;&#x52A0;&#x4E0A;required</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>text<span class="token punctuation">&quot;</span></span> <span class="token attr-name">required</span> <span class="token punctuation">/&gt;</span></span>
+</code></pre><h5 id="&#x6570;&#x5B57;">&#x6570;&#x5B57;</h5>
+<p>&#x9A8C;&#x8BC1;&#x8F93;&#x5165;&#x7684;&#x662F;&#x6570;&#x5B57;&#xFF0C;type&#x8BBE;&#x7F6E;&#x4E3A;number&#xFF0C;max&#x8BBE;&#x7F6E;&#x9700;&#x8981;&#x6700;&#x5927;&#x7684;&#x6570;&#x503C;&#xFF0C;&#x6700;&#x5C0F;&#x7684;&#x6570;&#x503C;&#x4E3A;1</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>number<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form-control<span class="token punctuation">&quot;</span></span> <span class="token attr-name">data-ng-model</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>number<span class="token punctuation">&quot;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>number<span class="token punctuation">&quot;</span></span> <span class="token attr-name">max</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>4094<span class="token punctuation">&quot;</span></span> <span class="token attr-name">min</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>1<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+</code></pre><h5 id="&#x6700;&#x5C0F;&#x957F;&#x5EA6;&#x548C;&#x6700;&#x5927;&#x957F;&#x5EA6;">&#x6700;&#x5C0F;&#x957F;&#x5EA6;&#x548C;&#x6700;&#x5927;&#x957F;&#x5EA6;</h5>
+<p>&#x9A8C;&#x8BC1;&#x8F93;&#x5165;&#x81F3;&#x5C11;&#x8F93;&#x5165;&#x7684;&#x5B57;&#x7B26;&#x6570;</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>text<span class="token punctuation">&quot;</span></span> <span class="token attr-name">ng-minlength</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>4<span class="token punctuation">&quot;</span></span>  <span class="token attr-name">ng-maxlength</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>20<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+</code></pre><h5 id="email">Email</h5>
+<p>&#x9A8C;&#x8BC1;&#x8F93;&#x5165;&#x5B57;&#x7B26;&#x662F;&#x4E00;&#x4E2A;&#x7535;&#x5B50;&#x90AE;&#x4EF6;</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>email<span class="token punctuation">&quot;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>email<span class="token punctuation">&quot;</span></span> <span class="token attr-name">ng-model</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span><span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+</code></pre><h5 id="ip&#x9A8C;&#x8BC1;">IP&#x9A8C;&#x8BC1;</h5>
+<p>&#x9A8C;&#x8BC1;&#x8F93;&#x5165;&#x7684;IP&#x683C;&#x5F0F;</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>text<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form-control<span class="token punctuation">&quot;</span></span> <span class="token attr-name">data-ng-model</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>ipNumber<span class="token punctuation">&quot;</span></span> <span class="token attr-name">ui-mask</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>999.999.999.999<span class="token punctuation">&quot;</span></span>  <span class="token attr-name">ui-mask-placeholder</span> <span class="token attr-name">ui-mask-placeholder-char</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>_<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+</code></pre><h5 id="&#x6B63;&#x5219;&#x5339;&#x914D;">&#x6B63;&#x5219;&#x5339;&#x914D;</h5>
+<p>&#x8981;&#x786E;&#x4FDD;&#x8F93;&#x5165;&#x5339;&#x914D;&#x7684;&#x4E00;&#x4E2A;&#x6B63;&#x5219;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x4F7F;&#x7528;ng-pattern</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>text<span class="token punctuation">&quot;</span></span> <span class="token attr-name">ng-pattern</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>/a-zA-Z/<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+</code></pre><h5 id="&#x9A8C;&#x8BC1;&#x8F93;&#x5165;&#x7684;&#x5185;&#x5BB9;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;">&#x9A8C;&#x8BC1;&#x8F93;&#x5165;&#x7684;&#x5185;&#x5BB9;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;</h5>
+<p>&#x4E00;&#x822C;&#x7528;&#x4E8E;&#x540D;&#x79F0;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x88AB;&#x4F7F;&#x7528;&#xFF0C;&#x4E0B;&#x9762;&#x6709;&#x5177;&#x4F53;&#x7684;&#x8C03;&#x7528;&#x540E;&#x53F0;&#x7684;&#x6848;&#x4F8B;</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form-group<span class="token punctuation">&quot;</span></span> <span class="token attr-name">ng-controller</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>ValidateCtrl<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>col-sm-3 control-label<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>Email<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>col-sm-7<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form-control<span class="token punctuation">&quot;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>email<span class="token punctuation">&quot;</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>try john.doe@mail.com or bad@domain.com<span class="token punctuation">&quot;</span></span>
+       <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>email<span class="token punctuation">&quot;</span></span> <span class="token attr-name">required</span> <span class="token attr-name">ng-model</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>email<span class="token punctuation">&quot;</span></span> <span class="token attr-name">ng-model-options</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>{ debounce: 500 }<span class="token punctuation">&quot;</span></span>
+       <span class="token attr-name">data-ui-validate</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>{duplicated: <span class="token punctuation">&apos;</span>notBlackListed($value)<span class="token punctuation">&apos;</span>}<span class="token punctuation">&quot;</span></span>
+       <span class="token attr-name">ui-validate-async</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>{duplicated: <span class="token punctuation">&apos;</span>doesNotExist($modelValue)<span class="token punctuation">&apos;</span> }<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form-error<span class="token punctuation">&quot;</span></span> <span class="token attr-name">ng-messages</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form.email.$error<span class="token punctuation">&quot;</span></span>
+     <span class="token attr-name">ng-messages-include</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>app/common/messages.html<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>text-muted<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>(&#x9A8C;&#x8BC1;&#x540D;&#x5B57;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x5B58;&#x5728;&#x5217;&#x8868;)<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+.controller(&apos;ValidateCtrl&apos;, function($scope, $timeout, $q) {
+$scope.notBlackListed = function(value) {
+var blacklist = [&apos;bad@domain.com&apos;, &apos;verybad@domain.com&apos;];
+return blacklist.indexOf(value) === -1;
+};
+$scope.doesNotExist = function(value) {
+var db = [&apos;john.doe@mail.com&apos;, &apos;jane.doe@mail.com&apos;];
+return $q(function(resolve, reject) {
+  $timeout(function() {
+    if (db.indexOf(value) &lt; 0) {
+      resolve();
+    } else {
+      reject();
+    }
+  }, 500);
+});
+};
+});
+</code></pre><p>&#x4F18;&#x5316;&#x540E;&#x7684;&#xFF1A;</p>
+<pre class="language-"><code>&lt;input name=&quot;farm_name&quot; type=&quot;text&quot; class=&quot;form-control&quot;
+   data-ng-model=&quot;appStackData.farm.name&quot;
+   required
+   ng-model-options=&quot;{ debounce: 500 }&quot;  //&#x5F85;input&#x8F93;&#x5165;&#x5185;&#x5BB9;&#x540E;&#xFF0C;&#x6709;500&#x6BEB;&#x79D2;&#x7684;&#x5EF6;&#x8FDF;&#xFF0C;&#x5728;&#x6267;&#x884C;checkAppStackName
+   data-ui-validate=&quot;{duplicated : &apos;checkAppStackName($value)&apos; }&quot;&gt;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">ng-messages</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>appStack.farm_name.$error<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form-error<span class="token punctuation">&quot;</span></span>
+ <span class="token attr-name">data-ng-messages-include</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>app/views/common/messages.html<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+
+//&#x63A7;&#x5236;&#x5668;&#x4E2D;&#x7684;&#x5185;&#x5BB9;
+$scope.checkAppStackName = function (name) {
+var defered = $q.defer(); //&#x58F0;&#x660E;&#x5EF6;&#x540E;&#x6267;&#x884C;&#xFF0C;&#x8868;&#x793A;&#x8981;&#x53BB;&#x76D1;&#x63A7;&#x540E;&#x9762;&#x7684;&#x6267;&#x884C;
+devApp.get({query: name}, function (resp) {
+$log.debug(resp); 
+if (resp[&apos;success&apos;] &amp;&amp; parseInt(resp[&apos;total&apos;]) &gt; 0) {
+  for (var i = 0; i &lt; parseInt(resp[&apos;total&apos;]); i++) {
+    if (resp[&apos;data&apos;][i].name === name &amp;&amp; resp[&apos;data&apos;][i].id !== $scope.appStackData.farmId + &apos;&apos;) {
+      defered.reject(); //&#x58F0;&#x660E;&#x6267;&#x884C;&#x5931;&#x8D25;
+      return;
+    }
+  }
+  defered.resolve();  //&#x58F0;&#x660E;&#x6267;&#x884C;&#x6210;&#x529F;
+} else {
+  defered.resolve();
+}
+}, function (error) {
+$log.debug(error);
+});
+return defered.promise; //&#x8FD4;&#x56DE;&#x627F;&#x8BFA;&#xFF0C;&#x8FD9;&#x91CC;&#x5E76;&#x4E0D;&#x662F;&#x6700;&#x7EC8;&#x6570;&#x636E;&#xFF0C;&#x800C;&#x662F;&#x8BBF;&#x95EE;&#x6700;&#x7EC8;&#x6570;&#x636E;&#x7684;API
+};
+</code></pre><h5 id="&#x5BC6;&#x7801;&#x9A8C;&#x8BC1;">&#x5BC6;&#x7801;&#x9A8C;&#x8BC1;</h5>
+<p>&#x6B64;&#x5904;&#x9A8C;&#x8BC1;2&#x6B21;&#x8F93;&#x5165;&#x7684;&#x5BC6;&#x7801;&#x662F;&#x5426;&#x76F8;&#x540C;</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>section</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>col-sm-6<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form-group<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>col-sm-3 control-label<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>&#x5BC6;&#x7801;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>col-sm-7<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form-control<span class="token punctuation">&quot;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>password<span class="token punctuation">&quot;</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>text<span class="token punctuation">&quot;</span></span> <span class="token attr-name">required</span> <span class="token attr-name">ng-model</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>password<span class="token punctuation">&quot;</span></span>
+         <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>password<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>text-center text-muted<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>&#x4EE5;&#x4E0B;&#x4E3A;2&#x79CD;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form-group<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>col-sm-3 control-label<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>&#x786E;&#x8BA4;&#x5BC6;&#x7801;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
+//&#x7B2C;&#x4E00;&#x79CD;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>col-sm-7<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form-control<span class="token punctuation">&quot;</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>confirm_password<span class="token punctuation">&quot;</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>text<span class="token punctuation">&quot;</span></span> <span class="token attr-name">required</span> <span class="token attr-name">ng-model</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>confirm_password<span class="token punctuation">&quot;</span></span>
+         <span class="token attr-name">ui-validate</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span><span class="token punctuation">&apos;</span>$value === password<span class="token punctuation">&apos;</span> <span class="token punctuation">&quot;</span></span>
+         <span class="token attr-name">ng-model-options</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>{ debounce: 500 }<span class="token punctuation">&quot;</span></span>
+         <span class="token attr-name">ui-validate-watch</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span> <span class="token punctuation">&apos;</span>password<span class="token punctuation">&apos;</span> <span class="token punctuation">&quot;</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>confirm password<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">ng-show</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&apos;</span>form.confirm_password.$error<span class="token punctuation">&apos;</span></span>
+       <span class="token attr-name">ng-messages-include</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>app/common/messages.html<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">ng-show</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&apos;</span>form.confirm_password.$error.validator<span class="token punctuation">&apos;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form-error<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>2&#x6B21;&#x8F93;&#x5165;&#x7684;&#x5BC6;&#x7801;&#x4E0D;&#x4E00;&#x81F4;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+//&#x7B2C;&#x4E8C;&#x79CD;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form-group<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>col-sm-3 control-label<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>&#x786E;&#x8BA4;&#x5BC6;&#x7801;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>col-sm-7<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>text<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form-control<span class="token punctuation">&quot;</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>confirm password<span class="token punctuation">&quot;</span></span>
+         <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>confirmPassword<span class="token punctuation">&quot;</span></span>
+         <span class="token attr-name">data-ng-model</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>confirmPassword<span class="token punctuation">&quot;</span></span>
+         <span class="token attr-name">compare-to</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>password<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">ng-messages</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form.confirmPassword.$error<span class="token punctuation">&quot;</span></span>
+       <span class="token attr-name">ng-messages-include</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>app/common/messages.html<span class="token punctuation">&quot;</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>form-error<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>section</span><span class="token punctuation">&gt;</span></span>
+
+//compare-to&#x6307;&#x4EE4;
+.directive(&apos;compareTo&apos;, [
+function() {
+return {
+  require: &quot;ngModel&quot;,
+  scope: {
+    otherModelValue: &quot;=compareTo&quot;
+  },
+  link: function(scope, element, attributes, ngModel) {
+
+    ngModel.$validators.compareTo = function(modelValue) {
+      return modelValue == scope.otherModelValue;
+    };
+
+    scope.$watch(&quot;otherModelValue&quot;, function() {
+      ngModel.$validate();
+    });
+  }
+};
+}])
+</code></pre><footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> caicai&#xA0;&#x7248;&#x6743;&#x6240;&#x6709;&#xA0;&#xA0;https://github.com/shmilyCai/knowledge-summary </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <span>&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;</span> 2018-10-19 09:25:02 </span> </footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="model.html" class="navigation navigation-prev " aria-label="Previous page: 双向绑定">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="form_status.html" class="navigation navigation-next " aria-label="Next page: form表单状态">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"form表单验证常用方法","level":"1.4.3","depth":2,"next":{"title":"form表单状态","level":"1.4.4","depth":2,"path":"angularjs/form_status.md","ref":"angularjs/form_status.md","articles":[]},"previous":{"title":"双向绑定","level":"1.4.2","depth":2,"path":"angularjs/model.md","ref":"angularjs/model.md","articles":[]},"dir":"ltr"},"config":{"plugins":["page-footer-ex","prism","-highlight","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"1","family":"sans","theme":"night"},"pluginsConfig":{"prism":{},"livereload":{},"page-footer-ex":{"copyright":"caicai&nbsp;版权所有&nbsp;&nbsp;https://github.com/shmilyCai/knowledge-summary","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<span>该文件修订时间</span>"},"search":{},"books":{"prism_themes":["prismjs/themes/prism-tomorrow.css"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"theme":"white","family":"msyh","size":2},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":10,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"小仙女的前端之路","variables":{},"title":"小仙女的前端之路","links":{"sharing":{"all":false,"facebook":false,"google":false,"twitter":false,"weibo":false},"sidebar":{}},"gitbook":"*","description":"小仙女的前端之路","extension":null},"file":{"path":"angularjs/form.md","mtime":"2018-10-19T01:25:02.340Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-22T02:20:04.636Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
