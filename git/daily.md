@@ -48,6 +48,8 @@ git push
 
 git checkout -b 本地分支名x origin/远程分支名x  --- 通过远程分支新建本地分支
 
+git push --set-upstream origin develop-hbb 推送分支
+
 git config user.name ---查看用户名
 
 git config user.email ---查看email

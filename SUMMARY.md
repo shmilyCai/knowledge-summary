@@ -63,6 +63,7 @@
   * [合并分支的2种方式](git/merge.md)
   * [Git合并指定文件到另一个分支](git/merge_file.md)
   * [撤销commit方式](git/reset.md)
+  * [删除本地分支和远程分支](git/delete_branch.md)
 * [Sass](sass/index.md)
   * [使用方式](sass/test.md)
 * [Jquery](jquery/index.md)
