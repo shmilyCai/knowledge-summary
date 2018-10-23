@@ -3,6 +3,7 @@
 * [Introduction](README.md)
 * [About ME](aboutme.md)
 * [2018-坑（经验）](2018/index.md)
+  * [angularJS多套系统嵌入方案](2018/more_system.md)
   * [ui-router报错误‘Cannot transition to abstract state’](2018/ui_router.md)
   * [substr报null错误](2018/substr.md)
   * [使用angularJS项目的三种启动方式](2018/angular_bootstrap.md)
