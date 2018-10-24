@@ -177,7 +177,6 @@ vertical-align: middle;
 ####水平垂直都居中
 
 元素的宽高固定
-ss
 ```
 
 ```
