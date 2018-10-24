@@ -23,3 +23,32 @@ $state.reload($state.current.name);
 ```
 $state.forceReload();
 ```
+
+5. 全部刷新页面，暴力解决方法
+
+```
+$window.location.reload();
+```
+
+6. 
+```
+$state.transitionTo($state.current, $stateParams, {
+	reload: true,
+	inherit: false,
+	notify: true
+});
+
+```
+
+```
+$scope.reload = function() {
+  return $state.transitionTo($state.current, $stateParams, {
+    reload: true
+  }).then(function() {
+    $scope.hideContent = true;
+    return $timeout(function() {
+      return $scope.hideContent = false;
+    }, 1);
+  });
+};
+```

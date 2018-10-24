@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>split.md · 小仙女的前端之路</title>
+        <title>javascript中 && 和 || 运算符的用法 · 小仙女的前端之路</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="interval_timeout.html" />
+    <link rel="next" href="findIndex.html" />
     
     
-    <link rel="prev" href="test.md" />
+    <link rel="prev" href="./" />
     
 
     </head>
@@ -537,7 +537,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1" data-path="js_&&.html">
+        <li class="chapter active" data-level="1.5.1" data-path="js_&&.html">
             
                 <a href="js_&&.html">
             
@@ -576,7 +576,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5.4" data-path="split.html">
+        <li class="chapter " data-level="1.5.4" data-path="split.html">
             
                 <a href="split.html">
             
@@ -1308,7 +1308,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >split.md</a>
+        <a href=".." >javascript中 && 和 || 运算符的用法</a>
     </h1>
 </div>
 
@@ -1323,11 +1323,30 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h4 id="split">split</h4>
-<p><code>split()</code> &#x65B9;&#x6CD5;&#x7528;&#x4E8E;&#x628A;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x5206;&#x5272;&#x6210;&#x5B57;&#x7B26;&#x4E32;&#x6570;&#x7EC4;</p>
-<pre class="language-"><code>&quot;2:3:4:5&quot;.split(&quot;:&quot;)    //&#x5C06;&#x8FD4;&#x56DE;[&quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;]
-&quot;|a|b|c&quot;.split(&quot;|&quot;)    //&#x5C06;&#x8FD4;&#x56DE;[&quot;&quot;, &quot;a&quot;, &quot;b&quot;, &quot;c&quot;]
-</code></pre><footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> caicai&#xA0;&#x7248;&#x6743;&#x6240;&#x6709;&#xA0;&#xA0;https://github.com/shmilyCai/knowledge-summary </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <span>&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;</span> 2018-10-22 11:08:50 </span> </footer>
+                                <h4 id="js&#x4E2D;--&#x548C;--&#x8FD0;&#x7B97;&#x7B26;&#x7684;&#x7528;&#x6CD5;">js&#x4E2D; &amp;&amp; &#x548C; || &#x8FD0;&#x7B97;&#x7B26;&#x7684;&#x7528;&#x6CD5;</h4>
+<p>&#x5199;js&#x4EE3;&#x7801;&#x65F6;&#xFF0C;&#x4E5F;&#x5C31;&#x4F7F;&#x7528;&amp;&amp;&#x548C;||&#x5224;&#x65AD;true&#x548C;false&#xFF0C;&#x8FD9;&#x6B21;&#x6709;&#x4E2A;&#x8FD0;&#x7B97;&#x5224;&#x65AD;&#xFF0C;&#x7ED5;&#x6655;&#x4E86;&#xFF0C;&#x7279;&#x5730;&#x603B;&#x7ED3;&#x4E0B;</p>
+<p>&#x5BF9;&#x4E8E;&amp;&amp;&#x548C;||&#x8FD0;&#x7B97;&#x7B26;&#xFF0C;&#x4E00;&#x822C;&#x53EA;&#x4F1A;&#x4F7F;&#x7528;&#x5230;&#x4EE5;&#x4E0B;&#x7684;&#x5224;&#x65AD;&#xFF1A;</p>
+<pre class="language-"><code>true &amp;&amp; true = true;
+true &amp;&amp; false = false;
+false &amp;&amp; true = false;
+false &amp;&amp; false = false;
+
+true || true = true;
+true|| false = true;
+false || true = true;
+false || false  = false;
+</code></pre><p>2&#x79CD;&#x8FD0;&#x7B97;&#x7B26;&#x7684;&#x8BF4;&#x660E;&#xFF0C;&#x6709;&#x4E2A;&#x7279;&#x522B;&#x5904;(&#x5E76;&#x4E14;&amp;&amp;&#x8FD0;&#x7B97;&#x7B26;&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x5927;&#x4E8E;||&#x8FD0;&#x7B97;&#x7B26;)</p>
+<pre class="language-"><code>&amp;&amp;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x4F1A;&#x8FD4;&#x56DE;&#x6700;&#x65E9;&#x9047;&#x5230;&#x4EE5;&#x4E0B;&#x7C7B;&#x578B;&#x7684;&#x503C;&#xFF1A;
+NaN null undefined 0 false;
+</code></pre><pre class="language-"><code>||&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x4F1A;&#x8FD4;&#x56DE;&#x6700;&#x65E9;&#x9047;&#x5230;&#x7684;&#x975E;&#x4EE5;&#x4E0B;&#x7C7B;&#x578B;&#x7684;&#x503C;&#xFF1A;
+NaN null undefined 0 false;
+</code></pre><h5 id="demo">Demo</h5>
+<p>&#x5BF9;&#x4E8E;&#x4EE5;&#x4E0B;&#x8D4B;&#x503C;&#x8BED;&#x53E5;&#xFF0C;a&#x7684;&#x503C;&#x662F;&#x591A;&#x5C11;&#x5462;&#xFF1F;</p>
+<pre class="language-"><code>var a=(undefined &amp;&amp; 1 ) || (0 || 5)&#xFF1B;
+</code></pre><p>&#x9996;&#x5148;&#x8BA1;&#x7B97;undefined &amp;&amp; 1&#xFF0C;&#x7531;&#x4E8E;&amp;&amp;&#x8FD0;&#x7B97;&#x7B26;&#x9996;&#x5148;&#x8FD4;&#x56DE;NaN&#x3001;null&#x3001;undefined&#x3001;0&#x3001;false&#xFF0C;&#x56E0;&#x6B64;&#x8FD4;&#x56DE;undefined&#x3002;</p>
+<p>&#x7136;&#x540E;&#x5BF9;&#x4E8E;0||5&#xFF0C;&#x7531;&#x4E8E;||&#x8FD0;&#x7B97;&#x7B26;&#x9996;&#x5148;&#x8FD4;&#x56DE;&#x975E;NaN&#x3001;null&#x3001;undefined&#x3001;0&#x3001;false&#xFF0C;&#x6240;&#x4EE5;&#x8FD4;&#x56DE;5&#x3002;</p>
+<p>&#x6700;&#x540E;&#xFF0C;undefined||5&#xFF0C;&#x663E;&#x7136;&#x8FD4;&#x56DE;5&#x3002;</p>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> caicai&#xA0;&#x7248;&#x6743;&#x6240;&#x6709;&#xA0;&#xA0;https://github.com/shmilyCai/knowledge-summary </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <span>&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;</span> 2018-10-24 13:43:11 </span> </footer>
                                 
                                 </section>
                             
@@ -1354,12 +1373,12 @@
 
             
                 
-                <a href="test.md" class="navigation navigation-prev " aria-label="Previous page: 说明">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Javascript">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="interval_timeout.html" class="navigation navigation-next " aria-label="Next page: interval与timeout区别">
+                <a href="findIndex.html" class="navigation navigation-next " aria-label="Next page: 数组去重-findIndex">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1370,7 +1389,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"split.md","level":"1.5.4","depth":2,"next":{"title":"interval与timeout区别","level":"1.5.5","depth":2,"path":"javascript/interval_timeout.md","ref":"javascript/interval_timeout.md","articles":[]},"previous":{"title":"说明","level":"1.5.3","depth":2,"path":"javascript/test.md","ref":"javascript/test.md","articles":[]},"dir":"ltr"},"config":{"plugins":["page-footer-ex","prism","-highlight","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"1","family":"sans","theme":"night"},"pluginsConfig":{"prism":{},"livereload":{},"page-footer-ex":{"copyright":"caicai&nbsp;版权所有&nbsp;&nbsp;https://github.com/shmilyCai/knowledge-summary","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<span>该文件修订时间</span>"},"search":{},"books":{"prism_themes":["prismjs/themes/prism-tomorrow.css"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"theme":"white","family":"msyh","size":2},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":10,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"小仙女的前端之路","variables":{},"title":"小仙女的前端之路","links":{"sharing":{"all":false,"facebook":false,"google":false,"twitter":false,"weibo":false},"sidebar":{}},"gitbook":"*","description":"小仙女的前端之路","extension":null},"file":{"path":"javascript/split.md","mtime":"2018-10-22T03:08:50.895Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-24T05:42:19.360Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"javascript中 && 和 || 运算符的用法","level":"1.5.1","depth":2,"next":{"title":"数组去重-findIndex","level":"1.5.2","depth":2,"path":"javascript/findIndex.md","ref":"javascript/findIndex.md","articles":[]},"previous":{"title":"Javascript","level":"1.5","depth":1,"path":"javascript/index.md","ref":"javascript/index.md","articles":[{"title":"javascript中 && 和 || 运算符的用法","level":"1.5.1","depth":2,"path":"javascript/js_&&.md","ref":"javascript/js_&&.md","articles":[]},{"title":"数组去重-findIndex","level":"1.5.2","depth":2,"path":"javascript/findIndex.md","ref":"javascript/findIndex.md","articles":[]},{"title":"说明","level":"1.5.3","depth":2,"path":"javascript/test.md","ref":"javascript/test.md","articles":[]},{"title":"split.md","level":"1.5.4","depth":2,"path":"javascript/split.md","ref":"javascript/split.md","articles":[]},{"title":"interval与timeout区别","level":"1.5.5","depth":2,"path":"javascript/interval_timeout.md","ref":"javascript/interval_timeout.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["page-footer-ex","prism","-highlight","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"1","family":"sans","theme":"night"},"pluginsConfig":{"prism":{},"livereload":{},"page-footer-ex":{"copyright":"caicai&nbsp;版权所有&nbsp;&nbsp;https://github.com/shmilyCai/knowledge-summary","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<span>该文件修订时间</span>"},"search":{},"books":{"prism_themes":["prismjs/themes/prism-tomorrow.css"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"theme":"white","family":"msyh","size":2},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":10,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"小仙女的前端之路","variables":{},"title":"小仙女的前端之路","links":{"sharing":{"all":false,"facebook":false,"google":false,"twitter":false,"weibo":false},"sidebar":{}},"gitbook":"*","description":"小仙女的前端之路","extension":null},"file":{"path":"javascript/js_&&.md","mtime":"2018-10-24T05:43:11.618Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-24T05:42:19.360Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

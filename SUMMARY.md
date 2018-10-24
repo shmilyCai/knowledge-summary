@@ -33,6 +33,7 @@
   * [$factory](angularjs/factory.md)
   * [ui-select](angularjs/uiSelect.md)
 * [Javascript](javascript/index.md)
+  * [javascript中 && 和 || 运算符的用法](javascript/js_&&.md)
   * [数组去重-findIndex](javascript/findIndex.md)
   * [说明](javascript/test.md)
   * [split.md](javascript/split.md)
