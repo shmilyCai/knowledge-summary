@@ -51,6 +51,8 @@ http://www.a.com/b.js 不同域名 不允许
 
 ##### 通过jsonp跨域
 
+##### CORS跨域
+
 
 
 

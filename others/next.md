@@ -28,4 +28,11 @@ Don't repeat yourself，不做重复事。把经常使用的功能抽象成库�
 
 
 
+next-总结下知识点：
 
+1. html
+2. css
+3. es6（主攻，包含js部分也相关的了解下）
+4. angularJS
+5. 项目准备
+6. angular2(有时间也学习下)
