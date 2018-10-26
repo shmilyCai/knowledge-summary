@@ -43,6 +43,8 @@
   * [localStorage与sessionStorage区别](html/localSession.md)
   * [Server-Sent Events(SSE)-消息流接收方法](javascript/eventSource.md)
 * [CSS3](css/index.md)
+  * [css标准模型和怪异模型](css/modal.md)
+  * [px/rem/em区别](css/px.md)
   * [css居中说明](css/css_centering.md)
   * [页面布局](css/layout.md)
   * [常用样式说明](css/daily.md)
