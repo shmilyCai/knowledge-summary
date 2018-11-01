@@ -54,7 +54,7 @@
   * [transition](css/transition.md)
   * [transform](css/transform.md)
   * [其他](css/others.md)
-* [ES6](es/index.md)
+* [ES6/Typescript](es/index.md)
   * [for_of](es/for_of.md)
 * [angular2](angular/index.md)
   * [index](angular/index.md)
