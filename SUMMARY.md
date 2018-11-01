@@ -58,6 +58,7 @@
   * [for_of](es/for_of.md)
 * [angular2](angular/index.md)
   * [index](angular/index.md)
+  * [前端主流框架插件的比较](angular/vue_react_angular_differ.md)
 * [git](git/index.md)
   * [常规操作](git/daily.md)
   * [常规指令说明](git/mores.md)
@@ -86,4 +87,4 @@
   * [gitbook周五的发布版本命令](others/gitbook_publish.md)
   * [webstorm快捷键使用](others/webstorm.md)
 * [Markdown使用说明](others/markdown.md)
-* [Next](others/next.md)
+* [Next](next/next.md)
