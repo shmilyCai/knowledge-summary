@@ -40,6 +40,7 @@ $state.transitionTo($state.current, $stateParams, {
 
 ```
 
+7.
 ```
 $scope.reload = function() {
   return $state.transitionTo($state.current, $stateParams, {
