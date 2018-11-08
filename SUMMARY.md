@@ -45,6 +45,7 @@
   * [js基础之this问题](javascript/this.md) -->
   * [js基础之闭包](javascript/bibao.md)
   * [js基础之参数按值传递](javascript/bibao.md)
+  * [js基础之垃圾回收机制](javascript/variable.md)
   * [js专题之 && 和 || 运算符的用法](javascript/js_&&.md)
   * [js专题之数组去重-findIndex](javascript/findIndex.md)
   * [js专题之split](javascript/split.md)
