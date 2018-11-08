@@ -2,7 +2,7 @@
 
 js中使用了对象，为了保证对象之间的联系，引入了原型与原型链的概念。
 
---
+---
 
 先使用构造函数创建一个对象：
 
@@ -20,7 +20,7 @@ console.log(person.name) // Kevin
 
 ##### <font color="#dd0000">prototype（原型）</font>
 
---
+---
 
 js中每个函数都有一个prototype属性.
 
@@ -51,7 +51,7 @@ console.log(person2.name) // Kevin
 
 ##### <font color="#dd0000">  __proto__(` __proto__`) </font>
 
---
+---
 
 每一个js对象（除null）都具有一个属性，叫` __proto__`，这个属性会指向该对象的原型。
 
@@ -69,7 +69,7 @@ console.log(person.__proto__ === Person.prototype); // true
 
 ##### <font color="#dd0000"> constructor</font>
 
---
+---
 
 每个原型都有一个 constructor 属性指向关联的构造函数
 
@@ -84,14 +84,14 @@ console.log(Person === Person.prototype.constructor); // true
 
 ##### <font color="#dd0000"> 实例与原型</font>
 
---
+---
 
 当读取实例的属性时，如果找不到，就会查找与对象关联的原型中的属性，如果还查不到，就去找原型的原型，一直找到最顶层为止。
 
 
 ##### <font color="#dd0000"> 原型的原型</font>
 
---
+---
 
 ```
 var obj = new Object();
@@ -105,7 +105,7 @@ console.log(obj.name) // Kevin
 
 ##### <font color="#dd0000"> 原型链</font>
 
---
+---
 
 ![Alt text](img/prototype5.png)
 
@@ -115,7 +115,7 @@ console.log(obj.name) // Kevin
 
 #### <font color="#dd0000">总结</font>
 
---
+---
 
 1. 每个构造函数都有一个prototype
 2. 每一个对象都有一个`_proto_`属性指向函数的protptype
