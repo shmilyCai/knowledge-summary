@@ -1,5 +1,14 @@
 #!/bin/sh
 
+### 先提交master分支下的_book文件
+git branch
+git checkout master
+gitbook server
+git add .
+git commit -am"_book"
+git pull --rebase
+git push
+
 ### 更新gh-pages下的文件
 git checkout gh-pages
 git branch
