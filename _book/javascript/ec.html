@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>js基础之理解执行上下文 · 小仙女的前端之路</title>
+        <title>js基础之理解执行上下文，变量对象和作用域链 · 小仙女的前端之路</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,7 +61,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="scope_chain.html" />
+    <link rel="next" href="this.html" />
     
     
     <link rel="prev" href="ecs.html" />
@@ -620,7 +620,7 @@
                 <a href="ec.html">
             
                     
-                    js基础之理解执行上下文
+                    js基础之理解执行上下文，变量对象和作用域链
             
                 </a>
             
@@ -628,20 +628,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.8" data-path="scope_chain.html">
-            
-                <a href="scope_chain.html">
-            
-                    
-                    js基础之作用域链
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.5.9" data-path="this.html">
+        <li class="chapter " data-level="1.5.8" data-path="this.html">
             
                 <a href="this.html">
             
@@ -654,7 +641,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.10" data-path="bibao.html">
+        <li class="chapter " data-level="1.5.9" data-path="bibao.html">
             
                 <a href="bibao.html">
             
@@ -667,9 +654,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.11" data-path="bibao.html">
+        <li class="chapter " data-level="1.5.10" data-path="variable_deliver.html">
             
-                <a href="bibao.html">
+                <a href="variable_deliver.html">
             
                     
                     js基础之参数按值传递
@@ -680,7 +667,72 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.12" data-path="js_&&.html">
+        <li class="chapter " data-level="1.5.11" data-path="collect_rubbish.html">
+            
+                <a href="collect_rubbish.html">
+            
+                    
+                    js基础之垃圾回收机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="call_apply.html">
+            
+                <a href="call_apply.html">
+            
+                    
+                    js基础之call和apply
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13" data-path="bind.html">
+            
+                <a href="bind.html">
+            
+                    
+                    js基础之bind
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.14" data-path="use_strict.html">
+            
+                <a href="use_strict.html">
+            
+                    
+                    js基础之严格模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.15" data-path="inherit.html">
+            
+                <a href="inherit.html">
+            
+                    
+                    js专题之继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.16" data-path="js_&&.html">
             
                 <a href="js_&&.html">
             
@@ -693,7 +745,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.13" data-path="findIndex.html">
+        <li class="chapter " data-level="1.5.17" data-path="findIndex.html">
             
                 <a href="findIndex.html">
             
@@ -706,7 +758,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.14" data-path="split.html">
+        <li class="chapter " data-level="1.5.18" data-path="split.html">
             
                 <a href="split.html">
             
@@ -719,7 +771,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.15" data-path="interval_timeout.html">
+        <li class="chapter " data-level="1.5.19" data-path="interval_timeout.html">
             
                 <a href="interval_timeout.html">
             
@@ -756,7 +808,7 @@
                 <a href="../html/form.html">
             
                     
-                    表单
+                    HTML5专题之表单
             
                 </a>
             
@@ -769,7 +821,7 @@
                 <a href="../html/localSession.html">
             
                     
-                    localStorage与sessionStorage区别
+                    HTML5专题之localStorage与sessionStorage区别
             
                 </a>
             
@@ -782,7 +834,7 @@
                 <a href="eventSource.html">
             
                     
-                    Server-Sent Events(SSE)-消息流接收方法
+                    HTML5专题之Server-Sent Events(SSE)-消息流接收方法
             
                 </a>
             
@@ -814,7 +866,7 @@
                 <a href="../css/modal.html">
             
                     
-                    css标准模型和怪异模型
+                    CSS3专题之标准模型和怪异模型
             
                 </a>
             
@@ -827,7 +879,7 @@
                 <a href="../css/px.html">
             
                     
-                    px/rem/em区别
+                    CSS3专题之px/rem/em区别
             
                 </a>
             
@@ -840,7 +892,7 @@
                 <a href="../css/css_centering.html">
             
                     
-                    css居中说明
+                    CSS3专题之居中说明
             
                 </a>
             
@@ -853,7 +905,7 @@
                 <a href="../css/layout.html">
             
                     
-                    页面布局
+                    CSS3专题之页面布局
             
                 </a>
             
@@ -866,7 +918,7 @@
                 <a href="../css/daily.html">
             
                     
-                    常用样式说明
+                    CSS3专题之常用样式说明
             
                 </a>
             
@@ -879,7 +931,7 @@
                 <a href="../css/selected.html">
             
                     
-                    选择器
+                    CSS3专题之选择器
             
                 </a>
             
@@ -892,7 +944,7 @@
                 <a href="../css/margin.html">
             
                     
-                    margin
+                    CSS3专题之margin
             
                 </a>
             
@@ -905,7 +957,7 @@
                 <a href="../css/animate.html">
             
                     
-                    animate
+                    CSS3专题之animate
             
                 </a>
             
@@ -918,7 +970,7 @@
                 <a href="../css/transition.html">
             
                     
-                    transition
+                    CSS3专题之transition
             
                 </a>
             
@@ -931,7 +983,7 @@
                 <a href="../css/transform.html">
             
                     
-                    transform
+                    CSS3专题之transform
             
                 </a>
             
@@ -1477,7 +1529,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >js基础之理解执行上下文</a>
+        <a href=".." >js基础之理解执行上下文，变量对象和作用域链</a>
     </h1>
 </div>
 
@@ -1521,6 +1573,7 @@ eval&#x5185;&#x90E8;&#x7684;&#x4EE3;&#x7801;</p>
 <li><p>&#x6FC0;&#x6D3B;&#x5BF9;&#x8C61;&#xFF08;Activation object&#xFF09;, &#x6709;&#x4E86;&#x53D8;&#x91CF;&#x5BF9;&#x8C61;&#x5B58;&#x6BCF;&#x4E2A;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x7684;&#x4E1C;&#x897F;&#xFF0C;&#x4F46;&#x662F;&#x5B83;&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x80FD;&#x88AB;&#x8BBF;&#x95EE;&#x5230;&#x5462;&#xFF1F;&#x5C31;&#x662F;&#x6BCF;&#x8FDB;&#x5165;&#x4E00;&#x4E2A;&#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;&#x65F6;&#xFF0C;&#x8FD9;&#x4E2A;&#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;&#x513F;&#x4E2D;&#x7684;&#x53D8;&#x91CF;&#x5BF9;&#x8C61;&#x5C31;&#x88AB;&#x6FC0;&#x6D3B;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BE5;&#x4E0A;&#x4E0B;&#x6587;&#x4E2D;&#x7684;&#x51FD;&#x6570;&#x6807;&#x793A;&#x7B26;&#x3001;&#x5F62;&#x53C2;&#x3001;&#x53D8;&#x91CF;&#x58F0;&#x660E;&#x7B49;&#x5C31;&#x53EF;&#x4EE5;&#x88AB;&#x8BBF;&#x95EE;&#x5230;&#x4E86;</p>
 </li>
 </ul>
+<p>&#x5728;&#x6CA1;&#x6709;&#x6267;&#x884C;&#x5F53;&#x524D;&#x73AF;&#x5883;&#x4E4B;&#x524D;&#xFF0C;&#x53D8;&#x91CF;&#x5BF9;&#x8C61;&#x4E2D;&#x7684;&#x5C5E;&#x6027;&#x90FD;&#x4E0D;&#x80FD;&#x8BBF;&#x95EE;&#xFF01;&#x4F46;&#x662F;&#x8FDB;&#x5165;&#x6267;&#x884C;&#x9636;&#x6BB5;&#x4E4B;&#x540E;&#xFF0C;&#x53D8;&#x91CF;&#x5BF9;&#x8C61;&#x8F6C;&#x53D8;&#x4E3A;&#x4E86;&#x6D3B;&#x52A8;&#x5BF9;&#x8C61;&#xFF0C;&#x91CC;&#x9762;&#x7684;&#x5C5E;&#x6027;&#x90FD;&#x80FD;&#x88AB;&#x8BBF;&#x95EE;&#x4E86;&#xFF0C;&#x7136;&#x540E;&#x5F00;&#x59CB;&#x8FDB;&#x884C;&#x6267;&#x884C;&#x9636;&#x6BB5;&#x7684;&#x64CD;&#x4F5C;&#x3002;&#x6240;&#x4EE5;&#x6D3B;&#x52A8;&#x5BF9;&#x8C61;&#x5B9E;&#x9645;&#x5C31;&#x662F;&#x53D8;&#x91CF;&#x5BF9;&#x8C61;&#x5728;&#x771F;&#x6B63;&#x6267;&#x884C;&#x65F6;&#x7684;&#x53E6;&#x4E00;&#x79CD;&#x5F62;&#x5F0F;</p>
 <h4 id="ec"><font color="#dd0000">EC</font></h4>
 <pre class="language-"><code>&#x4EE3;&#x7801;&#x7684;&#x6267;&#x884C;&#x6D41;&#x7A0B;&#x8FDB;&#x5165;&#x5185;&#x90E8;&#x51FD;&#x6570;&#xFF0C;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;&#x5E76;&#x628A;&#x5B83;&#x538B;&#x5165;&#x6267;&#x884C;&#x6808;&#x7684;&#x9876;&#x90E8;&#x3002;&#x6D4F;&#x89C8;&#x5668;&#x603B;&#x4F1A;&#x6267;&#x884C;&#x4F4D;&#x4E8E;&#x6808;&#x9876;&#x7684;&#x6267;&#x884C;&#x4E0A;&#x4E0B;&#x6587;&#xFF0C;&#x4E00;&#x65E6;&#x5F53;&#x524D;&#x4E0A;&#x4E0B;&#x6587;&#x51FD;&#x6570;&#x6267;&#x884C;&#x7ED3;&#x675F;&#xFF0C;&#x5B83;&#x5C06;&#x88AB;&#x4ECE;&#x6808;&#x9876;&#x5F39;&#x51FA;&#xFF0C;&#x5E76;&#x5C06;&#x4E0A;&#x4E0B;&#x6587;&#x63A7;&#x5236;&#x6743;&#x4EA4;&#x7ED9;&#x5F53;&#x524D;&#x7684;&#x6808;
 </code></pre><p>&#x521B;&#x5EFA;&#x7684;&#x7EC6;&#x8282;&#xFF1A;</p>
@@ -1542,7 +1595,7 @@ eval&#x5185;&#x90E8;&#x7684;&#x4EE3;&#x7801;</p>
     variableObject: { /*&#x51FD;&#x6570; arguments/&#x53C2;&#x6570;&#xFF0C;&#x5185;&#x90E8;&#x53D8;&#x91CF;&#x548C;&#x51FD;&#x6570;&#x58F0;&#x660E; */ }, 
     this: {} 
 }
-</code></pre><footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> caicai&#xA0;&#x7248;&#x6743;&#x6240;&#x6709;&#xA0;&#xA0;https://github.com/shmilyCai/knowledge-summary </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <span>&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;</span> 2018-11-07 16:17:44 </span> </footer>
+</code></pre><footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> caicai&#xA0;&#x7248;&#x6743;&#x6240;&#x6709;&#xA0;&#xA0;https://github.com/shmilyCai/knowledge-summary </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <span>&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;</span> 2018-11-08 14:16:24 </span> </footer>
                                 
                                 </section>
                             
@@ -1574,7 +1627,7 @@ eval&#x5185;&#x90E8;&#x7684;&#x4EE3;&#x7801;</p>
                 </a>
                 
                 
-                <a href="scope_chain.html" class="navigation navigation-next " aria-label="Next page: js基础之作用域链">
+                <a href="this.html" class="navigation navigation-next " aria-label="Next page: js基础之this问题">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1585,7 +1638,7 @@ eval&#x5185;&#x90E8;&#x7684;&#x4EE3;&#x7801;</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"js基础之理解执行上下文","level":"1.5.7","depth":2,"next":{"title":"js基础之作用域链","level":"1.5.8","depth":2,"path":"javascript/scope_chain.md","ref":"javascript/scope_chain.md","articles":[]},"previous":{"title":"js基础之执行上下文栈","level":"1.5.6","depth":2,"path":"javascript/ecs.md","ref":"javascript/ecs.md","articles":[]},"dir":"ltr"},"config":{"plugins":["page-footer-ex","prism","-highlight","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"1","family":"sans","theme":"night"},"pluginsConfig":{"prism":{},"livereload":{},"page-footer-ex":{"copyright":"caicai&nbsp;版权所有&nbsp;&nbsp;https://github.com/shmilyCai/knowledge-summary","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<span>该文件修订时间</span>"},"search":{},"books":{"prism_themes":["prismjs/themes/prism-tomorrow.css"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"theme":"white","family":"msyh","size":2},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":10,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"小仙女的前端之路","variables":{},"title":"小仙女的前端之路","links":{"sharing":{"all":false,"facebook":false,"google":false,"twitter":false,"weibo":false},"sidebar":{}},"gitbook":"*","description":"小仙女的前端之路","extension":null},"file":{"path":"javascript/ec.md","mtime":"2018-11-07T08:17:44.378Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-07T06:27:41.122Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"js基础之理解执行上下文，变量对象和作用域链","level":"1.5.7","depth":2,"next":{"title":"js基础之this问题","level":"1.5.8","depth":2,"path":"javascript/this.md","ref":"javascript/this.md","articles":[]},"previous":{"title":"js基础之执行上下文栈","level":"1.5.6","depth":2,"path":"javascript/ecs.md","ref":"javascript/ecs.md","articles":[]},"dir":"ltr"},"config":{"plugins":["page-footer-ex","prism","-highlight","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"1","family":"sans","theme":"night"},"pluginsConfig":{"prism":{},"livereload":{},"page-footer-ex":{"copyright":"caicai&nbsp;版权所有&nbsp;&nbsp;https://github.com/shmilyCai/knowledge-summary","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<span>该文件修订时间</span>"},"search":{},"books":{"prism_themes":["prismjs/themes/prism-tomorrow.css"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"theme":"white","family":"msyh","size":2},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":10,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"小仙女的前端之路","variables":{},"title":"小仙女的前端之路","links":{"sharing":{"all":false,"facebook":false,"google":false,"twitter":false,"weibo":false},"sidebar":{}},"gitbook":"*","description":"小仙女的前端之路","extension":null},"file":{"path":"javascript/ec.md","mtime":"2018-11-08T06:16:24.168Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-09T01:10:03.505Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -1,1 +1,1 @@
-use_strict.md
+#### 严格模式

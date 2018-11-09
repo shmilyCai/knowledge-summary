@@ -23,3 +23,12 @@ js是基于原型的面向对象语言，所有数据都可以当作对象处理
 
 ##### <font color="#dd0000">构造函数</font>
 构造函数是一种特殊的方法，主要用于创建对象时初始化对象，即为对象成员变量赋初始值。
+
+
+
+##### <font color="#dd0000">arguments</font>
+arguments 是一个对应于传递给函数的参数的类数组对象
+
+arguments对象是所有（非箭头）函数中都可用的局部变量。你可以使用arguments对象在函数中引用函数的参数
+
+arguments对象不是一个 Array 。它类似于Array，但除了length属性和索引元素之外没有任何Array属性
