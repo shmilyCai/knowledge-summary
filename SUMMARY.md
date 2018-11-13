@@ -49,6 +49,7 @@
   * [-js基础之严格模式](javascript/use_strict.md)
   * [-js专题之继承](javascript/inherit.md)
   * [-js专题之promise](javascript/promise.md)
+  * [js专题之函数作用域与变量作用域的提升](javascript/fn_var_scope.md)
   * [js专题之 && 和 || 运算符的用法](javascript/js_&&.md)
   * [js专题之数组去重-findIndex](javascript/findIndex.md)
   * [js专题之split](javascript/split.md)
