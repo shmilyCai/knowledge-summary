@@ -43,6 +43,7 @@
   * [-js基础之this问题](javascript/this.md)
   * [js基础之闭包](javascript/bibao.md)
   * [js基础之参数按值传递](javascript/variable_deliver.md)
+  * [js基础之事件流](javascript/event.md)
   * [js基础之垃圾回收机制](javascript/collect_rubbish.md)
   * [js基础之call，apply，bind](javascript/call_apply_bind.md)
   * [-js基础之new](javascript/new.md)
