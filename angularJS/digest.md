@@ -6,7 +6,7 @@
 
 $watch队列，在页面中每绑定一个值就向watch队列加入一条数据
 
-$digesr循环，当浏览器接收到可以被angular contexy处理的事件时，digest循环就会触发。分为2个小循环：
+$digest循环，当浏览器接收到可以被angular contexy处理的事件时，digest循环就会触发。分为2个小循环：
 
 	处理evalAsync队列
 
