@@ -38,13 +38,13 @@ function myDirective(){
 
 - 通过 AJAX 异步加载大量的模版会拖慢一个 Angular 应用的速度。可以提前将模版缓存到一个定义模版的 js 文件中，或者在加载 ng-app 的首页同时将模版以 script 标签加载，然后在配置 template 的地方通过 js 获取
 
-	```
-	<script id="pagerTpl" type="text/html">
-	    <div>...</div>
-	</script>
-	
-	template: document.querySelector('#pagerTpl').innerHTML
-	```
+```
+<script id="pagerTpl" type="text/html">
+    <div>...</div>
+</script>
+
+template: document.querySelector('#pagerTpl').innerHTML
+```
 
 `transclude `
 
