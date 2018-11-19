@@ -1,4 +1,4 @@
-#### 迭代器（Iterator）与生成器（Generator）
+####  for of
 
 https://segmentfault.com/a/1190000010747122
 
