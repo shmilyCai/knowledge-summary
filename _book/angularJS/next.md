@@ -28,7 +28,11 @@ angular.router
 6. 分属不同团队进行开发的angular应用，如果要做整合，可能会遇到哪些问题，如何解决？
 7. angular的缺点有哪些？
 8. 如何看待angular 1.2中引入的controller as 语法？
+
+
 9. 详述angular的“依赖注入”
+
+
 10. 如何看待angular 2……
 
 
