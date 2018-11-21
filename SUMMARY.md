@@ -120,5 +120,8 @@
   * [jenkins](others/jenkins.md)
   * [gitbook周五的发布版本命令](others/gitbook_publish.md)
   * [webstorm快捷键使用](others/webstorm.md)
+* [UI设计](ui/index.md)
+* [用户体验](user/index.md)
+* [项目管理](pm/index.md)
 * [Markdown使用说明](others/markdown.md)
 * [Next](next/next.md)
