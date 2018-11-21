@@ -3,6 +3,7 @@
 * [Introduction](README.md)
 * [About ME](aboutme.md)
 * [2018-坑（经验）](2018/index.md)
+  * [angularJS初始化页面时会出现页面绑定的代码，如何解决?](2018/angularjs_init.md)
   * [angularJS中gulp打包文件压缩，合并](2018/gulp.md)
   * [angularJS多套系统嵌入部署方案](2018/more_system.md)
   * [ui-router报错误‘Cannot transition to abstract state’](2018/ui_router.md)

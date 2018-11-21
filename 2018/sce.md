@@ -13,7 +13,7 @@
 `toastr`不能弹出`Object`类型的数据，会出现`$sec`报错
 
 
- ##### 解决方案
+##### 解决方案
  
  `$sce`提供了一种将可能存在跨站风险的内容(包括html,url,css,js,resourceUrl)标记为被信任的内容
 
