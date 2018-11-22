@@ -105,6 +105,8 @@ console.log(obj.name) // Kevin
 
 ##### <font color="#dd0000"> 原型链</font>
 
+原型链是一个由对象组成的有限对象链，用于实现继承和共享属性。
+
 ---
 
 ![Alt text](img/prototype5.png)
