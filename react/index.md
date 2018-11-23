@@ -21,6 +21,8 @@ react围绕可重用组件的概念设计，定义小组件并将它们组合在
 8. JSX，允许使用类似html的语法来编写react组件
 
 
+
+
 需要学习的api函数：
 
 1. React.createElement
@@ -28,3 +30,14 @@ react围绕可重用组件的概念设计，定义小组件并将它们组合在
 2. React.Component 
 
 3. React.render()
+
+
+reactjs与react native的区别：
+
+reactjs是以浏览器DOM作为后端
+
+react native， 以ios或者android原生控件作为后端
+
+
+
+
