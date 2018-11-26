@@ -3,7 +3,6 @@
 ### 先提交master分支下的_book文件
 git branch
 git checkout master
-gitbook serve
 git add .
 git commit -am"_book"
 git pull --rebase
