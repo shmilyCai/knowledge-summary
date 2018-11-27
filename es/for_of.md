@@ -23,12 +23,23 @@ for(var i=0; i<colors.length; i++){
 
 在ES6中，所有的集合对象（数组、Set集合及Map集合）和字符串都是可迭代对象，可迭代对象都绑定了默认的迭代器
 
+##### 使用范围
+
+1. 数组
+2. Set
+3. Map
+4. 类数组对象，如argument对象，DOM NodeList对象
+5. Generator对象
+6. 字符串
+
 ```
 var colors = ["red", "green", "blue"];
 for(let color of colors){
     console.log(color);
 }
 ```
+
+##### 内建迭代器
 
 for-of循环，可作用在可迭代对象上，正是利用了可迭代对象上的默认迭代器。大致过程是：for-of循环每执行一次都会调用可迭代对象的next()方法，并将迭代器返回的结果对象的value属性存储在变量中，循环将继续执行这一过程直到返回对象的done属性的值为true。
 

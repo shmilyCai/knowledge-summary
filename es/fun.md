@@ -33,7 +33,7 @@ let func = (value, num) => {
 
 2. 没有 arguments
 	
-	箭头函数没有arguments对象
+	箭头函数没有arguments对象，一般访问的arguments都是外围函数的
 
 3. 不能通过new关键字调用
 
