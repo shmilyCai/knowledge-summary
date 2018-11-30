@@ -1,0 +1,2163 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>ES6基础之class扩展 · 小仙女的前端之路</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        <meta name="identifier" content="小仙女的前端之路" scheme="ISBN">
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="promise.html" />
+    
+    
+    <link rel="prev" href="class.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../aboutme.html">
+            
+                <a href="../aboutme.html">
+            
+                    
+                    About ME
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../book.html">
+            
+                <a href="../book.html">
+            
+                    
+                    相关资料
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../2018/">
+            
+                <a href="../2018/">
+            
+                    
+                    2018-坑（经验）
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../2018/table_layout_fixed.html">
+            
+                <a href="../2018/table_layout_fixed.html">
+            
+                    
+                    table-layout设置fixed后，设置td宽度无效的解决方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../2018/angularjs_init.html">
+            
+                <a href="../2018/angularjs_init.html">
+            
+                    
+                    angularJS初始化页面时会出现页面绑定的代码，如何解决?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../2018/gulp.html">
+            
+                <a href="../2018/gulp.html">
+            
+                    
+                    angularJS中gulp打包文件压缩，合并
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../2018/more_system.html">
+            
+                <a href="../2018/more_system.html">
+            
+                    
+                    angularJS多套系统嵌入部署方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../2018/ui_router.html">
+            
+                <a href="../2018/ui_router.html">
+            
+                    
+                    ui-router报错误‘Cannot transition to abstract state’
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../2018/substr.html">
+            
+                <a href="../2018/substr.html">
+            
+                    
+                    substr报null错误
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../2018/angular_bootstrap.html">
+            
+                <a href="../2018/angular_bootstrap.html">
+            
+                    
+                    使用angularJS项目的三种启动方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../2018/sce.html">
+            
+                <a href="../2018/sce.html">
+            
+                    
+                    $sce报错
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="../2018/api_sequence.html">
+            
+                <a href="../2018/api_sequence.html">
+            
+                    
+                    链式调用和并发调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="../2018/router.html">
+            
+                <a href="../2018/router.html">
+            
+                    
+                    angularJS中刷新当前页面方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="../2018/endpoint.html">
+            
+                <a href="../2018/endpoint.html">
+            
+                    
+                    页面第一次加载时接口异步但有些需要触发同步操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="../2018/button.html">
+            
+                <a href="../2018/button.html">
+            
+                    
+                    点击页面中的button按钮触发校验问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="../2018/modal.html">
+            
+                <a href="../2018/modal.html">
+            
+                    
+                    模态对话框使用方法及常见问题解决
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.14" data-path="../others/01.html">
+            
+                <a href="../others/01.html">
+            
+                    
+                    总结-如何管理好10万行代码的前端单页面应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.15" data-path="../2018/web_optimize.html">
+            
+                <a href="../2018/web_optimize.html">
+            
+                    
+                    常见的前端优化内容
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16" data-path="../others/remote_develop.html">
+            
+                <a href="../others/remote_develop.html">
+            
+                    
+                    远程开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17" data-path="../2018/p_question.html">
+            
+                <a href="../2018/p_question.html">
+            
+                    
+                    目前产品前端所存在的问题-不间断更新
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.18" data-path="../2018/me_question.html">
+            
+                <a href="../2018/me_question.html">
+            
+                    
+                    开发时的自我约束与思考-不间断更新
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../angularjs/">
+            
+                <a href="../angularjs/">
+            
+                    
+                    angularJS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../angularjs/model.html">
+            
+                <a href="../angularjs/model.html">
+            
+                    
+                    angularJS基础之双向绑定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../angularjs/form.html">
+            
+                <a href="../angularjs/form.html">
+            
+                    
+                    angularJS基础之form表单验证常用方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../angularjs/form_status.html">
+            
+                <a href="../angularjs/form_status.html">
+            
+                    
+                    angularJS基础之form表单状态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../angularjs/directive.html">
+            
+                <a href="../angularjs/directive.html">
+            
+                    
+                    angularJS基础之directive
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../angularjs/filter.html">
+            
+                <a href="../angularjs/filter.html">
+            
+                    
+                    angularJS基础之过滤器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../angularjs/interceptor.html">
+            
+                <a href="../angularjs/interceptor.html">
+            
+                    
+                    angularJS基础之拦截器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../angularjs/on.html">
+            
+                <a href="../angularjs/on.html">
+            
+                    
+                    angularJS专题之各个控制器中的消息发送与接收
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../angularjs/hsf.html">
+            
+                <a href="../angularjs/hsf.html">
+            
+                    
+                    angularJS专题之$http，$service与$factory区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../angularjs/apply.html">
+            
+                <a href="../angularjs/apply.html">
+            
+                    
+                    angularJS专题之$apply
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../angularjs/factory.html">
+            
+                <a href="../angularjs/factory.html">
+            
+                    
+                    angularJS专题之$factory
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../angularjs/q.html">
+            
+                <a href="../angularjs/q.html">
+            
+                    
+                    angularJS专题之$q
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="../angularjs/watch.html">
+            
+                <a href="../angularjs/watch.html">
+            
+                    
+                    angularJS专题之$watch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13" data-path="../angularjs/digest.html">
+            
+                <a href="../angularjs/digest.html">
+            
+                    
+                    angularJS专题之脏检查机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.14" data-path="../angularjs/uiSelect.html">
+            
+                <a href="../angularjs/uiSelect.html">
+            
+                    
+                    angularJS插件之ui-select
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.15" data-path="../angularjs/plugins.html">
+            
+                <a href="../angularjs/plugins.html">
+            
+                    
+                    angularjs常用之插件地址
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.16" data-path="../angularjs/next.html">
+            
+                <a href="../angularjs/next.html">
+            
+                    
+                    angularjs常用之面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../javascript/">
+            
+                <a href="../javascript/">
+            
+                    
+                    Javascript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../javascript/explanation.html">
+            
+                <a href="../javascript/explanation.html">
+            
+                    
+                    js基础之名词解释
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../javascript/fun.html">
+            
+                <a href="../javascript/fun.html">
+            
+                    
+                    js基础之函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../javascript/data_type.html">
+            
+                <a href="../javascript/data_type.html">
+            
+                    
+                    js基础之数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../javascript/prototype.html">
+            
+                <a href="../javascript/prototype.html">
+            
+                    
+                    js基础之原型和原型链
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../javascript/scope.html">
+            
+                <a href="../javascript/scope.html">
+            
+                    
+                    js基础之词法作用域和动态作用域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../javascript/scope_next.html">
+            
+                <a href="../javascript/scope_next.html">
+            
+                    
+                    js基础之词法作用域和动态作用域的常见面试题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../javascript/ecs.html">
+            
+                <a href="../javascript/ecs.html">
+            
+                    
+                    js基础之执行上下文栈
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../javascript/ec.html">
+            
+                <a href="../javascript/ec.html">
+            
+                    
+                    js基础之理解执行上下文，变量对象和作用域链
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.9" data-path="../javascript/this.html">
+            
+                <a href="../javascript/this.html">
+            
+                    
+                    js基础之this问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.10" data-path="../javascript/bibao.html">
+            
+                <a href="../javascript/bibao.html">
+            
+                    
+                    js基础之闭包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.11" data-path="../javascript/variable_deliver.html">
+            
+                <a href="../javascript/variable_deliver.html">
+            
+                    
+                    js基础之参数按值传递
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.12" data-path="../javascript/module.html">
+            
+                <a href="../javascript/module.html">
+            
+                    
+                    js基础之Module
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.13" data-path="../javascript/event.html">
+            
+                <a href="../javascript/event.html">
+            
+                    
+                    js基础之事件流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.14" data-path="../javascript/collect_rubbish.html">
+            
+                <a href="../javascript/collect_rubbish.html">
+            
+                    
+                    js基础之垃圾回收机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.15" data-path="../javascript/call_apply_bind.html">
+            
+                <a href="../javascript/call_apply_bind.html">
+            
+                    
+                    js基础之call，apply，bind
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.16" data-path="../javascript/new.html">
+            
+                <a href="../javascript/new.html">
+            
+                    
+                    js基础之new
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.17" data-path="../javascript/use_strict.html">
+            
+                <a href="../javascript/use_strict.html">
+            
+                    
+                    js基础之严格模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.18" data-path="../javascript/inherit.html">
+            
+                <a href="../javascript/inherit.html">
+            
+                    
+                    js专题之继承
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.19" data-path="../javascript/promise.html">
+            
+                <a href="../javascript/promise.html">
+            
+                    
+                    js专题之promise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.20" data-path="../javascript/fn_var_scope.html">
+            
+                <a href="../javascript/fn_var_scope.html">
+            
+                    
+                    js专题之函数作用域与变量作用域的提升
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.21" data-path="../javascript/js_&&.html">
+            
+                <a href="../javascript/js_&&.html">
+            
+                    
+                    js专题之 && 和 || 运算符的用法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.22" data-path="../javascript/findIndex.html">
+            
+                <a href="../javascript/findIndex.html">
+            
+                    
+                    js专题之数组去重-findIndex
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.23" data-path="../javascript/split.html">
+            
+                <a href="../javascript/split.html">
+            
+                    
+                    js专题之split
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.24" data-path="../javascript/interval_timeout.html">
+            
+                <a href="../javascript/interval_timeout.html">
+            
+                    
+                    js专题之interval与timeout区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    ES6/Typescript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="let.html">
+            
+                <a href="let.html">
+            
+                    
+                    ES6基础之let和const
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="string.html">
+            
+                <a href="string.html">
+            
+                    
+                    ES6基础之模版字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="fun.html">
+            
+                <a href="fun.html">
+            
+                    
+                    ES6基础之箭头函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="var.html">
+            
+                <a href="var.html">
+            
+                    
+                    ES6基础之解构赋值
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="map.html">
+            
+                <a href="map.html">
+            
+                    
+                    ES6基础之Map
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="set.html">
+            
+                <a href="set.html">
+            
+                    
+                    ES6基础之Set数据结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" data-path="proxy.html">
+            
+                <a href="proxy.html">
+            
+                    
+                    ES6基础之Proxy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.8" data-path="reflect.html">
+            
+                <a href="reflect.html">
+            
+                    
+                    ES6基础之Reflect
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.9" data-path="symbol.html">
+            
+                <a href="symbol.html">
+            
+                    
+                    ES6基础之Symbol
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.10" data-path="promise.html">
+            
+                <a href="promise.html">
+            
+                    
+                    ES6基础之Promise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.11" data-path="generator.html">
+            
+                <a href="generator.html">
+            
+                    
+                    ES6基础之generator
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.12" data-path="class.html">
+            
+                <a href="class.html">
+            
+                    
+                    ES6基础之class
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7.13" data-path="class_extends.html">
+            
+                <a href="class_extends.html">
+            
+                    
+                    ES6基础之class扩展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.14" data-path="promise.html">
+            
+                <a href="promise.html">
+            
+                    
+                    ES6基础之async
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.15" data-path="for_of.html">
+            
+                <a href="for_of.html">
+            
+                    
+                    ES6基础之for_of
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.16" data-path="module.html">
+            
+                <a href="module.html">
+            
+                    
+                    ES6基础之Module
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../html/">
+            
+                <a href="../html/">
+            
+                    
+                    HTML5
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../html/form.html">
+            
+                <a href="../html/form.html">
+            
+                    
+                    HTML5专题之表单
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../html/localSession.html">
+            
+                <a href="../html/localSession.html">
+            
+                    
+                    HTML5专题之localStorage与sessionStorage区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../javascript/eventSource.html">
+            
+                <a href="../javascript/eventSource.html">
+            
+                    
+                    HTML5专题之Server-Sent Events(SSE)-消息流接收方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../css/">
+            
+                <a href="../css/">
+            
+                    
+                    CSS3
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../css/modal.html">
+            
+                <a href="../css/modal.html">
+            
+                    
+                    CSS3专题之标准模型和怪异模型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../css/px.html">
+            
+                <a href="../css/px.html">
+            
+                    
+                    CSS3专题之px/rem/em区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../css/css_centering.html">
+            
+                <a href="../css/css_centering.html">
+            
+                    
+                    CSS3专题之居中说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../css/layout.html">
+            
+                <a href="../css/layout.html">
+            
+                    
+                    CSS3专题之页面布局
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../css/daily.html">
+            
+                <a href="../css/daily.html">
+            
+                    
+                    CSS3专题之常用样式说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../css/selected.html">
+            
+                <a href="../css/selected.html">
+            
+                    
+                    CSS3专题之选择器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../css/margin.html">
+            
+                <a href="../css/margin.html">
+            
+                    
+                    CSS3专题之margin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="../css/animate.html">
+            
+                <a href="../css/animate.html">
+            
+                    
+                    CSS3专题之animate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="../css/transition.html">
+            
+                <a href="../css/transition.html">
+            
+                    
+                    CSS3专题之transition
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="../css/transform.html">
+            
+                <a href="../css/transform.html">
+            
+                    
+                    CSS3专题之transform
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.11" data-path="../css/others.html">
+            
+                <a href="../css/others.html">
+            
+                    
+                    其他
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../pattern/">
+            
+                <a href="../pattern/">
+            
+                    
+                    设计模式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../pattern/single.html">
+            
+                <a href="../pattern/single.html">
+            
+                    
+                    设计模式之单例模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../pattern/constructor.html">
+            
+                <a href="../pattern/constructor.html">
+            
+                    
+                    设计模式之构造函数模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../pattern/factory.html">
+            
+                <a href="../pattern/factory.html">
+            
+                    
+                    设计模式之工厂模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../pattern/prototype.html">
+            
+                <a href="../pattern/prototype.html">
+            
+                    
+                    设计模式之原型模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../pattern/proxy.html">
+            
+                <a href="../pattern/proxy.html">
+            
+                    
+                    设计模式之代理模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../angular/">
+            
+                <a href="../angular/">
+            
+                    
+                    angular2
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../angular/">
+            
+                <a href="../angular/">
+            
+                    
+                    index
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../angular/vue_react_angular_differ.html">
+            
+                <a href="../angular/vue_react_angular_differ.html">
+            
+                    
+                    前端主流框架插件的比较
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../react/">
+            
+                <a href="../react/">
+            
+                    
+                    react
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../java/">
+            
+                <a href="../java/">
+            
+                    
+                    Java
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../java/maven.html">
+            
+                <a href="../java/maven.html">
+            
+                    
+                    maven常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../java/docker.html">
+            
+                <a href="../java/docker.html">
+            
+                    
+                    docker常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../http/">
+            
+                <a href="../http/">
+            
+                    
+                    http
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../http/url.html">
+            
+                <a href="../http/url.html">
+            
+                    
+                    http基础之URL格式、 HTTP请求、响应、消息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../http/post.html">
+            
+                <a href="../http/post.html">
+            
+                    
+                    http专题之常见的POST提交格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../git/">
+            
+                <a href="../git/">
+            
+                    
+                    git
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../git/daily.html">
+            
+                <a href="../git/daily.html">
+            
+                    
+                    git基础之常规操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../git/mores.html">
+            
+                <a href="../git/mores.html">
+            
+                    
+                    git基础之常规指令说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../git/reset.html">
+            
+                <a href="../git/reset.html">
+            
+                    
+                    git基础之撤销commit方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../git/delete_branch.html">
+            
+                <a href="../git/delete_branch.html">
+            
+                    
+                    git基础之删除本地分支和远程分支
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="../git/gitconfig.html">
+            
+                <a href="../git/gitconfig.html">
+            
+                    
+                    git专题之gitconfig
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="../git/stash.html">
+            
+                <a href="../git/stash.html">
+            
+                    
+                    git专题之stash
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="../git/merge.html">
+            
+                <a href="../git/merge.html">
+            
+                    
+                    git专题之合并分支的2种方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.8" data-path="../git/merge_file.html">
+            
+                <a href="../git/merge_file.html">
+            
+                    
+                    git专题之合并指定文件到另一个分支
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../sass/">
+            
+                <a href="../sass/">
+            
+                    
+                    Sass
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../sass/test.html">
+            
+                <a href="../sass/test.html">
+            
+                    
+                    使用方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../jquery/">
+            
+                <a href="../jquery/">
+            
+                    
+                    Jquery
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.1" data-path="../jquery/fun.html">
+            
+                <a href="../jquery/fun.html">
+            
+                    
+                    常用方法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../nginx/">
+            
+                <a href="../nginx/">
+            
+                    
+                    Nginx
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.18.1" data-path="../nginx/operate.html">
+            
+                <a href="../nginx/operate.html">
+            
+                    
+                    常用操作命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../others/">
+            
+                <a href="../others/">
+            
+                    
+                    相关知识点
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.19.1" data-path="../others/gulp.html">
+            
+                <a href="../others/gulp.html">
+            
+                    
+                    Gulp常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.2" data-path="../others/api.html">
+            
+                <a href="../others/api.html">
+            
+                    
+                    RestfulAPI介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.3" data-path="../others/gitbook.html">
+            
+                <a href="../others/gitbook.html">
+            
+                    
+                    Gitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.4" data-path="../others/vim.html">
+            
+                <a href="../others/vim.html">
+            
+                    
+                    Vim常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.5" data-path="../others/linux.html">
+            
+                <a href="../others/linux.html">
+            
+                    
+                    Linux常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.6" data-path="../others/jenkins.html">
+            
+                <a href="../others/jenkins.html">
+            
+                    
+                    jenkins
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.7" data-path="../others/gitbook_publish.html">
+            
+                <a href="../others/gitbook_publish.html">
+            
+                    
+                    gitbook周五的发布版本命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.8" data-path="../others/webstorm.html">
+            
+                <a href="../others/webstorm.html">
+            
+                    
+                    webstorm快捷键使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="../others/markdown.html">
+            
+                <a href="../others/markdown.html">
+            
+                    
+                    Markdown使用说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="../ui/">
+            
+                <a href="../ui/">
+            
+                    
+                    UI设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" data-path="../user/">
+            
+                <a href="../user/">
+            
+                    
+                    用户体验
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" data-path="../pm/">
+            
+                <a href="../pm/">
+            
+                    
+                    项目管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" data-path="../next/next.html">
+            
+                <a href="../next/next.html">
+            
+                    
+                    Next
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >ES6基础之class扩展</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h4 id="class&#x7684;&#x7EE7;&#x627F;">class&#x7684;&#x7EE7;&#x627F;</h4>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> caicai&#xA0;&#x7248;&#x6743;&#x6240;&#x6709;&#xA0;&#xA0;https://github.com/shmilyCai/knowledge-summary </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <span>&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;</span> 2018-11-23 12:59:36 </span> </footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="class.html" class="navigation navigation-prev " aria-label="Previous page: ES6基础之class">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="promise.html" class="navigation navigation-next " aria-label="Next page: ES6基础之async">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"ES6基础之class扩展","level":"1.7.13","depth":2,"next":{"title":"ES6基础之async","level":"1.7.14","depth":2,"path":"es/promise.md","ref":"es/promise.md","articles":[]},"previous":{"title":"ES6基础之class","level":"1.7.12","depth":2,"path":"es/class.md","ref":"es/class.md","articles":[]},"dir":"ltr"},"config":{"plugins":["page-footer-ex","prism","-highlight","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"1","family":"sans","theme":"night"},"pluginsConfig":{"prism":{},"livereload":{},"page-footer-ex":{"copyright":"caicai&nbsp;版权所有&nbsp;&nbsp;https://github.com/shmilyCai/knowledge-summary","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<span>该文件修订时间</span>"},"search":{},"books":{"prism_themes":["prismjs/themes/prism-tomorrow.css"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"theme":"white","family":"msyh","size":2},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":10,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"小仙女的前端之路","variables":{},"title":"小仙女的前端之路","links":{"sharing":{"all":false,"facebook":false,"google":false,"twitter":false,"weibo":false},"sidebar":{}},"gitbook":"*","description":"小仙女的前端之路","extension":null},"file":{"path":"es/class_extends.md","mtime":"2018-11-23T04:59:36.881Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-30T01:24:26.905Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
