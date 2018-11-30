@@ -79,7 +79,7 @@
   * [ES6基础之class](es/class.md)
   * [ES6基础之class扩展](es/class_extends.md)
   * [ES6基础之async](es/promise.md)
-  * [ES6专题之for_of](es/for_of.md)
+  * [ES6基础之for_of](es/for_of.md)
   * [ES6基础之Module](es/module.md)
 * [HTML5](html/index.md)
   * [HTML5专题之表单](html/form.md)
