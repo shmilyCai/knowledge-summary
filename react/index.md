@@ -20,6 +20,10 @@ react围绕可重用组件的概念设计，定义小组件并将它们组合在
 
 8. JSX，允许使用类似html的语法来编写react组件
 
+9. 虚拟DOM（Virtual DOM）
+
+10. Diff算法（虚拟DOM的加速器，提升React性能的法宝）
+
 
 
 
@@ -30,6 +34,8 @@ react围绕可重用组件的概念设计，定义小组件并将它们组合在
 2. React.Component 
 
 3. React.render()
+
+4. React.createClass()
 
 
 reactjs与react native的区别：
