@@ -1,6 +1,8 @@
-# js代码实现apply
+# js模拟实现apply
 
 apply方法是让对象调用并不存在的方法，改变this指向。
+
+使函数立即执行，调用函数
 
 与call类似，区别是apply第二个是由参数组成的数组
 
@@ -16,7 +18,7 @@ var test = {   //test不存在testFn方法，可以使用call去调用，改变t
 testFn.apply(test);
 ```
 
-实现原理：
+实现原理与call类似，apply的参数是固定的1个或者2个
 
 ```
 Function.prototype.apply2 = function(context, arr){

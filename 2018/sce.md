@@ -12,7 +12,7 @@
 
 `toastr`不能弹出`Object`类型的数据，会出现`$sec`报错
 
-`$sec`是什么？
+`$sec`，Strict Contextual Escaping（严格的上下文模式）
 
 
 ##### 解决方案

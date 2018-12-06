@@ -1,4 +1,4 @@
-# 用js代码实现call
+# js模拟实现call
 
 
 call方法是让对象调用并不存在的方法，改变this指向。
@@ -23,6 +23,8 @@ testFn.call(test);
 实现原理：
 
 将新方法添加到对象里，再执行方法，最后删除方法
+
+特点注意call方法的参数不是固定的
 
 ```
 Function.prototype.call2 = function(context){
