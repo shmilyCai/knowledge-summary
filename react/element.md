@@ -18,7 +18,7 @@ const element = <h1>Hello, world</h1>;
 
 //element元素渲染到根DOM节点中，
 //通过将element元素加入ReactDOM.render()的方法来将其渲染到页面，
-ReactDOM.render(element, document.getElementById('root'));
+ReactDOM.render(element, document.getElementById('root'));  //将模版转换成html语言
 ```
 
 当元素被创建之后，是无法改变其内容或属性的，一个元素就好像是动画里的一帧。
