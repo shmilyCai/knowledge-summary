@@ -62,8 +62,7 @@
   * [js专题-继承](javascript/inherit.md)
   * [js专题-promise](javascript/promise.md)
   * [js专题-函数作用域与变量作用域的提升](javascript/fn_var_scope.md)
-  * [js专题- && 和 || 运算符的用法](javascript/js_&&.md)
-  * [js专题-数组去重-findIndex](javascript/findIndex.md)
+  * [js专题- && 和 || 运算符的用法](javascript/js_&&.md)s
   * [js专题-split](javascript/split.md)
   * [js专题-interval与timeout区别](javascript/interval_timeout.md)
   * [js专题-柯里化](javascript/curry.md)
@@ -72,6 +71,7 @@
   * [js代码-apply](javascript/c_apply.md)
   * [js代码-bind](javascript/c_bind.md)
   * [js代码-new](javascript/c_new.md)
+  * [js专题-findIndex](javascript/c_findIndex.md)
 * [ES6/Typescript](es/index.md)
   * [ES6基础-let和const](es/let.md)
   * [ES6基础-模版字符串](es/string.md)
