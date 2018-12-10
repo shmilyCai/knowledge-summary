@@ -23,6 +23,7 @@ false || false  = false;
 NaN null undefined 0 false;
 ```
 
+
 ```
 ||的返回值会返回最早遇到的非以下类型的值：
 NaN null undefined 0 false;
