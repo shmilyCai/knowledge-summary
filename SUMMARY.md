@@ -4,6 +4,7 @@
 * [About ME](aboutme.md)
 * [相关资料](book.md)
 * [2018-坑（经验）](2018/index.md)
+  * [gulp build时报错](2018/gulp_task_error.md)
   * [angularJS关于input输入框xss攻击说明](2018/xss.md)
   * [前后端跨域](2018/kua_yu.md)
   * [table-layout设置fixed后，设置td宽度无效的解决方法](2018/table_layout_fixed.md)
