@@ -58,3 +58,12 @@ git config --global user.name "your name" --- 修改用户名
 
 git config --global user.email "your email" ---修改email
 
+
+---
+
+git branch --set-upstream-to=origin/<gxxw> gxxw  本地分支与远程分支关联
+
+git branch -vv 查看本地分支与远程分支的关联情况
+
+
+

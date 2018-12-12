@@ -59,14 +59,19 @@ The gulp has updated this syntax for running tasks in series to add the function
 ## 扩展学习
 
 gulp.task()，定义自动执行的任务
+
 gulp.src()，匹配文件
+
 gulp.watch()，监视文件变化并执行指定任务
+
 gulp.run()，运行
+
 gulp.dest()，写入到目标文件
 
 -- V4.0后新添加的
 
 gulp.series(),
+
 gulp.parallel(),
 
 
