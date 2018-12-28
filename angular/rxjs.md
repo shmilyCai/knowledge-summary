@@ -48,18 +48,18 @@ ES迭代器
 
 Observable就是函数，接受Observer作为参数，由返回一个函数。
 
-以下操作符用于创建Observable对象，常用的操作符如下：
+以下操作符用于创建Observable对象（返回的是Observable实例），常用的操作符如下：
 
-* create
-* of
-* from
-* fromEvent
-* fromPromise
-* empty
-* never
-* throw
-* interval
-* timer
+* create()，
+* of()，返回一个Observable实例，用同步的方式把参数中提供的这些值发送出来
+* from()，该方法通常用于把一个数组转换成一个（发送多个值的）可观察对象
+* fromEvent()，
+* fromPromise()，
+* empty()，
+* never()，
+* throw()，
+* interval()，
+* timer()，
 
 ## RxJS-Observer
 
@@ -78,10 +78,83 @@ interface Observer<T> {
 * error，当Observeable内发生错误时，error方法就会被调用
 * complete，当Observable数据中指后，complete方法会被调用，在调用complete方法之后，next方法就不会再次被调用
 
+## demo
+
+```
+// Create simple observable that emits three values //创建observable并广播
+const myObservable = of(1, 2, 3);
+ 
+// Create observer object  //创建observer
+const myObserver = {
+  next: x => console.log('Observer got a next value: ' + x),
+  error: err => console.error('Observer got an error: ' + err),
+  complete: () => console.log('Observer got a complete notification'),
+};
+ 
+// Execute with the observer object  //订阅observable
+myObservable.subscribe(myObserver);  //subscribe()方法
+// Logs:
+// Observer got a next value: 1
+// Observer got a next value: 2
+// Observer got a next value: 3
+
+```
+
+## 操作符
+
+RxJS定义了一些操作符，比如map()，fliter(), concat() 和flatMap()
+
+操作符接受一些配置项，然后返回一个以来源可观察对象为参数的函数。
+当执行这个返回的函数时，这个操作符会观察来源可观察对象中发出的值，转换它们，并返回由转换后的值组成的新的可观察对象。
+
+可以使用管道来组合操作符链接
+
+```
+import { filter, map } from 'rxjs/operators';
+ 
+const nums = of(1, 2, 3, 4, 5);
+ 
+// Create a function that accepts an Observable.
+const squareOddVals = pipe(
+  filter((n: number) => n % 2 !== 0),
+  map(n => n * n)
+);
+ 
+// Create an Observable that will run the filter and map functions
+const squareOdd = squareOddVals(nums);
+ 
+// Suscribe to run the combined functions
+squareOdd.subscribe(x => console.log(x));
+```
+
+## Rxjs提供的常用操作符
+
+ 创建：from, fromPromise, formEvent, of
+
+ 组合：combineLatest, concat, merge, startWith, withLatestFrom, zip
+
+ 过滤：debounceTime, distinctUntilChanged, filter, take, takeUntil
+
+ 转换：bufferTime, concatMap, map, mergeMap, scan, switchMap
+
+ 工具：tap
+
+ 多播：share
+
+ 错误处理：
+ 1. catchError（允许在管道中处理错误）
+ 2. retry （尝试失败的请求）
+
+ 可观察对象以$符号结尾
 
 
+## angular中的可观察对象
 
+  EventEmitter类派生自Observable
 
+  HTTP模块使用可观察对象来处理AJAX请求和响应
+  
+  路由器和表单模块使用可观察对象来监听对用户输入事件的响应
 
 
 
