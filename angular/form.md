@@ -21,3 +21,10 @@
 4. 手动创建Form Model
 5. 方便的跟踪表单控件值的变化
 6. 易于动态添加表单控件
+
+构建响应式表单时：
+
+	* 组件是“真理之源”。表单验证在组件代码中定义。
+	* 在组件类中，使用 new FormControl() 或者 FormBuilder 显性地创建每个控件。
+	* 模板中的 input 元素不使用 ngModel。
+	* 相关联的 Angular 指令全部以 Form 开头，例如 FormGroup()、FormControl() 和 FormControlName()。
