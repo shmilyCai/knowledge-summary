@@ -2366,18 +2366,18 @@
  2. &#x53D1;&#x5E03;&#xFF0C;Observable&#x901A;&#x8FC7;&#x56DE;&#x8C03;next&#x65B9;&#x6CD5;&#x5411;Observe&#x53D1;&#x5E03;&#x4E8B;&#x4EF6;
 </code></pre><h2 id="rxjs-observable">RxJS-Observable</h2>
 <p>Observable&#x5C31;&#x662F;&#x51FD;&#x6570;&#xFF0C;&#x63A5;&#x53D7;Observer&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#xFF0C;&#x7531;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x3002;</p>
-<p>&#x4EE5;&#x4E0B;&#x64CD;&#x4F5C;&#x7B26;&#x7528;&#x4E8E;&#x521B;&#x5EFA;Observable&#x5BF9;&#x8C61;&#xFF0C;&#x5E38;&#x7528;&#x7684;&#x64CD;&#x4F5C;&#x7B26;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>&#x4EE5;&#x4E0B;&#x64CD;&#x4F5C;&#x7B26;&#x7528;&#x4E8E;&#x521B;&#x5EFA;Observable&#x5BF9;&#x8C61;&#xFF08;&#x8FD4;&#x56DE;&#x7684;&#x662F;Observable&#x5B9E;&#x4F8B;&#xFF09;&#xFF0C;&#x5E38;&#x7528;&#x7684;&#x64CD;&#x4F5C;&#x7B26;&#x5982;&#x4E0B;&#xFF1A;</p>
 <ul>
-<li>create</li>
-<li>of</li>
-<li>from</li>
-<li>fromEvent</li>
-<li>fromPromise</li>
-<li>empty</li>
-<li>never</li>
-<li>throw</li>
-<li>interval</li>
-<li>timer</li>
+<li>create()&#xFF0C;</li>
+<li>of()&#xFF0C;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;Observable&#x5B9E;&#x4F8B;&#xFF0C;&#x7528;&#x540C;&#x6B65;&#x7684;&#x65B9;&#x5F0F;&#x628A;&#x53C2;&#x6570;&#x4E2D;&#x63D0;&#x4F9B;&#x7684;&#x8FD9;&#x4E9B;&#x503C;&#x53D1;&#x9001;&#x51FA;&#x6765;</li>
+<li>from()&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x901A;&#x5E38;&#x7528;&#x4E8E;&#x628A;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x8F6C;&#x6362;&#x6210;&#x4E00;&#x4E2A;&#xFF08;&#x53D1;&#x9001;&#x591A;&#x4E2A;&#x503C;&#x7684;&#xFF09;&#x53EF;&#x89C2;&#x5BDF;&#x5BF9;&#x8C61;</li>
+<li>fromEvent()&#xFF0C;</li>
+<li>fromPromise()&#xFF0C;</li>
+<li>empty()&#xFF0C;</li>
+<li>never()&#xFF0C;</li>
+<li>throw()&#xFF0C;</li>
+<li>interval()&#xFF0C;</li>
+<li>timer()&#xFF0C;</li>
 </ul>
 <h2 id="rxjs-observer">RxJS-Observer</h2>
 <p>Observer&#xFF08;&#x89C2;&#x5BDF;&#x8005;&#xFF09;&#x662F;&#x4E00;&#x4E2A;&#x5305;&#x542B;&#x4E09;&#x4E2A;&#x65B9;&#x6CD5;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x6BCF;&#x6863;Observable&#x89E6;&#x53D1;&#x4E8B;&#x4EF6;&#x65F6;&#xFF0C;&#x4FBF;&#x4F1A;&#x81EA;&#x52A8;&#x8C03;&#x7528;&#x89C2;&#x5BDF;&#x8005;&#x7684;&#x5BF9;&#x5E94;&#x65B9;&#x6CD5;</p>
@@ -2392,7 +2392,62 @@
 <li>error&#xFF0C;&#x5F53;Observeable&#x5185;&#x53D1;&#x751F;&#x9519;&#x8BEF;&#x65F6;&#xFF0C;error&#x65B9;&#x6CD5;&#x5C31;&#x4F1A;&#x88AB;&#x8C03;&#x7528;</li>
 <li>complete&#xFF0C;&#x5F53;Observable&#x6570;&#x636E;&#x4E2D;&#x6307;&#x540E;&#xFF0C;complete&#x65B9;&#x6CD5;&#x4F1A;&#x88AB;&#x8C03;&#x7528;&#xFF0C;&#x5728;&#x8C03;&#x7528;complete&#x65B9;&#x6CD5;&#x4E4B;&#x540E;&#xFF0C;next&#x65B9;&#x6CD5;&#x5C31;&#x4E0D;&#x4F1A;&#x518D;&#x6B21;&#x88AB;&#x8C03;&#x7528;</li>
 </ul>
-<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> caicai&#xA0;&#x7248;&#x6743;&#x6240;&#x6709;&#xA0;&#xA0;https://github.com/shmilyCai/knowledge-summary </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <span>&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;</span> 2018-12-24 11:16:09 </span> </footer>
+<h2 id="demo">demo</h2>
+<pre class="language-"><code>// Create simple observable that emits three values //&#x521B;&#x5EFA;observable&#x5E76;&#x5E7F;&#x64AD;
+const myObservable = of(1, 2, 3);
+
+// Create observer object  //&#x521B;&#x5EFA;observer
+const myObserver = {
+  next: x =&gt; console.log(&apos;Observer got a next value: &apos; + x),
+  error: err =&gt; console.error(&apos;Observer got an error: &apos; + err),
+  complete: () =&gt; console.log(&apos;Observer got a complete notification&apos;),
+};
+
+// Execute with the observer object  //&#x8BA2;&#x9605;observable
+myObservable.subscribe(myObserver);  //subscribe()&#x65B9;&#x6CD5;
+// Logs:
+// Observer got a next value: 1
+// Observer got a next value: 2
+// Observer got a next value: 3
+</code></pre><h2 id="&#x64CD;&#x4F5C;&#x7B26;">&#x64CD;&#x4F5C;&#x7B26;</h2>
+<p>RxJS&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E9B;&#x64CD;&#x4F5C;&#x7B26;&#xFF0C;&#x6BD4;&#x5982;map()&#xFF0C;fliter(), concat() &#x548C;flatMap()</p>
+<p>&#x64CD;&#x4F5C;&#x7B26;&#x63A5;&#x53D7;&#x4E00;&#x4E9B;&#x914D;&#x7F6E;&#x9879;&#xFF0C;&#x7136;&#x540E;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x4EE5;&#x6765;&#x6E90;&#x53EF;&#x89C2;&#x5BDF;&#x5BF9;&#x8C61;&#x4E3A;&#x53C2;&#x6570;&#x7684;&#x51FD;&#x6570;&#x3002;
+&#x5F53;&#x6267;&#x884C;&#x8FD9;&#x4E2A;&#x8FD4;&#x56DE;&#x7684;&#x51FD;&#x6570;&#x65F6;&#xFF0C;&#x8FD9;&#x4E2A;&#x64CD;&#x4F5C;&#x7B26;&#x4F1A;&#x89C2;&#x5BDF;&#x6765;&#x6E90;&#x53EF;&#x89C2;&#x5BDF;&#x5BF9;&#x8C61;&#x4E2D;&#x53D1;&#x51FA;&#x7684;&#x503C;&#xFF0C;&#x8F6C;&#x6362;&#x5B83;&#x4EEC;&#xFF0C;&#x5E76;&#x8FD4;&#x56DE;&#x7531;&#x8F6C;&#x6362;&#x540E;&#x7684;&#x503C;&#x7EC4;&#x6210;&#x7684;&#x65B0;&#x7684;&#x53EF;&#x89C2;&#x5BDF;&#x5BF9;&#x8C61;&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7BA1;&#x9053;&#x6765;&#x7EC4;&#x5408;&#x64CD;&#x4F5C;&#x7B26;&#x94FE;&#x63A5;</p>
+<pre class="language-"><code>import { filter, map } from &apos;rxjs/operators&apos;;
+
+const nums = of(1, 2, 3, 4, 5);
+
+// Create a function that accepts an Observable.
+const squareOddVals = pipe(
+  filter((n: number) =&gt; n % 2 !== 0),
+  map(n =&gt; n * n)
+);
+
+// Create an Observable that will run the filter and map functions
+const squareOdd = squareOddVals(nums);
+
+// Suscribe to run the combined functions
+squareOdd.subscribe(x =&gt; console.log(x));
+</code></pre><h2 id="rxjs&#x63D0;&#x4F9B;&#x7684;&#x5E38;&#x7528;&#x64CD;&#x4F5C;&#x7B26;">Rxjs&#x63D0;&#x4F9B;&#x7684;&#x5E38;&#x7528;&#x64CD;&#x4F5C;&#x7B26;</h2>
+<p> &#x521B;&#x5EFA;&#xFF1A;from, fromPromise, formEvent, of</p>
+<p> &#x7EC4;&#x5408;&#xFF1A;combineLatest, concat, merge, startWith, withLatestFrom, zip</p>
+<p> &#x8FC7;&#x6EE4;&#xFF1A;debounceTime, distinctUntilChanged, filter, take, takeUntil</p>
+<p> &#x8F6C;&#x6362;&#xFF1A;bufferTime, concatMap, map, mergeMap, scan, switchMap</p>
+<p> &#x5DE5;&#x5177;&#xFF1A;tap</p>
+<p> &#x591A;&#x64AD;&#xFF1A;share</p>
+<p> &#x9519;&#x8BEF;&#x5904;&#x7406;&#xFF1A;</p>
+<ol>
+<li>catchError&#xFF08;&#x5141;&#x8BB8;&#x5728;&#x7BA1;&#x9053;&#x4E2D;&#x5904;&#x7406;&#x9519;&#x8BEF;&#xFF09;</li>
+<li><p>retry &#xFF08;&#x5C1D;&#x8BD5;&#x5931;&#x8D25;&#x7684;&#x8BF7;&#x6C42;&#xFF09;</p>
+<p>&#x53EF;&#x89C2;&#x5BDF;&#x5BF9;&#x8C61;&#x4EE5;$&#x7B26;&#x53F7;&#x7ED3;&#x5C3E;</p>
+</li>
+</ol>
+<h2 id="angular&#x4E2D;&#x7684;&#x53EF;&#x89C2;&#x5BDF;&#x5BF9;&#x8C61;">angular&#x4E2D;&#x7684;&#x53EF;&#x89C2;&#x5BDF;&#x5BF9;&#x8C61;</h2>
+<p>  EventEmitter&#x7C7B;&#x6D3E;&#x751F;&#x81EA;Observable</p>
+<p>  HTTP&#x6A21;&#x5757;&#x4F7F;&#x7528;&#x53EF;&#x89C2;&#x5BDF;&#x5BF9;&#x8C61;&#x6765;&#x5904;&#x7406;AJAX&#x8BF7;&#x6C42;&#x548C;&#x54CD;&#x5E94;</p>
+<p>  &#x8DEF;&#x7531;&#x5668;&#x548C;&#x8868;&#x5355;&#x6A21;&#x5757;&#x4F7F;&#x7528;&#x53EF;&#x89C2;&#x5BDF;&#x5BF9;&#x8C61;&#x6765;&#x76D1;&#x542C;&#x5BF9;&#x7528;&#x6237;&#x8F93;&#x5165;&#x4E8B;&#x4EF6;&#x7684;&#x54CD;&#x5E94;</p>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> caicai&#xA0;&#x7248;&#x6743;&#x6240;&#x6709;&#xA0;&#xA0;https://github.com/shmilyCai/knowledge-summary </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> <span>&#x8BE5;&#x6587;&#x4EF6;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;</span> 2018-12-29 11:21:20 </span> </footer>
                                 
                                 </section>
                             
@@ -2435,7 +2490,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"rxjs","level":"1.5.11","depth":2,"next":{"title":"angularJS","level":"1.6","depth":1,"path":"angularjs/index.md","ref":"angularjs/index.md","articles":[{"title":"angularJS基础-双向绑定","level":"1.6.1","depth":2,"path":"angularjs/model.md","ref":"angularjs/model.md","articles":[]},{"title":"angularJS基础-form表单验证常用方法","level":"1.6.2","depth":2,"path":"angularjs/form.md","ref":"angularjs/form.md","articles":[]},{"title":"angularJS基础-form表单状态","level":"1.6.3","depth":2,"path":"angularjs/form_status.md","ref":"angularjs/form_status.md","articles":[]},{"title":"angularJS基础-directive","level":"1.6.4","depth":2,"path":"angularjs/directive.md","ref":"angularjs/directive.md","articles":[]},{"title":"angularJS基础-过滤器","level":"1.6.5","depth":2,"path":"angularjs/filter.md","ref":"angularjs/filter.md","articles":[]},{"title":"angularJS基础-拦截器","level":"1.6.6","depth":2,"path":"angularjs/interceptor.md","ref":"angularjs/interceptor.md","articles":[]},{"title":"angularJS专题-各个控制器中的消息发送与接收","level":"1.6.7","depth":2,"path":"angularjs/on.md","ref":"angularjs/on.md","articles":[]},{"title":"angularJS专题-$http，$service与$factory区别","level":"1.6.8","depth":2,"path":"angularjs/hsf.md","ref":"angularjs/hsf.md","articles":[]},{"title":"angularJS专题-$apply","level":"1.6.9","depth":2,"path":"angularjs/apply.md","ref":"angularjs/apply.md","articles":[]},{"title":"angularJS专题-$factory","level":"1.6.10","depth":2,"path":"angularjs/factory.md","ref":"angularjs/factory.md","articles":[]},{"title":"angularJS专题-$q","level":"1.6.11","depth":2,"path":"angularjs/q.md","ref":"angularjs/q.md","articles":[]},{"title":"angularJS专题-$watch","level":"1.6.12","depth":2,"path":"angularjs/watch.md","ref":"angularjs/watch.md","articles":[]},{"title":"angularJS专题-脏检查机制","level":"1.6.13","depth":2,"path":"angularjs/digest.md","ref":"angularjs/digest.md","articles":[]},{"title":"angularJS插件-ui-select","level":"1.6.14","depth":2,"path":"angularjs/uiSelect.md","ref":"angularjs/uiSelect.md","articles":[]},{"title":"angularjs常用-插件地址","level":"1.6.15","depth":2,"path":"angularjs/plugins.md","ref":"angularjs/plugins.md","articles":[]},{"title":"angularjs常用-面试题","level":"1.6.16","depth":2,"path":"angularjs/next.md","ref":"angularjs/next.md","articles":[]}]},"previous":{"title":"decorator","level":"1.5.10","depth":2,"path":"angular/decorator.md","ref":"angular/decorator.md","articles":[]},"dir":"ltr"},"config":{"plugins":["page-footer-ex","prism","-highlight","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"1","family":"sans","theme":"night"},"pluginsConfig":{"prism":{},"livereload":{},"page-footer-ex":{"copyright":"caicai&nbsp;版权所有&nbsp;&nbsp;https://github.com/shmilyCai/knowledge-summary","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<span>该文件修订时间</span>"},"search":{},"books":{"prism_themes":["prismjs/themes/prism-tomorrow.css"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"theme":"white","family":"msyh","size":2},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":10,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"小仙女的前端之路","variables":{},"title":"小仙女的前端之路","links":{"sharing":{"all":false,"facebook":false,"google":false,"twitter":false,"weibo":false},"sidebar":{}},"gitbook":"*","description":"小仙女的前端之路","extension":null},"file":{"path":"angular/rxjs.md","mtime":"2018-12-24T03:16:09.527Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-24T08:22:48.155Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"rxjs","level":"1.5.11","depth":2,"next":{"title":"angularJS","level":"1.6","depth":1,"path":"angularjs/index.md","ref":"angularjs/index.md","articles":[{"title":"angularJS基础-双向绑定","level":"1.6.1","depth":2,"path":"angularjs/model.md","ref":"angularjs/model.md","articles":[]},{"title":"angularJS基础-form表单验证常用方法","level":"1.6.2","depth":2,"path":"angularjs/form.md","ref":"angularjs/form.md","articles":[]},{"title":"angularJS基础-form表单状态","level":"1.6.3","depth":2,"path":"angularjs/form_status.md","ref":"angularjs/form_status.md","articles":[]},{"title":"angularJS基础-directive","level":"1.6.4","depth":2,"path":"angularjs/directive.md","ref":"angularjs/directive.md","articles":[]},{"title":"angularJS基础-过滤器","level":"1.6.5","depth":2,"path":"angularjs/filter.md","ref":"angularjs/filter.md","articles":[]},{"title":"angularJS基础-拦截器","level":"1.6.6","depth":2,"path":"angularjs/interceptor.md","ref":"angularjs/interceptor.md","articles":[]},{"title":"angularJS专题-各个控制器中的消息发送与接收","level":"1.6.7","depth":2,"path":"angularjs/on.md","ref":"angularjs/on.md","articles":[]},{"title":"angularJS专题-$http，$service与$factory区别","level":"1.6.8","depth":2,"path":"angularjs/hsf.md","ref":"angularjs/hsf.md","articles":[]},{"title":"angularJS专题-$apply","level":"1.6.9","depth":2,"path":"angularjs/apply.md","ref":"angularjs/apply.md","articles":[]},{"title":"angularJS专题-$factory","level":"1.6.10","depth":2,"path":"angularjs/factory.md","ref":"angularjs/factory.md","articles":[]},{"title":"angularJS专题-$q","level":"1.6.11","depth":2,"path":"angularjs/q.md","ref":"angularjs/q.md","articles":[]},{"title":"angularJS专题-$watch","level":"1.6.12","depth":2,"path":"angularjs/watch.md","ref":"angularjs/watch.md","articles":[]},{"title":"angularJS专题-脏检查机制","level":"1.6.13","depth":2,"path":"angularjs/digest.md","ref":"angularjs/digest.md","articles":[]},{"title":"angularJS插件-ui-select","level":"1.6.14","depth":2,"path":"angularjs/uiSelect.md","ref":"angularjs/uiSelect.md","articles":[]},{"title":"angularjs常用-插件地址","level":"1.6.15","depth":2,"path":"angularjs/plugins.md","ref":"angularjs/plugins.md","articles":[]},{"title":"angularjs常用-面试题","level":"1.6.16","depth":2,"path":"angularjs/next.md","ref":"angularjs/next.md","articles":[]}]},"previous":{"title":"decorator","level":"1.5.10","depth":2,"path":"angular/decorator.md","ref":"angular/decorator.md","articles":[]},"dir":"ltr"},"config":{"plugins":["page-footer-ex","prism","-highlight","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"fontState":{"size":"1","family":"sans","theme":"night"},"pluginsConfig":{"prism":{},"livereload":{},"page-footer-ex":{"copyright":"caicai&nbsp;版权所有&nbsp;&nbsp;https://github.com/shmilyCai/knowledge-summary","markdown":false,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"<span>该文件修订时间</span>"},"search":{},"books":{"prism_themes":["prismjs/themes/prism-tomorrow.css"]},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"fontSettings":{"theme":"white","family":"msyh","size":2},"sharing":{"facebook":false,"twitter":false,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":[]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":10,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"isbn":"小仙女的前端之路","variables":{},"title":"小仙女的前端之路","links":{"sharing":{"all":false,"facebook":false,"google":false,"twitter":false,"weibo":false},"sidebar":{}},"gitbook":"*","description":"小仙女的前端之路","extension":null},"file":{"path":"angular/rxjs.md","mtime":"2018-12-29T03:21:20.463Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-29T03:30:45.623Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
