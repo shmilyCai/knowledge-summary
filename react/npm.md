@@ -1,4 +1,4 @@
-#### react常用命令
+# react常用命令
 
 ```
 // 全局安装create-react-app

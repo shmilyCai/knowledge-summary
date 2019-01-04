@@ -8,7 +8,7 @@ react围绕可重用组件的概念设计，定义小组件并将它们组合在
 
 2. 打包工具，webpack
 
-3. pm，nodejs包管理工具
+3. npm，nodejs包管理工具
 
 4. css模块，react-css-modules
 
