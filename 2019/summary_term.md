@@ -17,6 +17,10 @@ MVVM，指数据（Model）与视图（View），VM（ViewModel）替代了C（C
 
 创建可重用的定制元素
 
+1. HTML Template
+2. Shadow DOM
+3. Custom Element
+
 ## WebWorker
 
 JavaScript是单线程并以事件循环为主
@@ -41,3 +45,5 @@ WebWorker允许在另一个线程中执行任务，解放主线程
 6. 静态类型参数-范型
 
 ## 路由
+
+## 响应式编程
