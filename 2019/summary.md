@@ -30,21 +30,15 @@
 ###  原理/核心概念
 
 	脏值检查，检查model值是否发生了变化。
-
 	双向绑定原理：遍历每个数据的$watcher，比较新旧值，当新旧值不同时，触发更新操作
 
 ###  重要API
 
 	指令：
-
 	服务：（service，factory，provide）
-
 	控制器：负责用户的输入并把执行过程代理给对应的服务
-
 	依赖注入：
-
 	过滤器：
-
 	$scope：
 
 
@@ -55,19 +49,12 @@
 ###  重要点/重要API
 
 	组件
-
 	服务
-
 	依赖注入
-
 	服务端渲染
-
 	管道
-
 	分区
-
 	单向数据流
-
 	脏值检测
 
 ## RxJS
@@ -75,8 +62,24 @@
 ###  解决的问题
 
 	使异步代码和回调代码变得简单
+	实现方式：使用观察者模式和迭代器模式以函数式编程思维实现的。
 
 ###  原理/核心概念
+
+	Observables，是一个函数
+		接收一个Observe对象，包含next，error，complete方法的对象作为参数
+		返回一个unsubscrible函数，用于取消订阅
+	Observer，一个函数，具有next，error，complete方法
+		next，Observables发送新值的时候，被调用
+		error，Observables内发生错误时，被调用
+		complete，Observables数据终止后，被调用
+	两者之间的订阅发布关系：
+	订阅：Observer通过Obserables提供的subscrible()方法订阅Observable
+	发布：Observable通过回调next方法向observer发布事件
+	Operators-操作符，是个函数，主要用于创建Observable
+		接收一个Observable对象，返回一个新的Observable对象
+
+
 ###  重要点/重要API
 
 ## React
@@ -97,9 +100,7 @@
 ###  重要点/重要API
 
 	JSX：类似于html，使用jsx创建组件，实现组件化开发
-
 	组件：可复用并存在生命周期，state（组件中的数据），props（子组件接收父组件传递的数据）
-
 	数据流是从上往下：从父组件到子组件
 
 ## Redux
@@ -111,9 +112,7 @@
 ###  原理/核心概念
 
 	Action：
-
 	Reducer：
-	
 	Store：
 
 ###  重要点/重要API
