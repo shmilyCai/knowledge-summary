@@ -7,6 +7,7 @@
   * [前端常用名词说明与分析](2019/summary_term.md)
   * [设计模式总结与分析](2019/summary_pattern.md)
   * [前端各个框架分析与总结](2019/summary.md)
+  * [react被弃用的函数替换方案](2019/componentWillMount.md)
 * [react系列](react/index.md)
   * [jsx](react/jsx.md)
   * [element](react/element.md)
