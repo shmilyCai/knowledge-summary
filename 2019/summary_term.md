@@ -29,11 +29,27 @@ WebWorker允许在另一个线程中执行任务，解放主线程
 
 允许
 
-## 预编译
+## 预先（AOT）编译
 
 在编译期间将HTML和TypeScript代码转换成高效的JavaScript代码，浏览器可直接下载和运行。
 
+优点：渲染更快，需要的异步请求更少，需要下载的angular框架体积更小，提早检测模版错误，更安全
+
+## 即时编译（JIT）
+
+会在运行期间在浏览器中编译应用
+
 ## service worker
+
+即一段运行在web浏览器中，并为应用管理缓存的脚本
+
+Service Worker在用户关闭浏览器页标签时仍然会被保留，下次浏览器加载本应用时，sw就会首先加载，然后拦截加载本应用时的对每一项资源的请求。
+
+manifest文件描述要缓存的资源，用于新版本更新后，通知sw下载并缓存应用的一个新版本
+
+## 服务端渲染（server-side rendering SSR）
+
+将在服务端把页面预先生成html文件，作为静态文件工服务器使用，浏览器在请求时直接给出响应。
 
 ## TypeScript
 
@@ -81,6 +97,10 @@ WebWorker允许在另一个线程中执行任务，解放主线程
 ## PWA
 
 Progressive Web App（PWA），指渐进增强Web App，
+
+fetch API，cacheStorage API，service worker，push API
+
+
 
 
 

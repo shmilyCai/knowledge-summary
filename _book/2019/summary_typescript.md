@@ -1,1 +1,1 @@
-summary_typescript.md
+# typescript总结
