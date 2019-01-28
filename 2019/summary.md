@@ -109,11 +109,19 @@
 
 	统一管理项目中所有的数据，让数据变得可控
 
+	严格的单向数据流
+
 ###  原理/核心概念
 
 	Action：
-	Reducer：
+	action创建的函数：
+	Reducer：指定了应用状态的变化如何响应actions并发送到store中
 	Store：
+
+	三大原则：
+	1. 单一数据源，应用中的所有state储存在一棵object tree中
+	2. state是只读的，唯一改变state的方法就是触发action
+	3. 使用纯函数来执行修改，需要使用reducers
 
 ###  重要点/重要API
 

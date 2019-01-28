@@ -38,3 +38,6 @@
 `git add <filename>` ---实际上就是把要提交的所有修改放到暂存区
 
 `git commit -am"commit"` ---一次性把暂存区的所有修改提交到分支, 每次修改，如果不用`git add`到暂存区，那就不会加入到`commit`中
+
+
+`git push -f https://github.com/shmilyCai/vue-ui.git master:gh-pages` ---快速提交dist文件

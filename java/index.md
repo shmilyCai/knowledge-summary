@@ -12,6 +12,14 @@
 jdk版本太低
 maven不自动更新配置文件
 
+构建工具是maven
+
+框架是spring、spring-mvc、mybatis
+
+数据库是mysql
+
+具体一些技术有：quartz、rabbitmq
+
 
 ```
  pom.xml
