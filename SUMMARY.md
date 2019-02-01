@@ -8,6 +8,7 @@
   * [前端常用名词说明与分析-(总结)](2019/summary_term.md)
   * [设计模式总结与分析-(总结)](2019/summary_pattern.md)
   * [前端各个框架分析与总结-(总结)](2019/summary.md)
+  * [typeScript速成-(总结)](2019/typescript.md)
   * [react-(框架)](2019/react.md)
   * [redux-(框架)](2019/redux.md)
   * [react-router-(框架)](2019/react-router.md)

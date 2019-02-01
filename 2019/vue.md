@@ -35,6 +35,16 @@
 4. v-on:click
 5. v-model
 
+## 虚拟DOM
+
+虚拟DOM就是用一个原生的JS对象去描述一个DOM节点
+
+虚拟DOM是对真实DOM的一种抽象描述，核心定义是标签名，数据，子节点，键值
+
+映射到真实的DOM需要经历create，diff，patch等过程。
+
+create指的是createElement，创建虚拟机dom
+
 ## Vuex
 
 1. Vue components，Vue组件，HTML页面上，负责接收用户操作等交互行为，执行dispatch方法触发对应action进行回应
