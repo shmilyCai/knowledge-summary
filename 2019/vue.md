@@ -1,4 +1,4 @@
-# Vue学习
+# vue-ui
 
 需要了解的知识点：
 
@@ -21,29 +21,93 @@
 3. 指令
 4. 修饰符（作用域指令上的）
 5. 计算属性（获取属性时的拦截操作，默认getter操作），侦听属性（）
-6. props（向子组件传递数据）
-7. 子组件通过$emit向父组件传递消息
+6. props（父组件向子组件传递数据）
+7. 子组件通过$emit向父组件传递消息，$on绑定接收的消息
 8. slot插槽分发内容
-9. 插槽
-10. keep-alive
+9. ref访问子组件的实例
+10. 依赖注入
 
 
-## 指定
+## 指令
 1. v-if, v-else, v-else-if
 2. v-for
 3. v-show
 4. v-on:click
 5. v-model
+6. v-once，创建低开销的静态组件
 
-## 虚拟DOM
+v-modal与:modal的区别：
+    v-modal为双向绑定
+    :modal是v-modal的简写
 
-虚拟DOM就是用一个原生的JS对象去描述一个DOM节点
+## 插槽
 
-虚拟DOM是对真实DOM的一种抽象描述，核心定义是标签名，数据，子节点，键值
+所谓插槽，指父组件中的html或者数据传递到子组件中slot的位置处，
 
-映射到真实的DOM需要经历create，diff，patch等过程。
+1. 匿名插槽，
+    不含名字的插槽
+2. 具名插槽，
+    带有名字的插槽
+3. 作用域插槽，
+    父组件模版的所有东西都会在父级作用域内编译，子组件模版的所有东西都会在子级作用域内编译
+4. 默认的插槽内容写在slot中
 
-create指的是createElement，创建虚拟机dom
+## 动态组件与异步组件
+
+动态组件：使用keep-alive，返回到上次的目录处（具有翻页列表的部分页面）
+
+keep-alive，缓存组件在内存中，再次进入该页面不会重新渲染，用于保存页面的原始状态
+
+异步组件：工厂函数和promise配合使用
+
+## 组件的钩子函数
+
+1. beforeMount
+2. created
+3. beforeMount
+4. mounted
+5. beforeUpdate
+6. update
+7. beforeDestroy
+8. destroyed
+
+## 自定义指令的钩子函数
+
+1. bind
+2. inserted
+3. update
+4. componentUpdated
+5. unbind
+
+## 过滤器
+
+与angularjs中的过滤器类似
+
+## 异步组件
+
+1. 普通函数异步组件
+2. Promise异步组件
+3. 高级异步组件
+    高级异步组件实现了loading，resolve，reject，timeout 4种状态
+    异步组件实现的本质是2次渲染，除了0 delay的高级异步组件第一次直接渲染成loading组件外，其他都是第一次渲染生成一个注释节点，当异步获取组件成功后，再通过foreceRender强制重新渲染，这样就能正确渲染出我们异步加载的组件了。
+
+## 深入响应式原理
+
+Vue的数据驱动包括数据渲染DOM和数据的变更也触发DOM变化。
+
+计算属性本质上是computer watcher，而侦听属性本质上是user watcher。
+
+对应应用场景：
+计算属性适合用在模版渲染中，某个值是依赖了其他的响应式对象甚至是计算属性计算而来的；
+侦听属性适用于观测某个值的变化去完成一段复杂的业务逻辑。
+
+当数据发生变化的时候，会触发渲染watcher的回调函数，进而执行组件的更新过程。
+
+## 编译
+
+## 扩展
+
+## Vue Router
 
 ## Vuex
 
